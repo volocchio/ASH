@@ -123,8 +123,31 @@
       grid-template-columns: 1fr 1fr;
       gap: 1.5rem;
     }
+    .bp-grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      margin: 1.25rem 0;
+    }
+    .bp-mini-caption {
+      font-size: 0.78rem;
+      color: var(--ash-grey);
+      margin-top: -0.3rem;
+      margin-bottom: 0.6rem;
+    }
+    .bp-scenario-card {
+      background: rgba(200,168,78,0.04);
+      border: 1px solid rgba(200,168,78,0.14);
+      border-radius: 8px;
+      padding: 0.8rem;
+    }
+    .bp-scenario-card h4 {
+      margin: 0 0 0.6rem;
+      font-size: 1rem;
+    }
     @media (max-width: 768px) {
       .bp-grid-2 { grid-template-columns: 1fr; }
+      .bp-grid-3 { grid-template-columns: 1fr; }
     }
     /* Triangle diagram styles */
     .bp-triangle-wrap {
@@ -468,7 +491,7 @@
       <h2>4. Organizational Structure</h2>
 
       <h3>The Owl Framework</h3>
-      <p>ASH operates as a parent organization with three semi-autonomous divisions, each led by its own director, all reporting to the ASH Executive Director. The structure mirrors the owl motif:</p>
+      <p>ASH operates as a parent organization with three flagship pillars (A-H-S) embedded inside a broader 7-division Reactor model. Each division has accountable leadership and reports through the ASH Executive Director structure. The Owl Framework illustrates the core geometry:</p>
 
       <!-- Owl Framework Triangle -->
       <div class="bp-triangle-wrap">
@@ -639,6 +662,157 @@
         <li><strong>Phase 2 (Year 2-3):</strong> Paid Executive Director, 2-3 part-time staff, Guild members compensated per-ceremony.</li>
         <li><strong>Phase 3 (Year 4+):</strong> Full organizational chart with salaried leadership, regional chapter coordinators, and full-time Documemorial production team.</li>
       </ul>
+
+      <h3 id="reactor">The ASH Reactor</h3>
+      <p>The Reactor is ASH's self-replicating organizational engine — <strong>7 divisions, each containing 3 departments, for 21 departments total</strong> — arranged as a triangle within a triangle within a triangle. Every division mirrors the structure of the whole, and every part contains the blueprint to reproduce the entire organization.</p>
+
+      <div class="bp-callout">
+        <p><strong>The Fractal Principle:</strong> Just as the ASH triangle (A-S-H) defines the parent organization, each division is itself a triangle of 3 departments. Scale any single division outward and it becomes a complete ASH in miniature — capable of autonomous operation while remaining part of the whole. This is the reactor: self-similar at every level, infinitely scalable.</p>
+      </div>
+
+      <!-- Reactor Diagram (SVG) -->
+      <div class="bp-triangle-wrap">
+        <svg viewBox="0 0 600 520" xmlns="http://www.w3.org/2000/svg" style="max-width:560px;">
+          <!-- Outer inverted triangle -->
+          <polygon points="50,40 550,40 300,470" fill="none" stroke="#c8a84e" stroke-width="2.5" stroke-linejoin="round"/>
+
+          <!-- Top side divisions: 1 Communications, 2 Accommodations, 3 Therapy -->
+          <!-- Division tick marks on top edge -->
+          <line x1="217" y1="40" x2="217" y2="55" stroke="#c8a84e" stroke-width="1" opacity="0.5"/>
+          <line x1="383" y1="40" x2="383" y2="55" stroke="#c8a84e" stroke-width="1" opacity="0.5"/>
+          <text x="133" y="30" fill="#c8a84e" font-size="10" font-family="Georgia" text-anchor="middle" font-weight="bold">1</text>
+          <text x="300" y="30" fill="#c8a84e" font-size="10" font-family="Georgia" text-anchor="middle" font-weight="bold">2</text>
+          <text x="467" y="30" fill="#c8a84e" font-size="10" font-family="Georgia" text-anchor="middle" font-weight="bold">3</text>
+          <text x="133" y="18" fill="#b8bbbe" font-size="8" font-family="Montserrat" text-anchor="middle">COMMUNICATIONS</text>
+          <text x="300" y="18" fill="#b8bbbe" font-size="8" font-family="Montserrat" text-anchor="middle">ACCOMMODATIONS</text>
+          <text x="467" y="18" fill="#b8bbbe" font-size="8" font-family="Montserrat" text-anchor="middle">THERAPY</text>
+
+          <!-- Dept markers on top edge (9 departments: 1-9) -->
+          <line x1="106" y1="40" x2="106" y2="48" stroke="#c8a84e" stroke-width="0.5" opacity="0.4"/>
+          <line x1="161" y1="40" x2="161" y2="48" stroke="#c8a84e" stroke-width="0.5" opacity="0.4"/>
+          <line x1="272" y1="40" x2="272" y2="48" stroke="#c8a84e" stroke-width="0.5" opacity="0.4"/>
+          <line x1="328" y1="40" x2="328" y2="48" stroke="#c8a84e" stroke-width="0.5" opacity="0.4"/>
+          <line x1="439" y1="40" x2="439" y2="48" stroke="#c8a84e" stroke-width="0.5" opacity="0.4"/>
+          <line x1="494" y1="40" x2="494" y2="48" stroke="#c8a84e" stroke-width="0.5" opacity="0.4"/>
+
+          <!-- Right side divisions: 4 Production, 5 Quality -->
+          <text x="480" y="185" fill="#c8a84e" font-size="10" font-family="Georgia" font-weight="bold" transform="rotate(59,480,185)">4</text>
+          <text x="400" y="340" fill="#c8a84e" font-size="10" font-family="Georgia" font-weight="bold" transform="rotate(59,400,340)">5</text>
+          <text x="500" y="170" fill="#b8bbbe" font-size="8" font-family="Montserrat" transform="rotate(59,500,170)">OPERATIONS</text>
+          <text x="420" y="330" fill="#b8bbbe" font-size="8" font-family="Montserrat" transform="rotate(59,420,330)">QUALITY</text>
+
+          <!-- Left side division: 6 Public Relations -->
+          <text x="120" y="185" fill="#c8a84e" font-size="10" font-family="Georgia" font-weight="bold" transform="rotate(-59,120,185)">6</text>
+          <text x="95" y="200" fill="#b8bbbe" font-size="8" font-family="Montserrat" transform="rotate(-59,95,200)">PUBLIC RELATIONS</text>
+
+          <!-- Center: Division 7 — Executive -->
+          <polygon points="230,160 370,160 300,280" fill="rgba(200,168,78,0.04)" stroke="#c8a84e" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="6,3"/>
+          <text x="300" y="195" fill="#c8a84e" font-size="11" font-family="Georgia" text-anchor="middle" font-weight="bold">7</text>
+          <text x="300" y="212" fill="#c8a84e" font-size="9" font-family="Montserrat" text-anchor="middle">EXECUTIVE</text>
+          <text x="300" y="224" fill="#c8a84e" font-size="9" font-family="Montserrat" text-anchor="middle">DEPT.</text>
+
+          <!-- Smaller inner triangles at each vertex (fractal echoes) -->
+          <!-- Top-left mini triangle -->
+          <polygon points="70,55 130,55 100,100" fill="none" stroke="#c8a84e" stroke-width="0.7" opacity="0.25"/>
+          <!-- Top-right mini triangle -->
+          <polygon points="470,55 530,55 500,100" fill="none" stroke="#c8a84e" stroke-width="0.7" opacity="0.25"/>
+          <!-- Bottom mini triangle -->
+          <polygon points="275,400 325,400 300,445" fill="none" stroke="#c8a84e" stroke-width="0.7" opacity="0.25"/>
+
+          <!-- Dept labels inside executive triangle -->
+          <text x="262" y="178" fill="#b8bbbe" font-size="7" font-family="Montserrat" opacity="0.6">19</text>
+          <text x="330" y="178" fill="#b8bbbe" font-size="7" font-family="Montserrat" opacity="0.6">20</text>
+          <text x="296" y="265" fill="#b8bbbe" font-size="7" font-family="Montserrat" opacity="0.6">21</text>
+
+          <!-- Circumscribed circle (subtle) -->
+          <circle cx="300" cy="200" r="215" fill="none" stroke="#c8a84e" stroke-width="0.6" opacity="0.12"/>
+        </svg>
+        <p class="bp-triangle-caption">The ASH Reactor — 7 Divisions × 3 Departments = 21 departments. The triangle within the triangle within the triangle.</p>
+      </div>
+
+      <!-- Reactor images from Bill Liebhart's original sketches -->
+      <div class="bp-grid-2" style="margin:1.5rem 0;">
+        <div style="text-align:center;">
+          <img src="images/The_ASH_reactor_7_Div_file/image0.jpeg" alt="ASH Reactor sketch — overview" style="max-width:100%;border-radius:8px;border:1px solid rgba(200,168,78,0.15);" class="reactor-img">
+        </div>
+        <div style="text-align:center;">
+          <img src="images/The_ASH_reactor_7_Div_file/image6.jpeg" alt="ASH Reactor sketch — 7 divisions with 21 departments" style="max-width:100%;border-radius:8px;border:1px solid rgba(200,168,78,0.15);" class="reactor-img">
+        </div>
+      </div>
+      <p class="bp-triangle-caption" style="text-align:center;">Original reactor sketches by Bill Liebhart — the 7-division, 21-department self-replicating model</p>
+
+      <h4>The 7 Divisions</h4>
+      <table class="bp-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Division</th>
+            <th>Side</th>
+            <th>Departments (×3)</th>
+            <th>Function</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1</strong></td>
+            <td>Communications</td>
+            <td>Top</td>
+            <td>Depts 1–3</td>
+            <td>Outreach, media relations, branding, social channels</td>
+          </tr>
+          <tr>
+            <td><strong>2</strong></td>
+            <td>Accommodations</td>
+            <td>Top</td>
+            <td>Depts 4–6</td>
+            <td>Family logistics, travel, lodging, ceremony venue coordination</td>
+          </tr>
+          <tr>
+            <td><strong>3</strong></td>
+            <td>Therapy</td>
+            <td>Top</td>
+            <td>Depts 7–9</td>
+            <td>Grief counseling, chaplaincy, pre- and post-ceremony family support</td>
+          </tr>
+          <tr>
+            <td><strong>4</strong></td>
+            <td>Operations</td>
+            <td>Right</td>
+            <td>Depts 10–12</td>
+            <td>Guild management, aircraft, dispersal devices, ceremony execution</td>
+          </tr>
+          <tr>
+            <td><strong>5</strong></td>
+            <td>Quality</td>
+            <td>Right</td>
+            <td>Depts 13–15</td>
+            <td>Safety, training, certification, continuous improvement (7-Step)</td>
+          </tr>
+          <tr>
+            <td><strong>6</strong></td>
+            <td>Public Relations</td>
+            <td>Left</td>
+            <td>Depts 16–18</td>
+            <td>Community engagement, partnerships, affiliate network, fundraising</td>
+          </tr>
+          <tr>
+            <td><strong>7</strong></td>
+            <td>Executive</td>
+            <td>Center</td>
+            <td>Depts 19–21</td>
+            <td>Strategic leadership, governance, 501(c)(3) compliance, board liaison</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h4>Self-Replication: How the Reactor Scales</h4>
+      <p>The reactor's power is in its fractal geometry. When ASH opens a new <strong>regional chapter</strong> or <strong>international affiliate</strong>, the chapter doesn't need to invent its own structure — it simply instantiates the same 7-division, 21-department triangle. The triangle <em>is</em> the instruction set.</p>
+      <ul>
+        <li><strong>Level 1 — National:</strong> ASH headquarters operates the full 7×3 reactor.</li>
+        <li><strong>Level 2 — Regional:</strong> Each regional chapter mirrors the reactor with localized departments scaled to demand.</li>
+        <li><strong>Level 3 — Affiliate:</strong> International partners adopt the reactor framework, adapting departments to local regulations and culture while preserving structural integrity.</li>
+      </ul>
+      <p>This is the triangle within the triangle within the triangle: the organizational DNA that makes ASH infinitely reproducible without loss of identity or mission coherence.</p>
     </div>
 
     <!-- 5. Services & Offerings -->
@@ -980,8 +1154,9 @@
     <div class="bp-section" id="financials">
       <h2>8. Financial Projections</h2>
 
-      <h3>5-Year Revenue Projection</h3>
-      <table class="bp-table">
+      <h3>10-Year Revenue Projection</h3>
+      <div style="overflow-x:auto;">
+      <table class="bp-table" style="min-width:1100px;">
         <thead>
           <tr>
             <th>Metric</th>
@@ -990,6 +1165,11 @@
             <th>Year 3</th>
             <th>Year 4</th>
             <th>Year 5</th>
+            <th>Year 6</th>
+            <th>Year 7</th>
+            <th>Year 8</th>
+            <th>Year 9</th>
+            <th>Year 10</th>
           </tr>
         </thead>
         <tbody>
@@ -1000,6 +1180,24 @@
             <td>200</td>
             <td>450</td>
             <td>800</td>
+            <td>1,200</td>
+            <td>1,800</td>
+            <td>2,500</td>
+            <td>3,200</td>
+            <td>4,000</td>
+          </tr>
+          <tr>
+            <td>Regional Chapters</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>5</td>
+            <td>8</td>
+            <td>12</td>
+            <td>16</td>
+            <td>20</td>
+            <td>25</td>
           </tr>
           <tr>
             <td>Avg Revenue / Ceremony</td>
@@ -1008,6 +1206,11 @@
             <td>$6,000</td>
             <td>$6,500</td>
             <td>$7,000</td>
+            <td>$7,500</td>
+            <td>$8,000</td>
+            <td>$8,200</td>
+            <td>$8,500</td>
+            <td>$8,800</td>
           </tr>
           <tr>
             <td>Ceremony Revenue</td>
@@ -1016,6 +1219,11 @@
             <td>$1,200,000</td>
             <td>$2,925,000</td>
             <td>$5,600,000</td>
+            <td>$9,000,000</td>
+            <td>$14,400,000</td>
+            <td>$20,500,000</td>
+            <td>$27,200,000</td>
+            <td>$35,200,000</td>
           </tr>
           <tr>
             <td>Documemorial Revenue</td>
@@ -1024,22 +1232,50 @@
             <td>$350,000</td>
             <td>$750,000</td>
             <td>$1,400,000</td>
+            <td>$2,400,000</td>
+            <td>$3,600,000</td>
+            <td>$5,000,000</td>
+            <td>$6,400,000</td>
+            <td>$8,000,000</td>
           </tr>
           <tr>
-            <td>Sponsorships & Donations</td>
+            <td>Sponsorships &amp; Donations</td>
             <td>$75,000</td>
             <td>$250,000</td>
             <td>$650,000</td>
             <td>$1,000,000</td>
             <td>$1,500,000</td>
+            <td>$2,200,000</td>
+            <td>$3,000,000</td>
+            <td>$3,800,000</td>
+            <td>$4,500,000</td>
+            <td>$5,200,000</td>
+          </tr>
+          <tr>
+            <td>International &amp; Licensing</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>$100,000</td>
+            <td>$300,000</td>
+            <td>$800,000</td>
+            <td>$1,500,000</td>
+            <td>$2,800,000</td>
+            <td>$4,200,000</td>
+            <td>$6,000,000</td>
           </tr>
           <tr>
             <td>Other Revenue</td>
             <td>$25,000</td>
             <td>$100,000</td>
             <td>$950,000</td>
-            <td>$1,325,000</td>
-            <td>$2,000,000</td>
+            <td>$1,225,000</td>
+            <td>$1,700,000</td>
+            <td>$2,100,000</td>
+            <td>$2,500,000</td>
+            <td>$2,900,000</td>
+            <td>$3,200,000</td>
+            <td>$3,600,000</td>
           </tr>
           <tr>
             <td><strong>Total Revenue</strong></td>
@@ -1048,12 +1284,19 @@
             <td><strong>$3,150,000</strong></td>
             <td><strong>$6,000,000</strong></td>
             <td><strong>$10,500,000</strong></td>
+            <td><strong>$16,500,000</strong></td>
+            <td><strong>$25,000,000</strong></td>
+            <td><strong>$35,000,000</strong></td>
+            <td><strong>$45,500,000</strong></td>
+            <td><strong>$58,000,000</strong></td>
           </tr>
         </tbody>
       </table>
+      </div>
 
-      <h3>5-Year Expense Projection</h3>
-      <table class="bp-table">
+      <h3>10-Year Expense Projection</h3>
+      <div style="overflow-x:auto;">
+      <table class="bp-table" style="min-width:1100px;">
         <thead>
           <tr>
             <th>Category</th>
@@ -1062,6 +1305,11 @@
             <th>Year 3</th>
             <th>Year 4</th>
             <th>Year 5</th>
+            <th>Year 6</th>
+            <th>Year 7</th>
+            <th>Year 8</th>
+            <th>Year 9</th>
+            <th>Year 10</th>
           </tr>
         </thead>
         <tbody>
@@ -1072,30 +1320,50 @@
             <td>$800,000</td>
             <td>$1,800,000</td>
             <td>$3,200,000</td>
+            <td>$5,000,000</td>
+            <td>$7,500,000</td>
+            <td>$10,500,000</td>
+            <td>$13,500,000</td>
+            <td>$17,000,000</td>
           </tr>
           <tr>
-            <td>Guild Operations & Ceremonies</td>
+            <td>Guild Operations &amp; Ceremonies</td>
             <td>$60,000</td>
             <td>$200,000</td>
             <td>$600,000</td>
             <td>$1,200,000</td>
             <td>$2,100,000</td>
+            <td>$3,200,000</td>
+            <td>$4,800,000</td>
+            <td>$6,500,000</td>
+            <td>$8,300,000</td>
+            <td>$10,400,000</td>
           </tr>
           <tr>
-            <td>Technology & Platform</td>
+            <td>Technology &amp; Platform</td>
             <td>$40,000</td>
             <td>$100,000</td>
             <td>$250,000</td>
             <td>$400,000</td>
             <td>$600,000</td>
+            <td>$900,000</td>
+            <td>$1,200,000</td>
+            <td>$1,500,000</td>
+            <td>$1,800,000</td>
+            <td>$2,100,000</td>
           </tr>
           <tr>
-            <td>Marketing & Outreach</td>
+            <td>Marketing &amp; Outreach</td>
             <td>$25,000</td>
             <td>$100,000</td>
             <td>$350,000</td>
             <td>$600,000</td>
             <td>$1,000,000</td>
+            <td>$1,500,000</td>
+            <td>$2,200,000</td>
+            <td>$3,000,000</td>
+            <td>$3,800,000</td>
+            <td>$4,500,000</td>
           </tr>
           <tr>
             <td>Documemorial Production</td>
@@ -1104,14 +1372,37 @@
             <td>$250,000</td>
             <td>$500,000</td>
             <td>$900,000</td>
+            <td>$1,500,000</td>
+            <td>$2,300,000</td>
+            <td>$3,200,000</td>
+            <td>$4,100,000</td>
+            <td>$5,200,000</td>
           </tr>
           <tr>
-            <td>Legal & Compliance</td>
+            <td>Regional Chapter Costs</td>
+            <td>—</td>
+            <td>—</td>
+            <td>$50,000</td>
+            <td>$150,000</td>
+            <td>$400,000</td>
+            <td>$800,000</td>
+            <td>$1,400,000</td>
+            <td>$2,000,000</td>
+            <td>$2,800,000</td>
+            <td>$3,500,000</td>
+          </tr>
+          <tr>
+            <td>Legal &amp; Compliance</td>
             <td>$20,000</td>
             <td>$40,000</td>
             <td>$80,000</td>
             <td>$120,000</td>
             <td>$200,000</td>
+            <td>$300,000</td>
+            <td>$420,000</td>
+            <td>$550,000</td>
+            <td>$700,000</td>
+            <td>$850,000</td>
           </tr>
           <tr>
             <td>Insurance</td>
@@ -1120,6 +1411,11 @@
             <td>$80,000</td>
             <td>$150,000</td>
             <td>$250,000</td>
+            <td>$400,000</td>
+            <td>$600,000</td>
+            <td>$800,000</td>
+            <td>$1,000,000</td>
+            <td>$1,250,000</td>
           </tr>
           <tr>
             <td>Administrative / Overhead</td>
@@ -1128,25 +1424,351 @@
             <td>$100,000</td>
             <td>$200,000</td>
             <td>$350,000</td>
+            <td>$500,000</td>
+            <td>$700,000</td>
+            <td>$950,000</td>
+            <td>$1,200,000</td>
+            <td>$1,500,000</td>
           </tr>
           <tr>
             <td><strong>Total Expenses</strong></td>
             <td><strong>$235,000</strong></td>
             <td><strong>$830,000</strong></td>
-            <td><strong>$2,510,000</strong></td>
-            <td><strong>$4,970,000</strong></td>
-            <td><strong>$8,600,000</strong></td>
+            <td><strong>$2,560,000</strong></td>
+            <td><strong>$5,120,000</strong></td>
+            <td><strong>$9,000,000</strong></td>
+            <td><strong>$14,100,000</strong></td>
+            <td><strong>$21,120,000</strong></td>
+            <td><strong>$29,000,000</strong></td>
+            <td><strong>$37,200,000</strong></td>
+            <td><strong>$46,300,000</strong></td>
           </tr>
           <tr>
             <td><strong>Net Surplus/(Deficit)</strong></td>
             <td style="color:#d45050;">($10,000)</td>
             <td style="color:#4caf7d;">$20,000</td>
-            <td style="color:#4caf7d;"><strong>$640,000</strong></td>
-            <td style="color:#4caf7d;"><strong>$1,030,000</strong></td>
-            <td style="color:#4caf7d;"><strong>$1,900,000</strong></td>
+            <td style="color:#4caf7d;"><strong>$590,000</strong></td>
+            <td style="color:#4caf7d;"><strong>$880,000</strong></td>
+            <td style="color:#4caf7d;"><strong>$1,500,000</strong></td>
+            <td style="color:#4caf7d;"><strong>$2,400,000</strong></td>
+            <td style="color:#4caf7d;"><strong>$3,880,000</strong></td>
+            <td style="color:#4caf7d;"><strong>$6,000,000</strong></td>
+            <td style="color:#4caf7d;"><strong>$8,300,000</strong></td>
+            <td style="color:#4caf7d;"><strong>$11,700,000</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Cumulative Surplus</strong></td>
+            <td style="color:#d45050;">($10,000)</td>
+            <td style="color:#4caf7d;">$10,000</td>
+            <td style="color:#4caf7d;">$600,000</td>
+            <td style="color:#4caf7d;">$1,480,000</td>
+            <td style="color:#4caf7d;">$2,980,000</td>
+            <td style="color:#4caf7d;">$5,380,000</td>
+            <td style="color:#4caf7d;">$9,260,000</td>
+            <td style="color:#4caf7d;">$15,260,000</td>
+            <td style="color:#4caf7d;">$23,560,000</td>
+            <td style="color:#4caf7d;"><strong>$35,260,000</strong></td>
           </tr>
         </tbody>
       </table>
+      </div>
+
+      <div class="bp-callout">
+        <p><strong>Reactor-Driven Growth (Years 6–10):</strong> The exponential revenue growth in years 6–10 is a direct product of the Reactor model. Each new regional chapter instantiates a full 7-division triangle, adding capacity without proportional overhead at headquarters. By Year 10, 25 chapters operating the reactor framework produce 4,000 ceremonies annually with $58M total revenue and a 20% net surplus margin — demonstrating the fractal scalability of the ASH organizational DNA.</p>
+      </div>
+
+      <h3>10-Year Scenario Comparison (Three Tables)</h3>
+      <p class="bp-mini-caption">The three scenarios below provide downside, base case, and upside planning ranges for Board-level decision making.</p>
+
+      <div class="bp-grid-3">
+        <div class="bp-scenario-card">
+          <h4>Conservative Case</h4>
+          <table class="bp-table">
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>Year 5</th>
+                <th>Year 10</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ceremonies</td>
+                <td>600</td>
+                <td>2,400</td>
+              </tr>
+              <tr>
+                <td>Total Revenue</td>
+                <td>$7.8M</td>
+                <td>$38.0M</td>
+              </tr>
+              <tr>
+                <td>Total Expenses</td>
+                <td>$7.0M</td>
+                <td>$33.8M</td>
+              </tr>
+              <tr>
+                <td>Net Surplus</td>
+                <td>$0.8M</td>
+                <td>$4.2M</td>
+              </tr>
+              <tr>
+                <td>Net Margin</td>
+                <td>10%</td>
+                <td>11%</td>
+              </tr>
+              <tr>
+                <td>Regional Chapters</td>
+                <td>4</td>
+                <td>15</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bp-scenario-card">
+          <h4>Base Case</h4>
+          <table class="bp-table">
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>Year 5</th>
+                <th>Year 10</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ceremonies</td>
+                <td>800</td>
+                <td>4,000</td>
+              </tr>
+              <tr>
+                <td>Total Revenue</td>
+                <td>$10.5M</td>
+                <td>$58.0M</td>
+              </tr>
+              <tr>
+                <td>Total Expenses</td>
+                <td>$9.0M</td>
+                <td>$46.3M</td>
+              </tr>
+              <tr>
+                <td>Net Surplus</td>
+                <td>$1.5M</td>
+                <td>$11.7M</td>
+              </tr>
+              <tr>
+                <td>Net Margin</td>
+                <td>14%</td>
+                <td>20%</td>
+              </tr>
+              <tr>
+                <td>Regional Chapters</td>
+                <td>5</td>
+                <td>25</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bp-scenario-card">
+          <h4>Aggressive Case</h4>
+          <table class="bp-table">
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>Year 5</th>
+                <th>Year 10</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ceremonies</td>
+                <td>1,000</td>
+                <td>6,000</td>
+              </tr>
+              <tr>
+                <td>Total Revenue</td>
+                <td>$13.8M</td>
+                <td>$82.0M</td>
+              </tr>
+              <tr>
+                <td>Total Expenses</td>
+                <td>$11.2M</td>
+                <td>$62.3M</td>
+              </tr>
+              <tr>
+                <td>Net Surplus</td>
+                <td>$2.6M</td>
+                <td>$19.7M</td>
+              </tr>
+              <tr>
+                <td>Net Margin</td>
+                <td>19%</td>
+                <td>24%</td>
+              </tr>
+              <tr>
+                <td>Regional Chapters</td>
+                <td>7</td>
+                <td>35</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h3>3-Statement Financial Presentation (Base Case)</h3>
+      <p class="bp-mini-caption">Board-format presentation of projected Income Statement, Balance Sheet, and Cash Flow for Year 1, Year 5, and Year 10.</p>
+
+      <h4>Income Statement (Statement of Activities)</h4>
+      <div style="overflow-x:auto;">
+      <table class="bp-table" style="min-width:760px;">
+        <thead>
+          <tr>
+            <th>Line Item</th>
+            <th>Year 1</th>
+            <th>Year 5</th>
+            <th>Year 10</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Total Revenue</td>
+            <td>$225,000</td>
+            <td>$10,500,000</td>
+            <td>$58,000,000</td>
+          </tr>
+          <tr>
+            <td>Total Expenses</td>
+            <td>$235,000</td>
+            <td>$9,000,000</td>
+            <td>$46,300,000</td>
+          </tr>
+          <tr>
+            <td>Operating Surplus/(Deficit)</td>
+            <td style="color:#d45050;">($10,000)</td>
+            <td style="color:#4caf7d;">$1,500,000</td>
+            <td style="color:#4caf7d;">$11,700,000</td>
+          </tr>
+          <tr>
+            <td>Operating Margin</td>
+            <td style="color:#d45050;">-4%</td>
+            <td>14%</td>
+            <td>20%</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h4>Balance Sheet Snapshot</h4>
+      <div style="overflow-x:auto;">
+      <table class="bp-table" style="min-width:760px;">
+        <thead>
+          <tr>
+            <th>Line Item</th>
+            <th>Year 1</th>
+            <th>Year 5</th>
+            <th>Year 10</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cash &amp; Equivalents</td>
+            <td>$65,000</td>
+            <td>$2,100,000</td>
+            <td>$13,000,000</td>
+          </tr>
+          <tr>
+            <td>Other Current Assets</td>
+            <td>$35,000</td>
+            <td>$900,000</td>
+            <td>$3,200,000</td>
+          </tr>
+          <tr>
+            <td>Property &amp; Equipment (Net)</td>
+            <td>$40,000</td>
+            <td>$2,500,000</td>
+            <td>$10,000,000</td>
+          </tr>
+          <tr>
+            <td><strong>Total Assets</strong></td>
+            <td><strong>$140,000</strong></td>
+            <td><strong>$5,500,000</strong></td>
+            <td><strong>$26,200,000</strong></td>
+          </tr>
+          <tr>
+            <td>Current Liabilities</td>
+            <td>$90,000</td>
+            <td>$1,200,000</td>
+            <td>$3,100,000</td>
+          </tr>
+          <tr>
+            <td>Long-Term Liabilities</td>
+            <td>$35,000</td>
+            <td>$1,000,000</td>
+            <td>$2,500,000</td>
+          </tr>
+          <tr>
+            <td><strong>Total Liabilities</strong></td>
+            <td><strong>$125,000</strong></td>
+            <td><strong>$2,200,000</strong></td>
+            <td><strong>$5,600,000</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Net Assets (Unrestricted + Restricted)</strong></td>
+            <td><strong>$15,000</strong></td>
+            <td><strong>$3,300,000</strong></td>
+            <td><strong>$20,600,000</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h4>Cash Flow Summary</h4>
+      <div style="overflow-x:auto;">
+      <table class="bp-table" style="min-width:760px;">
+        <thead>
+          <tr>
+            <th>Line Item</th>
+            <th>Year 1</th>
+            <th>Year 5</th>
+            <th>Year 10</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Net Cash from Operations</td>
+            <td>$5,000</td>
+            <td>$2,050,000</td>
+            <td>$13,500,000</td>
+          </tr>
+          <tr>
+            <td>Net Cash from Investing</td>
+            <td style="color:#d45050;">($40,000)</td>
+            <td style="color:#d45050;">($1,200,000)</td>
+            <td style="color:#d45050;">($5,100,000)</td>
+          </tr>
+          <tr>
+            <td>Net Cash from Financing</td>
+            <td>$100,000</td>
+            <td style="color:#d45050;">($300,000)</td>
+            <td style="color:#d45050;">($900,000)</td>
+          </tr>
+          <tr>
+            <td><strong>Net Change in Cash</strong></td>
+            <td><strong>$65,000</strong></td>
+            <td><strong>$550,000</strong></td>
+            <td><strong>$7,500,000</strong></td>
+          </tr>
+          <tr>
+            <td>Ending Cash Balance</td>
+            <td>$65,000</td>
+            <td>$2,100,000</td>
+            <td>$13,000,000</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
 
       <h3>Startup Funding Requirements</h3>
       <p>ASH is a <strong>bootstrap venture</strong> with initial funding from:</p>
