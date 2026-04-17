@@ -1,0 +1,162 @@
+Delivered-To: nick@voloalto.aero
+Received: by 2002:a17:523:796:b0:654:c816:2ad5 with SMTP id pl22csp7301pvb;
+        Fri, 17 Apr 2026 13:11:34 -0700 (PDT)
+X-Received: by 2002:a05:7022:670a:b0:128:d7b3:6c52 with SMTP id a92af1059eb24-12c73f97761mr803168c88.4.1776456694355;
+        Fri, 17 Apr 2026 13:11:34 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1776456694; cv=none;
+        d=google.com; s=arc-20240605;
+        b=W/BYEi3KbkKDDZLAFhVCVW1NbBkOK3DPNii/yorCRtnTHEOlsmZBV4L1coziu2TlD/
+         dJfurnNuTmTlqVVko7auSJQ3fTOX5e/+DLXaWC6cwWDqMR83gxDndqvgpPmQE0EvTaef
+         H1jBUZrD908jfYE/r81kl5yIHd0OqbudaKCgiFTcvo/7dgHvkigPzYKX5/CwB+X1bznn
+         7R1JsSpg8/HsWDQf26+s5QNokJiwYYMWZgyjIcPHZfDoDRdLVI419qaDASTvBcBVShIb
+         56IyVrpuLdIK/7PR1T+jcpFC4Ayoe29KRlI40+gc2jv7/4tNy+i8jk5CEnyqOuQBLL0t
+         Nn/w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:cc:date:message-id:subject:mime-version:from:dkim-signature;
+        bh=9SWN9bJNN0OBzHYx52Yh/HLZRCGkoP9RgllG4FPltM4=;
+        fh=DiZpiq5cIR9yyqNQPUlVCs5NjyYB+NZIAfGSQ2PWhwM=;
+        b=Ap2WZmk7BlJ9dDXd1Hq/95gScupyxu8+6B4JdNH6AvH369QFZkS8rQYkB/ug80Qmjn
+         e0VM3p577wO7VCjuc1yLbZkFiUWiBnlxcYuLe+5W8eJolZ/r05dThTcSNE1oHl+1XPL5
+         MoZnz6dh0LoJ9De8RSJ5rUVdujU2u45VWlyGH3cF77eURPrUiANNOwyN7C1tiVg6pNtV
+         OkfwPAninG+gZKUQC3Gz2Y/HOZ1LLRuZQgq1mTTg/jr9C4CI55eZz45/DcPK2egjuu+L
+         +VZSiNjMsto89R0E19CM7e+p3br07WC6gZxAy49Xmz2UszchxOPkCvD35ObbxtPEi+1Z
+         v3vQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=L761jokr;
+       spf=pass (google.com: domain of wjlgizmo@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=wjlgizmo@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=neutral header.i=@voloalto.aero
+Return-Path: <wjlgizmo@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a92af1059eb24-12c7ad11b61sor46214c88.2.2026.04.17.13.11.34
+        for <Nick@voloalto.aero>
+        (Google Transport Security);
+        Fri, 17 Apr 2026 13:11:34 -0700 (PDT)
+Received-SPF: pass (google.com: domain of wjlgizmo@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=L761jokr;
+       spf=pass (google.com: domain of wjlgizmo@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=wjlgizmo@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=neutral header.i=@voloalto.aero
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1776456693; x=1777061493; darn=voloalto.aero;
+        h=to:cc:date:message-id:subject:mime-version:from:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=9SWN9bJNN0OBzHYx52Yh/HLZRCGkoP9RgllG4FPltM4=;
+        b=L761jokrFvJA0hJaY2NbCf97Wjur3mp838i1CzlxgWHK7m+SaIJm46776SJveWUJll
+         w4ShpJh3xEHWXyH67o9GdRE8ymE0G/rOs/8lVee3wlqy6tqCiLCxQpU46JM5gMtucYxu
+         rMA1/tKFDSK0S14K4ADjmOkHDJj3f7Rm1pqERGklEZS7r/zkvBBLw843W4meSa6GPmwC
+         HOGymJjPt25lEvNXfYhAb+RoBiot6RoD91tLNdZ8TvwmQdMgqecGI6Azxtry3qq4Nq5d
+         +Vm7WP6TuuybiUoSSedxR/Q8CB/8/RlvWZSXAD8Cnp23uh68Tpe4T2v6SO1yjBJdFnM1
+         ajJQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1776456693; x=1777061493;
+        h=to:cc:date:message-id:subject:mime-version:from:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=9SWN9bJNN0OBzHYx52Yh/HLZRCGkoP9RgllG4FPltM4=;
+        b=gonYWdSvyNKvNA9U8TmF0McxnYeIEvyjYGbu+2Q9GgS1tBJh9M5oDu2FXJAd9vg4lW
+         9QmIBlhHjKtWXVDGJaKr2k9eNXsyQGHy5JIRDvOvvI2kxQWKT8IBlQ9UkUscZeubdFyq
+         QK92skSpQ/8qW97LyzG3CTCDmubSKR3hWP5FrTvsmIlArJLbJX8pqVE3n/LENdPdi3Vv
+         eQq9T3xy4m9vtmFBlHigiiT1DzwggXrTQV7mJ7u86IxfhfI19CNwmC+pyY5u6onuHvRl
+         uSTfKaE+U8KEpBQhu8qOnXzh0QkqR0VvUv5L0mtbAzlQ3XdOVDzuq/Hzn0NzEeAcY0Xu
+         G6Pw==
+X-Gm-Message-State: AOJu0Ywwkk3KowTG1L+JIQBK7sIDTm4cVDXeO4hrySX7mhp7/WURneiC
+	HukM0P+ccVSv+t58QJaLbZO+nFdyGQB64cBbAFClLhIfwjYSY97CvLykItrj2w==
+X-Gm-Gg: AeBDievF7NScApgPUCWRdPzzB0WmUYljDmH9gxibK0Bfn+WefncRBeReoDSrlkuXQHg
+	icPJSlzF07sl6VjzashhTLy22brjWwgzCfusp0s+xSxSL6BqrLwVL7u9CknDZpcZCrFInYHoS+a
+	qd0XKOSyTF7OpCRjLnKiSffQzRFfzHtuCrw9eYuqzEUfQCk+PZAmZTkiZCIy09Y343ZqUfP9BzO
+	PzoKXKVSEXNWjQqzCFvkzh6BLgJpk+4/eq2vO01ZTR5h6gNo9ibh9mv+WdBFZBNhDX2bIWk6XBL
+	WirGLcRVlE4oBBrTFVCGLAAQw9gGuLJUf6crEEgmdCI4T7fSmrc4NFRfYhd9MgfDEM9XVa/fmfu
+	TqXZ+AQPl8ycQ8Gw0ScCuOLQsGVqkz9toqnoQA86SEr1Xq1x3jRWbjI/lOAGpHf+qbiiuPno3nI
+	k5MrXHiVvx7u6CUCaecgf2h+6hk1Bx6XJuJk48yjY5WhIjnK9q9BJj8g0A1ozS
+X-Received: by 2002:a05:7023:b0d:b0:12a:6d05:3938 with SMTP id a92af1059eb24-12c73afc31fmr1504969c88.7.1776456693307;
+        Fri, 17 Apr 2026 13:11:33 -0700 (PDT)
+Return-Path: <wjlgizmo@gmail.com>
+Received: from smtpclient.apple ([2607:fb91:8e32:87bf:7992:f915:7010:8472])
+        by smtp.gmail.com with ESMTPSA id a92af1059eb24-12c749dc86bsm4674083c88.8.2026.04.17.13.11.32
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 17 Apr 2026 13:11:32 -0700 (PDT)
+From: W J LIEBHART <wjlgizmo@gmail.com>
+Content-Type: multipart/alternative;
+	boundary="Apple-Mail=_5210D84A-3A08-4053-BFDA-5DA4FA99F2FE"
+Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3826.200.121\))
+Subject: ASH presentation elements for ash.voloaltro.tech
+Message-Id: <A4A9BA91-E94C-46D5-AEE2-3A957F87B5B3@gmail.com>
+Date: Fri, 17 Apr 2026 13:11:20 -0700
+Cc: Michelle Smith <Micheducator@gmail.com>
+To: Nick@voloalto.aero
+X-Mailer: Apple Mail (2.3826.200.121)
+
+
+--Apple-Mail=_5210D84A-3A08-4053-BFDA-5DA4FA99F2FE
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
+
+Great stuff (understated for first draft)
+Nick=20
+
+Thanx for having me over last evening.  You are a gracious host.  =
+Letting me share the concepts and vision of the Triad of "ASH Reactor=E2=80=
+=9D   The overall OWL elements with the integrated flow of the 7 =
+division 3 department replicating at the A, S, & H=20
+
+Loved the "Cathedral Farewell=E2=80=9D
+
+A lot to unpack covering every aspect of the ASH OWL I will do my =
+best...
+
+Just Pet segment wow! has a huge market cap.
+
+Had meeting/call with Michelle my/our ASH Executive Director.  We had a =
+very big catch up session.  Her meeting briefly planted the seed with =
+her Big Picture guy Steve, who sees favorably the viability scope and =
+magnitude ASH concept.
+
+The images from my presentation outline along with My YouTube links to =
+follow.
+
+
+
+
+
+
+--Apple-Mail=_5210D84A-3A08-4053-BFDA-5DA4FA99F2FE
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=utf-8
+
+<html><head><meta http-equiv=3D"content-type" content=3D"text/html; =
+charset=3Dutf-8"></head><body style=3D"overflow-wrap: break-word; =
+-webkit-nbsp-mode: space; line-break: after-white-space;"><div><span =
+style=3D"font-size: 36px;">Great stuff (understated for first =
+draft)</span></div><div><span style=3D"font-size: =
+36px;">Nick&nbsp;</span></div><div><span style=3D"font-size: =
+36px;"><br></span></div><div><span style=3D"font-size: 36px;">Thanx for =
+having me over last evening. &nbsp;You are a gracious host. =
+&nbsp;Letting me share the concepts and vision of the Triad of "ASH =
+Reactor=E2=80=9D&nbsp;&nbsp; The overall OWL elements with the =
+integrated flow of the 7 division 3 department replicating at the A, S, =
+&amp; H&nbsp;</span></div><div><span style=3D"font-size: =
+36px;"><br></span></div><div><span style=3D"font-size: 36px;">Loved the =
+"Cathedral Farewell=E2=80=9D</span></div><div><span style=3D"font-size: =
+36px;"><br></span></div><div><span style=3D"font-size: 36px;">A lot to =
+unpack covering every aspect of the ASH OWL I will do my =
+best...</span></div><div><span style=3D"font-size: =
+36px;"><br></span></div><div><span style=3D"font-size: 36px;">Just Pet =
+segment wow! has a huge market cap.</span></div><div><span =
+style=3D"font-size: 36px;"><br></span></div><div><span style=3D"font-size:=
+ 36px;">Had meeting/call with Michelle my/our ASH Executive Director. =
+&nbsp;We had a very big catch up session. &nbsp;Her meeting briefly =
+planted the seed with her Big Picture guy Steve, who sees favorably the =
+viability scope and magnitude ASH concept.</span></div><div><span =
+style=3D"font-size: 36px;"><br></span></div><div><span style=3D"font-size:=
+ 36px;">The images from my presentation outline along with My YouTube =
+links to follow.</span></div><div><span style=3D"font-size: =
+36px;"><br></span></div><div><span style=3D"font-size: =
+36px;"><br></span></div><div><span style=3D"font-size: =
+36px;"><br></span></div><div><span style=3D"font-size: =
+36px;"><br></span></div><div><br></div></body></html>=
+
+--Apple-Mail=_5210D84A-3A08-4053-BFDA-5DA4FA99F2FE--

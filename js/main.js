@@ -225,4 +225,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ---- Lightbox for gallery & reactor images ----
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  if (lightbox && lightboxImg) {
+    document.querySelectorAll('.gallery-img, .reactor-img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('active');
+      });
+    });
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+      lightboxImg.src = '';
+    });
+  }
+
 });
