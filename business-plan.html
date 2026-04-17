@@ -126,6 +126,37 @@
     @media (max-width: 768px) {
       .bp-grid-2 { grid-template-columns: 1fr; }
     }
+    /* Triangle diagram styles */
+    .bp-triangle-wrap {
+      text-align: center;
+      margin: 2rem auto;
+    }
+    .bp-triangle-wrap svg {
+      max-width: 100%;
+      height: auto;
+    }
+    .bp-triangle-caption {
+      color: var(--ash-grey);
+      font-size: 0.8rem;
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+    .bp-evolution-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .bp-evolution-stage {
+      text-align: center;
+      flex: 0 0 150px;
+    }
+    .bp-evolution-stage p {
+      font-size: 0.75rem;
+      color: var(--ash-grey);
+      margin-top: 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -212,6 +243,38 @@
       </div>
 
       <h3>Key Differentiators</h3>
+
+      <!-- Executive Summary Triangle -->
+      <div class="bp-triangle-wrap">
+        <svg viewBox="0 0 500 320" xmlns="http://www.w3.org/2000/svg" style="max-width:460px;">
+          <!-- Main triangle (vertex down) -->
+          <polygon points="60,40 440,40 250,280" fill="none" stroke="#c8a84e" stroke-width="2.5" stroke-linejoin="round"/>
+          <!-- Circumscribed circle -->
+          <circle cx="250" cy="130" r="142" fill="none" stroke="#c8a84e" stroke-width="0.8" opacity="0.2"/>
+          <!-- Vertex circles -->
+          <circle cx="60" cy="40" r="26" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1.5"/>
+          <circle cx="440" cy="40" r="26" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1.5"/>
+          <circle cx="250" cy="280" r="26" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1.5"/>
+          <!-- Vertex letters -->
+          <text x="52" y="46" fill="#c8a84e" font-size="20" font-family="Georgia" font-weight="bold">A</text>
+          <text x="432" y="46" fill="#c8a84e" font-size="20" font-family="Georgia" font-weight="bold">H</text>
+          <text x="243" y="286" fill="#c8a84e" font-size="20" font-family="Georgia" font-weight="bold">S</text>
+          <!-- Division labels -->
+          <text x="18" y="75" fill="#b8bbbe" font-size="10" font-family="Montserrat">App &amp; Platform</text>
+          <text x="395" y="75" fill="#b8bbbe" font-size="10" font-family="Montserrat">Hub &amp; Guild</text>
+          <text x="215" y="315" fill="#b8bbbe" font-size="10" font-family="Montserrat">Special Events</text>
+          <!-- Center owl icon -->
+          <circle cx="250" cy="110" r="14" fill="none" stroke="#c8a84e" stroke-width="1" opacity="0.4"/>
+          <circle cx="243" cy="107" r="3" fill="#c8a84e" opacity="0.6"/>
+          <circle cx="257" cy="107" r="3" fill="#c8a84e" opacity="0.6"/>
+          <polygon points="247,113 253,113 250,118" fill="#c8a84e" opacity="0.4"/>
+          <!-- Edge descriptions -->
+          <text x="175" y="28" fill="#b8bbbe" font-size="9" font-family="Montserrat" text-anchor="middle" opacity="0.6">Technology ↔ Operations</text>
+          <text x="380" y="185" fill="#b8bbbe" font-size="9" font-family="Montserrat" opacity="0.6" transform="rotate(52,380,185)">Guild → Events</text>
+          <text x="118" y="200" fill="#b8bbbe" font-size="9" font-family="Montserrat" opacity="0.6" transform="rotate(-52,118,200)">Events → App</text>
+        </svg>
+        <p class="bp-triangle-caption">The ASH Isosceles Triangle — vertex-down, A top-left, H top-right, S bottom</p>
+      </div>
       <ul>
         <li><strong>501(c)(3) Nonprofit Status:</strong> Mission-driven, donor-supported, tax-deductible contributions.</li>
         <li><strong>The ASH Guild:</strong> A certified network of skydivers (wingsuit, freefly, belly, angle, BASE) and pilots trained on proprietary dispersal systems.</li>
@@ -255,6 +318,41 @@
 
       <h3>The Owl Motif</h3>
       <p>The owl — a symbol of wisdom, guardianship, and spiritual transition across nearly every culture — serves as ASH's central motif. The owl's triangular face represents the three pillars of the organization:</p>
+
+      <!-- Owl Motif Triangle -->
+      <div class="bp-triangle-wrap">
+        <svg viewBox="0 0 440 400" xmlns="http://www.w3.org/2000/svg" style="max-width:400px;">
+          <!-- Main triangle (vertex down) -->
+          <polygon points="50,60 390,60 220,340" fill="none" stroke="#c8a84e" stroke-width="2.5" stroke-linejoin="round"/>
+          <!-- Circumscribed circle -->
+          <circle cx="220" cy="160" r="165" fill="none" stroke="#c8a84e" stroke-width="1" opacity="0.2"/>
+          <!-- Eyes -->
+          <circle cx="160" cy="120" r="22" fill="none" stroke="#c8a84e" stroke-width="1.5"/>
+          <circle cx="160" cy="120" r="10" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1"/>
+          <circle cx="160" cy="120" r="5" fill="#c8a84e"/>
+          <circle cx="280" cy="120" r="22" fill="none" stroke="#c8a84e" stroke-width="1.5"/>
+          <circle cx="280" cy="120" r="10" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1"/>
+          <circle cx="280" cy="120" r="5" fill="#c8a84e"/>
+          <!-- Eyebrows -->
+          <path d="M95,58 Q128,38 160,52" fill="none" stroke="#c8a84e" stroke-width="2" stroke-linecap="round"/>
+          <path d="M345,58 Q312,38 280,52" fill="none" stroke="#c8a84e" stroke-width="2" stroke-linecap="round"/>
+          <text x="85" y="45" fill="#c8a84e" font-size="13" font-family="Georgia" opacity="0.7">IT</text>
+          <text x="340" y="45" fill="#c8a84e" font-size="13" font-family="Georgia" opacity="0.7">IP</text>
+          <!-- Beak -->
+          <polygon points="210,155 230,155 220,175" fill="rgba(200,168,78,0.25)" stroke="#c8a84e" stroke-width="1"/>
+          <!-- Vertex labels -->
+          <text x="14" y="55" fill="#c8a84e" font-size="22" font-family="Georgia" font-weight="bold">A</text>
+          <text x="396" y="55" fill="#c8a84e" font-size="22" font-family="Georgia" font-weight="bold">H</text>
+          <text x="210" y="370" fill="#c8a84e" font-size="22" font-family="Georgia" font-weight="bold">S</text>
+          <!-- Sublabels -->
+          <text x="10" y="78" fill="#b8bbbe" font-size="10" font-family="Montserrat">App &amp; Platform</text>
+          <text x="370" y="78" fill="#b8bbbe" font-size="10" font-family="Montserrat">Hub &amp; Guild</text>
+          <text x="194" y="390" fill="#b8bbbe" font-size="10" font-family="Montserrat">Special Events</text>
+          <!-- Chin: Affiliates -->
+          <text x="170" y="395" fill="#c8a84e" font-size="10" font-family="Montserrat" opacity="0.5">AFFILIATES</text>
+        </svg>
+        <p class="bp-triangle-caption">The Owl: IT (left eyebrow), IP (right eyebrow), Affiliates (chin below S)</p>
+      </div>
       <ul>
         <li><strong>A (Top Left):</strong> The App & Digital Platform</li>
         <li><strong>H (Top Right):</strong> The Hub & Guild (Operations)</li>
@@ -372,6 +470,54 @@
       <h3>The Owl Framework</h3>
       <p>ASH operates as a parent organization with three semi-autonomous divisions, each led by its own director, all reporting to the ASH Executive Director. The structure mirrors the owl motif:</p>
 
+      <!-- Owl Framework Triangle -->
+      <div class="bp-triangle-wrap">
+        <svg viewBox="0 0 540 430" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;">
+          <!-- Main triangle (vertex down) -->
+          <polygon points="70,60 470,60 270,370" fill="none" stroke="#c8a84e" stroke-width="2.5" stroke-linejoin="round"/>
+          <!-- Circumscribed circle -->
+          <circle cx="270" cy="175" r="185" fill="none" stroke="#c8a84e" stroke-width="0.8" opacity="0.2"/>
+          <!-- Midpoint inner triangle (dashed) -->
+          <line x1="170" y1="215" x2="370" y2="215" stroke="#c8a84e" stroke-width="1" opacity="0.3" stroke-dasharray="5,4"/>
+          <line x1="270" y1="60" x2="370" y2="215" stroke="#c8a84e" stroke-width="1" opacity="0.3" stroke-dasharray="5,4"/>
+          <line x1="270" y1="60" x2="170" y2="215" stroke="#c8a84e" stroke-width="1" opacity="0.3" stroke-dasharray="5,4"/>
+          <!-- Eyes -->
+          <circle cx="195" cy="120" r="24" fill="none" stroke="#c8a84e" stroke-width="1.5"/>
+          <circle cx="195" cy="120" r="10" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="0.8"/>
+          <circle cx="195" cy="120" r="5" fill="#c8a84e"/>
+          <circle cx="345" cy="120" r="24" fill="none" stroke="#c8a84e" stroke-width="1.5"/>
+          <circle cx="345" cy="120" r="10" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="0.8"/>
+          <circle cx="345" cy="120" r="5" fill="#c8a84e"/>
+          <!-- Eyebrows with labels -->
+          <path d="M110,58 Q152,32 195,50" fill="none" stroke="#c8a84e" stroke-width="2" stroke-linecap="round"/>
+          <path d="M430,58 Q388,32 345,50" fill="none" stroke="#c8a84e" stroke-width="2" stroke-linecap="round"/>
+          <text x="92" y="42" fill="#c8a84e" font-size="12" font-family="Georgia" font-weight="bold">IT</text>
+          <text x="430" y="42" fill="#c8a84e" font-size="12" font-family="Georgia" font-weight="bold">IP</text>
+          <text x="72" y="55" fill="#b8bbbe" font-size="8" font-family="Montserrat">Info Tech</text>
+          <text x="428" y="55" fill="#b8bbbe" font-size="8" font-family="Montserrat">Intell. Prop.</text>
+          <!-- Beak -->
+          <polygon points="260,165 280,165 270,185" fill="rgba(200,168,78,0.25)" stroke="#c8a84e" stroke-width="1"/>
+          <!-- Vertex labels & roles -->
+          <text x="25" y="55" fill="#c8a84e" font-size="20" font-family="Georgia" font-weight="bold">A</text>
+          <text x="476" y="55" fill="#c8a84e" font-size="20" font-family="Georgia" font-weight="bold">H</text>
+          <text x="262" y="400" fill="#c8a84e" font-size="20" font-family="Georgia" font-weight="bold">S</text>
+          <text x="8" y="78" fill="#b8bbbe" font-size="9" font-family="Montserrat">Dir. of Technology</text>
+          <text x="445" y="78" fill="#b8bbbe" font-size="9" font-family="Montserrat">Dir. of Operations</text>
+          <text x="222" y="418" fill="#b8bbbe" font-size="9" font-family="Montserrat">Dir. of Special Events</text>
+          <!-- Wings (left and right) -->
+          <path d="M70,60 Q20,100 30,170" fill="none" stroke="#c8a84e" stroke-width="1.5" opacity="0.4" stroke-dasharray="6,3"/>
+          <path d="M470,60 Q520,100 510,170" fill="none" stroke="#c8a84e" stroke-width="1.5" opacity="0.4" stroke-dasharray="6,3"/>
+          <text x="2" y="185" fill="#c8a84e" font-size="9" font-family="Montserrat" opacity="0.5">PATRONS</text>
+          <text x="480" y="185" fill="#c8a84e" font-size="9" font-family="Montserrat" opacity="0.5">SPONSORS</text>
+          <!-- Chin: Affiliates -->
+          <text x="215" y="428" fill="#c8a84e" font-size="10" font-family="Montserrat" opacity="0.5">AFFILIATES</text>
+          <!-- Center label -->
+          <text x="240" y="250" fill="#c8a84e" font-size="11" font-family="Georgia" opacity="0.5">Exec Dir.</text>
+          <text x="252" y="265" fill="#c8a84e" font-size="11" font-family="Georgia" opacity="0.5">/ CEO</text>
+        </svg>
+        <p class="bp-triangle-caption">Complete Owl Framework — Divisions, support functions, and growth elements</p>
+      </div>
+
       <table class="bp-table">
         <thead>
           <tr>
@@ -435,6 +581,40 @@
 
       <h3>Inter-Division Relationships (Lune Model)</h3>
       <p>Each division's triangle is inscribed within a circle. The two "lunes" (crescent-shaped areas between the triangle and circle) represent the other two divisions. This ensures every division inherently connects to and serves the other two:</p>
+
+      <!-- Lune Model Diagram -->
+      <div class="bp-triangle-wrap">
+        <svg viewBox="0 0 500 340" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;">
+          <!-- Main triangle (vertex down) -->
+          <polygon points="60,40 440,40 250,280" fill="none" stroke="#c8a84e" stroke-width="2.5" stroke-linejoin="round"/>
+          <!-- Circumscribed circle -->
+          <circle cx="250" cy="130" r="145" fill="none" stroke="#c8a84e" stroke-width="1" opacity="0.25"/>
+          <!-- Lune overlays — ellipses representing each division's influence zone -->
+          <ellipse cx="155" cy="160" rx="80" ry="100" fill="none" stroke="#c8a84e" stroke-width="1" opacity="0.2" transform="rotate(-15,155,160)"/>
+          <ellipse cx="345" cy="160" rx="80" ry="100" fill="none" stroke="#c8a84e" stroke-width="1" opacity="0.2" transform="rotate(15,345,160)"/>
+          <ellipse cx="250" cy="225" rx="100" ry="65" fill="none" stroke="#c8a84e" stroke-width="1" opacity="0.2"/>
+          <!-- Vertex circles -->
+          <circle cx="60" cy="40" r="22" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1.5"/>
+          <circle cx="440" cy="40" r="22" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1.5"/>
+          <circle cx="250" cy="280" r="22" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1.5"/>
+          <!-- Vertex letters -->
+          <text x="52" y="46" fill="#c8a84e" font-size="18" font-family="Georgia" font-weight="bold">A</text>
+          <text x="432" y="46" fill="#c8a84e" font-size="18" font-family="Georgia" font-weight="bold">H</text>
+          <text x="243" y="286" fill="#c8a84e" font-size="18" font-family="Georgia" font-weight="bold">S</text>
+          <!-- Lune labels inside crescent areas -->
+          <text x="115" y="120" fill="#b8bbbe" font-size="9" font-family="Montserrat" opacity="0.6">A lune</text>
+          <text x="355" y="120" fill="#b8bbbe" font-size="9" font-family="Montserrat" opacity="0.6">H lune</text>
+          <text x="225" y="255" fill="#b8bbbe" font-size="9" font-family="Montserrat" opacity="0.6">S lune</text>
+          <!-- Center -->
+          <text x="218" y="155" fill="#c8a84e" font-size="10" font-family="Georgia" opacity="0.6">Shared</text>
+          <text x="220" y="170" fill="#c8a84e" font-size="10" font-family="Georgia" opacity="0.6">Mission</text>
+          <!-- Arrows showing interconnection -->
+          <path d="M110,75 C160,55 200,55 250,75" fill="none" stroke="#c8a84e" stroke-width="1" opacity="0.4" marker-end="url(#arrow)"/>
+          <path d="M390,75 C340,55 300,55 250,75" fill="none" stroke="#c8a84e" stroke-width="1" opacity="0.4"/>
+          <defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#c8a84e" opacity="0.5"/></marker></defs>
+        </svg>
+        <p class="bp-triangle-caption">Lune Model — Each division's circle overlaps, creating shared crescent zones of collaboration</p>
+      </div>
       <ul>
         <li><strong>A Division:</strong> Driven by App/Tech. Lunes: S (Special Events) and H (Hub/Guild).</li>
         <li><strong>H Division:</strong> Driven by Operations/Guild. Lunes: A (App) and S (Special Events).</li>
@@ -466,6 +646,35 @@
       <h2>5. Services & Offerings</h2>
 
       <h3>Core Ceremony Types</h3>
+
+      <!-- Services Triangle -->
+      <div class="bp-triangle-wrap">
+        <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" style="max-width:460px;">
+          <!-- Main triangle (vertex down) -->
+          <polygon points="60,35 440,35 250,260" fill="none" stroke="#c8a84e" stroke-width="2" stroke-linejoin="round"/>
+          <!-- Vertex circles & labels -->
+          <circle cx="60" cy="35" r="22" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1.5"/>
+          <text x="52" y="41" fill="#c8a84e" font-size="18" font-family="Georgia" font-weight="bold">A</text>
+          <circle cx="440" cy="35" r="22" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1.5"/>
+          <text x="432" y="41" fill="#c8a84e" font-size="18" font-family="Georgia" font-weight="bold">H</text>
+          <circle cx="250" cy="260" r="22" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1.5"/>
+          <text x="243" y="266" fill="#c8a84e" font-size="18" font-family="Georgia" font-weight="bold">S</text>
+          <!-- A: Platform services -->
+          <text x="15" y="70" fill="#b8bbbe" font-size="8.5" font-family="Montserrat">• Wish Registry</text>
+          <text x="15" y="84" fill="#b8bbbe" font-size="8.5" font-family="Montserrat">• Live Streaming</text>
+          <text x="15" y="98" fill="#b8bbbe" font-size="8.5" font-family="Montserrat">• Documemorial CMS</text>
+          <text x="15" y="112" fill="#b8bbbe" font-size="8.5" font-family="Montserrat">• Digital Memorials</text>
+          <!-- H: Guild services -->
+          <text x="370" y="70" fill="#b8bbbe" font-size="8.5" font-family="Montserrat">• Skydiving</text>
+          <text x="370" y="84" fill="#b8bbbe" font-size="8.5" font-family="Montserrat">• Helicopter</text>
+          <text x="370" y="98" fill="#b8bbbe" font-size="8.5" font-family="Montserrat">• Hot Air Balloon</text>
+          <text x="370" y="112" fill="#b8bbbe" font-size="8.5" font-family="Montserrat">• Airplane / Glider</text>
+          <text x="370" y="126" fill="#b8bbbe" font-size="8.5" font-family="Montserrat">• BASE Jump</text>
+          <!-- S: Special Events -->
+          <text x="150" y="290" fill="#b8bbbe" font-size="8.5" font-family="Montserrat">• International Expeditions  • Celebrity/Corporate  • Pet Memorials</text>
+        </svg>
+        <p class="bp-triangle-caption">Services mapped to their managing division</p>
+      </div>
       <table class="bp-table">
         <thead>
           <tr>
@@ -563,6 +772,56 @@
 
       <p>Each of ASH's three divisions — and the parent ASH organization itself — operates on a rigorous 7-step looping process. The steps are mapped to the edges of the isosceles triangle:</p>
 
+      <!-- 7-Step Process Triangle -->
+      <div class="bp-triangle-wrap">
+        <svg viewBox="0 0 520 400" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;">
+          <!-- Main triangle (vertex down) -->
+          <polygon points="70,50 450,50 260,350" fill="none" stroke="#c8a84e" stroke-width="2.5" stroke-linejoin="round"/>
+          <!-- Vertex circles -->
+          <circle cx="70" cy="50" r="24" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1.5"/>
+          <circle cx="450" cy="50" r="24" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1.5"/>
+          <circle cx="260" cy="350" r="24" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1.5"/>
+          <!-- Vertex letters -->
+          <text x="62" y="56" fill="#c8a84e" font-size="20" font-family="Georgia" font-weight="bold">A</text>
+          <text x="442" y="56" fill="#c8a84e" font-size="20" font-family="Georgia" font-weight="bold">H</text>
+          <text x="252" y="356" fill="#c8a84e" font-size="20" font-family="Georgia" font-weight="bold">S</text>
+          <!-- EDGE A→H (top, Steps 1-2-3) -->
+          <text x="260" y="35" fill="#c8a84e" font-size="11" font-family="Montserrat" font-weight="600" text-anchor="middle">Steps 1 – 2 – 3</text>
+          <!-- Step dots on top edge -->
+          <circle cx="165" cy="50" r="14" fill="rgba(200,168,78,0.12)" stroke="#c8a84e" stroke-width="1"/>
+          <text x="160" y="54" fill="#c8a84e" font-size="11" font-family="Georgia" font-weight="bold">1</text>
+          <text x="130" y="80" fill="#b8bbbe" font-size="9" font-family="Montserrat">Define</text>
+          <circle cx="260" cy="50" r="14" fill="rgba(200,168,78,0.12)" stroke="#c8a84e" stroke-width="1"/>
+          <text x="255" y="54" fill="#c8a84e" font-size="11" font-family="Georgia" font-weight="bold">2</text>
+          <text x="225" y="80" fill="#b8bbbe" font-size="9" font-family="Montserrat">Uncover</text>
+          <circle cx="355" cy="50" r="14" fill="rgba(200,168,78,0.12)" stroke="#c8a84e" stroke-width="1"/>
+          <text x="350" y="54" fill="#c8a84e" font-size="11" font-family="Georgia" font-weight="bold">3</text>
+          <text x="320" y="80" fill="#b8bbbe" font-size="9" font-family="Montserrat">Measure</text>
+          <!-- EDGE H→S (right, Steps 4-5) -->
+          <text x="410" y="175" fill="#c8a84e" font-size="11" font-family="Montserrat" font-weight="600" transform="rotate(57,410,175)">Steps 4 – 5</text>
+          <!-- Step dots on right edge -->
+          <circle cx="393" cy="145" r="14" fill="rgba(200,168,78,0.12)" stroke="#c8a84e" stroke-width="1"/>
+          <text x="388" y="149" fill="#c8a84e" font-size="11" font-family="Georgia" font-weight="bold">4</text>
+          <text x="415" y="140" fill="#b8bbbe" font-size="9" font-family="Montserrat">Analyze</text>
+          <circle cx="345" cy="230" r="14" fill="rgba(200,168,78,0.12)" stroke="#c8a84e" stroke-width="1"/>
+          <text x="340" y="234" fill="#c8a84e" font-size="11" font-family="Georgia" font-weight="bold">5</text>
+          <text x="365" y="228" fill="#b8bbbe" font-size="9" font-family="Montserrat">Act</text>
+          <!-- EDGE S→A (left, Steps 6-7) -->
+          <text x="105" y="260" fill="#c8a84e" font-size="11" font-family="Montserrat" font-weight="600" transform="rotate(-57,105,260)">Steps 6 – 7</text>
+          <!-- Step dots on left edge -->
+          <circle cx="175" cy="230" r="14" fill="rgba(200,168,78,0.12)" stroke="#c8a84e" stroke-width="1"/>
+          <text x="170" y="234" fill="#c8a84e" font-size="11" font-family="Georgia" font-weight="bold">6</text>
+          <text x="125" y="225" fill="#b8bbbe" font-size="9" font-family="Montserrat">Control</text>
+          <circle cx="127" cy="145" r="14" fill="rgba(200,168,78,0.12)" stroke="#c8a84e" stroke-width="1"/>
+          <text x="122" y="149" fill="#c8a84e" font-size="11" font-family="Georgia" font-weight="bold">7</text>
+          <text x="75" y="140" fill="#b8bbbe" font-size="9" font-family="Montserrat">Monitor</text>
+          <!-- Loop arrow in center -->
+          <path d="M245,170 C270,140 290,145 275,175 C265,195 240,195 235,175 Z" fill="none" stroke="#c8a84e" stroke-width="1.2" opacity="0.4"/>
+          <text x="238" y="210" fill="#c8a84e" font-size="9" font-family="Montserrat" opacity="0.6">LOOP</text>
+        </svg>
+        <p class="bp-triangle-caption">7-Step Continuous Improvement Process mapped to the triangle edges</p>
+      </div>
+
       <div class="bp-callout">
         <p><strong>Edge A→H (Steps 1-3):</strong> Define, Uncover, Measure<br>
         <strong>Edge H→S (Steps 4-5):</strong> Analyze, Act<br>
@@ -612,6 +871,37 @@
       <p>As a 501(c)(3) nonprofit, ASH generates revenue through program services, donations, sponsorships, and grants — not investor returns. All surplus is reinvested into the mission.</p>
 
       <h3>Revenue Streams</h3>
+
+      <!-- Revenue Triangle -->
+      <div class="bp-triangle-wrap">
+        <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" style="max-width:460px;">
+          <!-- Main triangle (vertex down) -->
+          <polygon points="60,35 440,35 250,260" fill="none" stroke="#c8a84e" stroke-width="2" stroke-linejoin="round"/>
+          <!-- Vertex circles & labels -->
+          <circle cx="60" cy="35" r="22" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1.5"/>
+          <text x="52" y="41" fill="#c8a84e" font-size="18" font-family="Georgia" font-weight="bold">A</text>
+          <circle cx="440" cy="35" r="22" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1.5"/>
+          <text x="432" y="41" fill="#c8a84e" font-size="18" font-family="Georgia" font-weight="bold">H</text>
+          <circle cx="250" cy="260" r="22" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1.5"/>
+          <text x="243" y="266" fill="#c8a84e" font-size="18" font-family="Georgia" font-weight="bold">S</text>
+          <!-- A: Platform revenue -->
+          <text x="10" y="68" fill="#b8bbbe" font-size="8.5" font-family="Montserrat">• Memberships $150K</text>
+          <text x="10" y="82" fill="#b8bbbe" font-size="8.5" font-family="Montserrat">• Documemorial Pkgs $350K</text>
+          <text x="10" y="96" fill="#b8bbbe" font-size="8.5" font-family="Montserrat">• Affiliate Fees $120K</text>
+          <!-- H: Operations revenue -->
+          <text x="365" y="68" fill="#b8bbbe" font-size="8.5" font-family="Montserrat">• Ceremony Fees $1.2M</text>
+          <text x="365" y="82" fill="#b8bbbe" font-size="8.5" font-family="Montserrat">• Dispersal Vessels $180K</text>
+          <!-- S: Special Events revenue -->
+          <text x="205" y="290" fill="#b8bbbe" font-size="8.5" font-family="Montserrat">• Special Events $500K</text>
+          <!-- Shared revenue in center -->
+          <text x="195" y="145" fill="#c8a84e" font-size="9" font-family="Montserrat" opacity="0.6">Sponsors $300K</text>
+          <text x="195" y="160" fill="#c8a84e" font-size="9" font-family="Montserrat" opacity="0.6">Donations $200K</text>
+          <text x="200" y="175" fill="#c8a84e" font-size="9" font-family="Montserrat" opacity="0.6">Grants $150K</text>
+          <!-- Year 3 total -->
+          <text x="195" y="200" fill="#c8a84e" font-size="12" font-family="Georgia" font-weight="bold">Yr 3: $3.15M</text>
+        </svg>
+        <p class="bp-triangle-caption">Year 3 revenue streams by division — shared revenue at center</p>
+      </div>
       <table class="bp-table">
         <thead>
           <tr>
@@ -1136,6 +1426,96 @@
 
       <h3>D. Owl Motif Evolution</h3>
       <p>As ASH grows, the owl motif visually evolves to reflect organizational maturation:</p>
+
+      <!-- Owl Evolution Stages -->
+      <div class="bp-evolution-row">
+        <!-- Stage 1: Triangle only -->
+        <div class="bp-evolution-stage">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="20,20 100,20 60,100" fill="none" stroke="#c8a84e" stroke-width="2" stroke-linejoin="round"/>
+            <text x="12" y="16" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">A</text>
+            <text x="98" y="16" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">H</text>
+            <text x="55" y="115" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">S</text>
+          </svg>
+          <p><strong>Stage 1</strong><br>Triangle Only</p>
+        </div>
+        <!-- Stage 2: Triangle + Eyebrows -->
+        <div class="bp-evolution-stage">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="20,25 100,25 60,105" fill="none" stroke="#c8a84e" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M28,23 Q40,10 52,18" fill="none" stroke="#c8a84e" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M92,23 Q80,10 68,18" fill="none" stroke="#c8a84e" stroke-width="1.5" stroke-linecap="round"/>
+            <text x="24" y="9" fill="#c8a84e" font-size="7" font-family="Georgia">IT</text>
+            <text x="86" y="9" fill="#c8a84e" font-size="7" font-family="Georgia">IP</text>
+            <text x="12" y="22" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">A</text>
+            <text x="98" y="22" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">H</text>
+            <text x="55" y="118" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">S</text>
+          </svg>
+          <p><strong>Stage 2</strong><br>+ Eyebrows (IT/IP)</p>
+        </div>
+        <!-- Stage 3: + Eyes + Beak -->
+        <div class="bp-evolution-stage">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="20,25 100,25 60,105" fill="none" stroke="#c8a84e" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M28,23 Q40,10 52,18" fill="none" stroke="#c8a84e" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M92,23 Q80,10 68,18" fill="none" stroke="#c8a84e" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="45" cy="42" r="8" fill="none" stroke="#c8a84e" stroke-width="1"/>
+            <circle cx="45" cy="42" r="3" fill="#c8a84e"/>
+            <circle cx="75" cy="42" r="8" fill="none" stroke="#c8a84e" stroke-width="1"/>
+            <circle cx="75" cy="42" r="3" fill="#c8a84e"/>
+            <polygon points="56,55 64,55 60,63" fill="rgba(200,168,78,0.3)" stroke="#c8a84e" stroke-width="0.8"/>
+            <text x="12" y="22" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">A</text>
+            <text x="98" y="22" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">H</text>
+            <text x="55" y="118" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">S</text>
+          </svg>
+          <p><strong>Stage 3</strong><br>+ Talons (Chapters)</p>
+        </div>
+        <!-- Stage 4: + Wings -->
+        <div class="bp-evolution-stage">
+          <svg viewBox="0 0 140 120" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="30,25 110,25 70,105" fill="none" stroke="#c8a84e" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M38,23 Q50,10 62,18" fill="none" stroke="#c8a84e" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M102,23 Q90,10 78,18" fill="none" stroke="#c8a84e" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="55" cy="42" r="8" fill="none" stroke="#c8a84e" stroke-width="1"/>
+            <circle cx="55" cy="42" r="3" fill="#c8a84e"/>
+            <circle cx="85" cy="42" r="8" fill="none" stroke="#c8a84e" stroke-width="1"/>
+            <circle cx="85" cy="42" r="3" fill="#c8a84e"/>
+            <polygon points="66,55 74,55 70,63" fill="rgba(200,168,78,0.3)" stroke="#c8a84e" stroke-width="0.8"/>
+            <!-- Wings -->
+            <path d="M30,25 Q5,50 10,90" fill="none" stroke="#c8a84e" stroke-width="1.5" opacity="0.6" stroke-dasharray="4,3"/>
+            <path d="M110,25 Q135,50 130,90" fill="none" stroke="#c8a84e" stroke-width="1.5" opacity="0.6" stroke-dasharray="4,3"/>
+            <text x="22" y="22" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">A</text>
+            <text x="108" y="22" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">H</text>
+            <text x="65" y="118" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">S</text>
+          </svg>
+          <p><strong>Stage 4</strong><br>+ Wings (Sponsors)</p>
+        </div>
+        <!-- Stage 5: Full Owl -->
+        <div class="bp-evolution-stage">
+          <svg viewBox="0 0 140 130" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="30,25 110,25 70,100" fill="none" stroke="#c8a84e" stroke-width="2" stroke-linejoin="round"/>
+            <circle cx="70" cy="55" r="42" fill="none" stroke="#c8a84e" stroke-width="0.8" opacity="0.25"/>
+            <path d="M38,23 Q50,10 62,18" fill="none" stroke="#c8a84e" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M102,23 Q90,10 78,18" fill="none" stroke="#c8a84e" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="55" cy="40" r="9" fill="none" stroke="#c8a84e" stroke-width="1.2"/>
+            <circle cx="55" cy="40" r="4" fill="#c8a84e"/>
+            <circle cx="85" cy="40" r="9" fill="none" stroke="#c8a84e" stroke-width="1.2"/>
+            <circle cx="85" cy="40" r="4" fill="#c8a84e"/>
+            <polygon points="66,53 74,53 70,61" fill="rgba(200,168,78,0.4)" stroke="#c8a84e" stroke-width="0.8"/>
+            <!-- Wings -->
+            <path d="M30,25 Q2,48 8,90" fill="none" stroke="#c8a84e" stroke-width="1.5" opacity="0.6"/>
+            <path d="M110,25 Q138,48 132,90" fill="none" stroke="#c8a84e" stroke-width="1.5" opacity="0.6"/>
+            <!-- Talons -->
+            <line x1="60" y1="100" x2="55" y2="118" stroke="#c8a84e" stroke-width="1.5" opacity="0.6"/>
+            <line x1="70" y1="100" x2="70" y2="120" stroke="#c8a84e" stroke-width="1.5" opacity="0.6"/>
+            <line x1="80" y1="100" x2="85" y2="118" stroke="#c8a84e" stroke-width="1.5" opacity="0.6"/>
+            <text x="22" y="22" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">A</text>
+            <text x="108" y="22" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">H</text>
+            <text x="65" y="98" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">S</text>
+          </svg>
+          <p><strong>Stage 5</strong><br>Full Owl (Global)</p>
+        </div>
+      </div>
       <ol>
         <li><strong>Stage 1 (Launch):</strong> Triangle only — the three pillars (A, H, S)</li>
         <li><strong>Stage 2 (Growth):</strong> Triangle + Eyebrows — IT and IP capabilities established</li>
