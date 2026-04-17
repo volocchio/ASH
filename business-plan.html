@@ -180,6 +180,53 @@
       color: var(--ash-grey);
       margin-top: 0.5rem;
     }
+    .bp-pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .bp-pillar-card {
+      background: rgba(200,168,78,0.04);
+      border: 1px solid rgba(200,168,78,0.16);
+      border-radius: 10px;
+      padding: 1.2rem;
+      height: 100%;
+    }
+    .bp-pillar-letter {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+    .bp-pillar-card h4 {
+      margin-top: 0;
+      margin-bottom: 0.55rem;
+      font-size: 1.1rem;
+    }
+    .bp-pillar-card p {
+      font-size: 0.92rem;
+      margin-bottom: 0.7rem;
+    }
+    .bp-pillar-card ul {
+      margin: 0.6rem 0 0 1.1rem;
+      font-size: 0.88rem;
+    }
+    .bp-pillar-card li {
+      margin-bottom: 0.35rem;
+      line-height: 1.55;
+    }
+    @media (max-width: 768px) {
+      .bp-pillars-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -382,6 +429,65 @@
         <li><strong>S (Bottom):</strong> Special Events (Premium Experiences)</li>
       </ul>
       <p>The owl's eyebrows represent <strong>IT</strong> (left) and <strong>IP</strong> (right) — the technology and intellectual property functions. The chin below the S vertex represents <strong>Affiliates Management</strong>. As ASH grows, the owl motif evolves — adding talons, wings (patrons/sponsors), and a full body — reflecting the organization's maturation.</p>
+
+      <h3>The Three Pillars (A-S-H)</h3>
+      <p>The same structure shown on the public ASH website is also the core operating model in this business plan: three interconnected pillars that each own a distinct mandate while reinforcing the others.</p>
+
+      <div class="bp-triangle-wrap">
+        <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;width:100%;">
+          <polygon points="60,40 440,40 250,270" fill="none" stroke="#c8a84e" stroke-width="2.5" stroke-linejoin="round"/>
+          <circle cx="250" cy="140" r="135" fill="none" stroke="#c8a84e" stroke-width="0.8" opacity="0.2"/>
+          <ellipse cx="155" cy="155" rx="75" ry="90" fill="none" stroke="#c8a84e" stroke-width="0.5" opacity="0.15" transform="rotate(-15,155,155)"/>
+          <ellipse cx="345" cy="155" rx="75" ry="90" fill="none" stroke="#c8a84e" stroke-width="0.5" opacity="0.15" transform="rotate(15,345,155)"/>
+          <ellipse cx="250" cy="220" rx="90" ry="65" fill="none" stroke="#c8a84e" stroke-width="0.5" opacity="0.15"/>
+          <circle cx="60" cy="40" r="28" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1.5"/>
+          <text x="50" y="45" fill="#c8a84e" font-size="20" font-family="Georgia" font-weight="bold">A</text>
+          <text x="22" y="70" fill="#b8bbbe" font-size="9" font-family="Montserrat">App</text>
+          <circle cx="440" cy="40" r="28" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1.5"/>
+          <text x="430" y="45" fill="#c8a84e" font-size="20" font-family="Georgia" font-weight="bold">H</text>
+          <text x="415" y="70" fill="#b8bbbe" font-size="9" font-family="Montserrat">Hub</text>
+          <circle cx="250" cy="270" r="28" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1.5"/>
+          <text x="242" y="275" fill="#c8a84e" font-size="20" font-family="Georgia" font-weight="bold">S</text>
+          <text x="220" y="298" fill="#b8bbbe" font-size="9" font-family="Montserrat">Special</text>
+          <text x="200" y="28" fill="#b8bbbe" font-size="8" font-family="Montserrat" text-anchor="middle" opacity="0.6">Steps 1-2-3 →</text>
+          <text x="380" y="175" fill="#b8bbbe" font-size="8" font-family="Montserrat" opacity="0.6" transform="rotate(52,380,175)">Steps 4-5 →</text>
+          <text x="115" y="195" fill="#b8bbbe" font-size="8" font-family="Montserrat" opacity="0.6" transform="rotate(-52,115,195)">← Steps 6-7</text>
+        </svg>
+        <p class="bp-triangle-caption">ASH Three Pillars model used across brand, operations, and service delivery</p>
+      </div>
+
+      <div class="bp-pillars-grid">
+        <div class="bp-pillar-card">
+          <div class="bp-pillar-letter">A</div>
+          <h4>App & Platform</h4>
+          <p>Digital foundation for planning, coordination, storytelling, and family access.</p>
+          <ul>
+            <li>Final wishes registry and planning workflow</li>
+            <li>Ceremony scheduling and secure family portal</li>
+            <li>Live stream and Documemorial hosting</li>
+          </ul>
+        </div>
+        <div class="bp-pillar-card">
+          <div class="bp-pillar-letter">S</div>
+          <h4>Special Events</h4>
+          <p>Premium domestic and international ceremonies for high-touch, bespoke experiences.</p>
+          <ul>
+            <li>Destination and expedition-based memorial releases</li>
+            <li>VIP concierge planning and family travel coordination</li>
+            <li>Corporate, celebrity, and legacy-centered events</li>
+          </ul>
+        </div>
+        <div class="bp-pillar-card">
+          <div class="bp-pillar-letter">H</div>
+          <h4>Hub & Guild</h4>
+          <p>Operational backbone that recruits, trains, certifies, and deploys aviation talent.</p>
+          <ul>
+            <li>Guild standards, onboarding, and safety governance</li>
+            <li>Logistics, route planning, and ceremony operations</li>
+            <li>Dispersal equipment stewardship and QA</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <!-- 3. Market Analysis -->
