@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASH Business Plan — Ashes Soaring High</title>
+  <meta name="description" content="Comprehensive business plan for ASH International, a 501(c)(3) nonprofit providing aviation-based ash dispersal memorial services.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Business Plan specific styles */
+    .bp-hero {
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 50%, #132d4f 100%);
+      padding-top: 100px;
+    }
+    .bp-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .bp-section {
+      padding: 4rem 0;
+      border-bottom: 1px solid rgba(200,168,78,0.1);
+    }
+    .bp-section:last-child { border-bottom: none; }
+    .bp-section h2 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+    .bp-section h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: var(--gold-light);
+      margin: 2rem 0 1rem;
+    }
+    .bp-section h4 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      color: var(--cream);
+      margin: 1.5rem 0 0.8rem;
+    }
+    .bp-section p {
+      color: var(--ash-light);
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+    .bp-section ul, .bp-section ol {
+      color: var(--ash-light);
+      margin: 1rem 0 1.5rem 1.5rem;
+    }
+    .bp-section li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    .bp-section strong { color: var(--cream); }
+    .bp-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+    }
+    .bp-table th {
+      background: rgba(200,168,78,0.12);
+      color: var(--gold);
+      padding: 0.8rem 1rem;
+      text-align: left;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid rgba(200,168,78,0.3);
+    }
+    .bp-table td {
+      padding: 0.7rem 1rem;
+      color: var(--ash-light);
+      font-size: 0.9rem;
+      border-bottom: 1px solid rgba(200,168,78,0.08);
+    }
+    .bp-table tr:hover td {
+      background: rgba(200,168,78,0.04);
+    }
+    .bp-callout {
+      background: rgba(200,168,78,0.06);
+      border-left: 4px solid var(--gold);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .bp-callout p { margin-bottom: 0; }
+    .bp-toc {
+      background: rgba(200,168,78,0.04);
+      border: 1px solid rgba(200,168,78,0.15);
+      border-radius: 10px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+    .bp-toc h3 { margin-top: 0; }
+    .bp-toc ol { margin-left: 1.5rem; }
+    .bp-toc a { color: var(--gold); }
+    .bp-toc a:hover { color: var(--gold-light); }
+    .bp-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(200,168,78,0.1);
+    }
+    .bp-phase-card {
+      background: rgba(200,168,78,0.05);
+      border: 1px solid rgba(200,168,78,0.15);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+    }
+    .bp-phase-card h4 { margin-top: 0; }
+    .bp-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 768px) {
+      .bp-grid-2 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="height:40px;">
+        <polygon points="20,22 60,22 40,58" fill="none" stroke="#c8a84e" stroke-width="2"/>
+        <circle cx="30" cy="30" r="5" fill="none" stroke="#c8a84e" stroke-width="1"/>
+        <circle cx="30" cy="30" r="2" fill="#c8a84e"/>
+        <circle cx="50" cy="30" r="5" fill="none" stroke="#c8a84e" stroke-width="1"/>
+        <circle cx="50" cy="30" r="2" fill="#c8a84e"/>
+        <polygon points="37,38 43,38 40,44" fill="#c8a84e" opacity="0.7"/>
+      </svg>
+      <div>
+        <span class="nav-logo-text">ASH</span>
+        <span class="nav-logo-tagline">Business Plan</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">← Back to Website</a></li>
+      <li><a href="#executive-summary">Summary</a></li>
+      <li><a href="#market-analysis">Market</a></li>
+      <li><a href="#organization">Organization</a></li>
+      <li><a href="#services-bp">Services</a></li>
+      <li><a href="#financials">Financials</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="bp-hero">
+  <div class="hero-content">
+    <h1 style="font-size:3rem;"><span>ASH</span> Business Plan</h1>
+    <p class="hero-tagline">"Ashes Soaring High — Where Every Farewell Takes Flight"</p>
+    <p class="hero-description">Comprehensive business plan for ASH International, Inc. — a 501(c)(3) nonprofit organization providing aviation-based ash dispersal memorial services worldwide.</p>
+    <p style="color:var(--ash-grey);font-size:0.85rem;margin-top:2rem;">Version 1.0 · April 2026 · Confidential</p>
+  </div>
+</section>
+
+<!-- Business Plan Content -->
+<div class="container" style="padding-top:2rem;padding-bottom:4rem;">
+  <div class="bp-content">
+
+    <!-- Table of Contents -->
+    <div class="bp-toc">
+      <h3>Table of Contents</h3>
+      <ol>
+        <li><a href="#executive-summary">Executive Summary</a></li>
+        <li><a href="#mission-vision">Mission, Vision & Values</a></li>
+        <li><a href="#market-analysis">Market Analysis</a></li>
+        <li><a href="#organization">Organizational Structure</a></li>
+        <li><a href="#services-bp">Services & Offerings</a></li>
+        <li><a href="#process-framework">7-Step Operational Process</a></li>
+        <li><a href="#revenue-model">Revenue Model</a></li>
+        <li><a href="#financials">Financial Projections</a></li>
+        <li><a href="#marketing">Marketing & Growth Strategy</a></li>
+        <li><a href="#technology">Technology Platform</a></li>
+        <li><a href="#legal-compliance">Legal & Regulatory Compliance</a></li>
+        <li><a href="#risk">Risk Analysis & Mitigation</a></li>
+        <li><a href="#roadmap">Implementation Roadmap</a></li>
+        <li><a href="#appendix">Appendix</a></li>
+      </ol>
+    </div>
+
+    <!-- 1. Executive Summary -->
+    <div class="bp-section" id="executive-summary">
+      <h2>1. Executive Summary</h2>
+      
+      <p><strong>ASH International, Inc.</strong> (Ashes Soaring High) is a proposed 501(c)(3) nonprofit organization that provides aviation-based ash dispersal memorial services. We transform the final farewell into an extraordinary, breathtaking experience — through skydiving formations, helicopter ceremonies, hot air balloon releases, hang gliding, paragliding, and international destination expeditions.</p>
+
+      <div class="bp-callout">
+        <p><strong>The Problem:</strong> Cremation has become the preferred end-of-life choice in America, with a 63.4% cremation rate in 2025 (NFDA), projected to reach 82.3% by 2045. Yet 37.1% of cremated remains end up sitting in an urn on a shelf — families struggle to find meaningful, accessible ways to honor their loved ones. The ash-scattering market is fragmented, unprofessional, and lacks a national or international platform.</p>
+      </div>
+
+      <div class="bp-callout">
+        <p><strong>The Solution:</strong> ASH provides a comprehensive, technology-enabled platform that connects families with a professionally trained Guild of skydivers, pilots, and aviators who conduct beautiful, safe, and legally compliant ash dispersal ceremonies. From local balloon releases to international expeditions over Easter Island, ASH makes aviation memorials accessible, affordable (through cost-sharing), and deeply meaningful.</p>
+      </div>
+
+      <h3>Key Differentiators</h3>
+      <ul>
+        <li><strong>501(c)(3) Nonprofit Status:</strong> Mission-driven, donor-supported, tax-deductible contributions.</li>
+        <li><strong>The ASH Guild:</strong> A certified network of skydivers (wingsuit, freefly, belly, angle, BASE) and pilots trained on proprietary dispersal systems.</li>
+        <li><strong>Documemorial™:</strong> Professional documentary + memorial film production with 7-channel social media broadcast and global live streaming.</li>
+        <li><strong>Proprietary Dispersal Vessel:</strong> Handcrafted, personalized containers that become family keepsakes after the ceremony.</li>
+        <li><strong>Technology Platform:</strong> App-based wish registration, ceremony scheduling, live streaming, and digital memorial pages.</li>
+        <li><strong>Cost-Sharing Events:</strong> Shared ceremonies that dramatically reduce individual family costs.</li>
+        <li><strong>Three-Pillar Model (A-S-H):</strong> App, Special Events, and Hub/Guild — each a semi-autonomous organization with dedicated leadership.</li>
+        <li><strong>International Reach:</strong> Destination ceremonies worldwide — Easter Island, Machu Picchu, Galápagos, and any meaningful location on Earth.</li>
+      </ul>
+
+      <h3>Target Market Segments</h3>
+      <ol>
+        <li><strong>Ashes on a Shelf:</strong> Families with cremated remains currently in urns at home, seeking a more meaningful option.</li>
+        <li><strong>Pre-Planning (End of Life):</strong> Individuals approaching end of life who want to arrange their own aviation farewell.</li>
+        <li><strong>Future Wishers:</strong> Healthy individuals recording long-term cremation and dispersal preferences in the ASH app.</li>
+        <li><strong>Pet Memorials:</strong> The $23B+ U.S. pet memorial market — beloved companions deserve extraordinary farewells too.</li>
+        <li><strong>High-Net-Worth / Celebrity:</strong> Special Events division serving HNW individuals, celebrities, corporations (NFL, NBA, Fortune 500).</li>
+      </ol>
+    </div>
+
+    <!-- 2. Mission, Vision & Values -->
+    <div class="bp-section" id="mission-vision">
+      <h2>2. Mission, Vision & Values</h2>
+
+      <h3>Mission</h3>
+      <p>To honor every life with an extraordinary aviation-based farewell — transforming the act of ash scattering into a breathtaking, spiritual celebration that connects families and communities worldwide.</p>
+
+      <h3>Vision</h3>
+      <p>To become the world's premier organization for aviation memorial services — the first name families think of when they envision a farewell that soars. By 2035, ASH will serve 10,000+ ceremonies annually across 50+ countries.</p>
+
+      <h3>Core Values</h3>
+      <ul>
+        <li><strong>Reverence:</strong> Every ceremony is sacred. We treat each life with the dignity, respect, and artistry it deserves.</li>
+        <li><strong>Safety:</strong> No ceremony proceeds without absolute safety compliance. Our Guild adheres to the highest aviation and skydiving standards.</li>
+        <li><strong>Accessibility:</strong> Through cost-sharing, sponsorships, and sliding-scale pricing, no family is turned away for financial reasons.</li>
+        <li><strong>Innovation:</strong> From proprietary dispersal devices to live-streaming Documemorials, we continuously push the boundaries of what's possible.</li>
+        <li><strong>Community:</strong> We build a global network of families, skydivers, pilots, volunteers, sponsors, and affiliates united by a common mission.</li>
+        <li><strong>Transparency:</strong> As a 501(c)(3), we hold ourselves to the highest standards of financial transparency and governance.</li>
+      </ul>
+
+      <h3>The Owl Motif</h3>
+      <p>The owl — a symbol of wisdom, guardianship, and spiritual transition across nearly every culture — serves as ASH's central motif. The owl's triangular face represents the three pillars of the organization:</p>
+      <ul>
+        <li><strong>A (Top Left):</strong> The App & Digital Platform</li>
+        <li><strong>H (Top Right):</strong> The Hub & Guild (Operations)</li>
+        <li><strong>S (Bottom):</strong> Special Events (Premium Experiences)</li>
+      </ul>
+      <p>The owl's eyebrows represent <strong>IT</strong> (left) and <strong>IP</strong> (right) — the technology and intellectual property functions. The chin below the S vertex represents <strong>Affiliates Management</strong>. As ASH grows, the owl motif evolves — adding talons, wings (patrons/sponsors), and a full body — reflecting the organization's maturation.</p>
+    </div>
+
+    <!-- 3. Market Analysis -->
+    <div class="bp-section" id="market-analysis">
+      <h2>3. Market Analysis</h2>
+
+      <h3>Industry Overview</h3>
+      <p>The U.S. funeral services industry generates <strong>$20.6 billion annually</strong> ($16.3B funeral homes + $4.3B crematories/cemeteries), employing over 105,000 people across 15,400+ funeral homes (NFDA, 2025). Cremation has overtaken burial as the dominant choice, fundamentally reshaping the industry.</p>
+
+      <table class="bp-table">
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Value</th>
+            <th>Source</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>U.S. Cremation Rate (2025)</td>
+            <td><strong>63.4%</strong></td>
+            <td>NFDA 2025 Cremation & Burial Report</td>
+          </tr>
+          <tr>
+            <td>U.S. Burial Rate (2025)</td>
+            <td>31.6%</td>
+            <td>NFDA 2025</td>
+          </tr>
+          <tr>
+            <td>Projected Cremation Rate (2045)</td>
+            <td><strong>82.3%</strong></td>
+            <td>NFDA 20-year projection</td>
+          </tr>
+          <tr>
+            <td>Prefer Scattering in Sentimental Place</td>
+            <td><strong>33.5%</strong></td>
+            <td>NFDA Consumer Survey</td>
+          </tr>
+          <tr>
+            <td>Prefer Ashes Kept in Urn at Home</td>
+            <td>37.1%</td>
+            <td>NFDA Consumer Survey</td>
+          </tr>
+          <tr>
+            <td>Interested in Green Funeral Options</td>
+            <td><strong>61.4%</strong></td>
+            <td>NFDA 2025 Consumer Report</td>
+          </tr>
+          <tr>
+            <td>Attended Non-Traditional Funeral</td>
+            <td>58.3%</td>
+            <td>NFDA 2025 Consumer Report</td>
+          </tr>
+          <tr>
+            <td>U.S. Deaths per Year</td>
+            <td>~3.3 million</td>
+            <td>CDC</td>
+          </tr>
+          <tr>
+            <td>Estimated Annual Cremations</td>
+            <td>~2.1 million</td>
+            <td>63.4% × 3.3M</td>
+          </tr>
+          <tr>
+            <td>U.S. Pet Memorial Market</td>
+            <td><strong>$23B+/year</strong></td>
+            <td>Industry estimates</td>
+          </tr>
+          <tr>
+            <td>Average Funeral Cost (with cremation)</td>
+            <td>$6,280</td>
+            <td>NFDA 2023 Price Study</td>
+          </tr>
+          <tr>
+            <td>Average Funeral Cost (with burial)</td>
+            <td>$8,300</td>
+            <td>NFDA 2023 Price Study</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Serviceable Addressable Market (SAM)</h3>
+      <p>Of the ~2.1 million annual U.S. cremations:</p>
+      <ul>
+        <li>33.5% prefer scattering → <strong>~700,000 families/year</strong> seeking scattering options</li>
+        <li>37.1% keep ashes in an urn → <strong>~780,000 households</strong> with ashes "on a shelf" (cumulative millions)</li>
+        <li>Even capturing <strong>0.1%</strong> of the annual scattering market = 700 ceremonies/year</li>
+        <li>At an average ceremony value of <strong>$5,000</strong>, that represents <strong>$3.5M in annual revenue</strong></li>
+      </ul>
+
+      <h3>Competitive Landscape</h3>
+      <p>The aerial ash scattering market is highly fragmented with no dominant national player:</p>
+      <ul>
+        <li><strong>Local charter services:</strong> Small airplane or helicopter companies offering basic flyover scattering. No branding, no Documemorial, no emotional design.</li>
+        <li><strong>Eternal Ascent Society:</strong> Balloon-based ash releases. Regional, limited service options.</li>
+        <li><strong>Various skydiving centers:</strong> Occasional one-off ash jumps, no standardized process, no Guild certification.</li>
+        <li><strong>DIY approaches:</strong> Families attempting their own scattering, often unsure of legality or logistics.</li>
+      </ul>
+      <p><strong>ASH's competitive advantage:</strong> No existing organization offers a comprehensive, branded, technology-enabled, multi-modality platform with a certified Guild, Documemorial production, proprietary dispersal devices, international expedition capability, and 501(c)(3) nonprofit status — all in one place.</p>
+
+      <h3>Social Media & Viral Potential</h3>
+      <p>Aviation ash-scattering videos regularly achieve <strong>millions of views</strong> on YouTube, TikTok, and Instagram. The visual drama of skydivers forming shapes, balloons ascending at sunset, and ashes catching the wind creates inherently shareable, emotionally powerful content. This organic viral potential is a core growth engine for ASH — every Documemorial is a marketing asset.</p>
+    </div>
+
+    <!-- 4. Organizational Structure -->
+    <div class="bp-section" id="organization">
+      <h2>4. Organizational Structure</h2>
+
+      <h3>The Owl Framework</h3>
+      <p>ASH operates as a parent organization with three semi-autonomous divisions, each led by its own director, all reporting to the ASH Executive Director. The structure mirrors the owl motif:</p>
+
+      <table class="bp-table">
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Division</th>
+            <th>Function</th>
+            <th>Leader</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>A</strong> (Top Left)</td>
+            <td>App & Platform</td>
+            <td>Digital platform, wish registry, scheduling, live streaming, Documemorial hosting</td>
+            <td>Director of Technology</td>
+          </tr>
+          <tr>
+            <td><strong>H</strong> (Top Right)</td>
+            <td>Hub & Guild</td>
+            <td>Guild recruitment/training, operations, logistics, dispersal device management</td>
+            <td>Director of Operations</td>
+          </tr>
+          <tr>
+            <td><strong>S</strong> (Bottom)</td>
+            <td>Special Events</td>
+            <td>Premium/international ceremonies, HNW clients, celebrity events, expeditions</td>
+            <td>Director of Special Events</td>
+          </tr>
+          <tr>
+            <td><strong>IT</strong> (Left Eyebrow)</td>
+            <td>Information Technology</td>
+            <td>Infrastructure, security, platform development</td>
+            <td>Reports to Director of Technology</td>
+          </tr>
+          <tr>
+            <td><strong>IP</strong> (Right Eyebrow)</td>
+            <td>Intellectual Property</td>
+            <td>Patents (dispersal device), trademarks, brand protection</td>
+            <td>Legal Counsel</td>
+          </tr>
+          <tr>
+            <td><strong>Chin</strong> (Below S)</td>
+            <td>Affiliates</td>
+            <td>Cremation cos., hospices, funeral homes, angel flight orgs, estate planners</td>
+            <td>Director of Partnerships</td>
+          </tr>
+          <tr>
+            <td><strong>Wings</strong></td>
+            <td>Patrons & Sponsors</td>
+            <td>Individual donors, corporate sponsors, founding partners</td>
+            <td>Director of Development</td>
+          </tr>
+          <tr>
+            <td><strong>ASH (Triangle)</strong></td>
+            <td>Parent Organization</td>
+            <td>Strategy, governance, 501(c)(3) compliance, board management</td>
+            <td>Executive Director / CEO</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Inter-Division Relationships (Lune Model)</h3>
+      <p>Each division's triangle is inscribed within a circle. The two "lunes" (crescent-shaped areas between the triangle and circle) represent the other two divisions. This ensures every division inherently connects to and serves the other two:</p>
+      <ul>
+        <li><strong>A Division:</strong> Driven by App/Tech. Lunes: S (Special Events) and H (Hub/Guild).</li>
+        <li><strong>H Division:</strong> Driven by Operations/Guild. Lunes: A (App) and S (Special Events).</li>
+        <li><strong>S Division:</strong> Driven by Special Events. Lunes: A (App) and H (Hub/Guild).</li>
+      </ul>
+      <p>The driver division is always the <strong>upper lune</strong> in its circumscribed circle, ensuring clarity of ownership while maintaining interconnection.</p>
+
+      <h3>Board of Directors</h3>
+      <p>As a 501(c)(3), ASH will be governed by a Board of Directors with the following composition:</p>
+      <ul>
+        <li>Executive Director (ex-officio)</li>
+        <li>3 Division Directors (ex-officio, non-voting)</li>
+        <li>3-5 Independent Board Members (aviation, nonprofit, finance, legal, marketing expertise)</li>
+        <li>1-2 Family Representatives (past ceremony participants)</li>
+        <li>1 Major Donor Representative</li>
+      </ul>
+
+      <h3>Staffing Model</h3>
+      <p>ASH operates on a <strong>bootstrap volunteer model</strong> initially, transitioning to paid positions as revenue grows:</p>
+      <ul>
+        <li><strong>Phase 1 (Year 1):</strong> All-volunteer executive team + Guild. Stipends for ceremony operations.</li>
+        <li><strong>Phase 2 (Year 2-3):</strong> Paid Executive Director, 2-3 part-time staff, Guild members compensated per-ceremony.</li>
+        <li><strong>Phase 3 (Year 4+):</strong> Full organizational chart with salaried leadership, regional chapter coordinators, and full-time Documemorial production team.</li>
+      </ul>
+    </div>
+
+    <!-- 5. Services & Offerings -->
+    <div class="bp-section" id="services-bp">
+      <h2>5. Services & Offerings</h2>
+
+      <h3>Core Ceremony Types</h3>
+      <table class="bp-table">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Description</th>
+            <th>Price Range</th>
+            <th>Division</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Skydiving Formation</td>
+            <td>Guild skydivers form owl/custom shapes at 10,000-15,000ft, ashes released during formation</td>
+            <td>$5,000 – $15,000</td>
+            <td>H (Guild)</td>
+          </tr>
+          <tr>
+            <td>Helicopter Ceremony</td>
+            <td>Private helicopter flight over chosen landscape, family on board</td>
+            <td>$3,500 – $8,000</td>
+            <td>H (Guild)</td>
+          </tr>
+          <tr>
+            <td>Hot Air Balloon</td>
+            <td>Sunrise/sunset balloon flight, ashes released from basket</td>
+            <td>$2,500 – $5,000</td>
+            <td>H (Guild)</td>
+          </tr>
+          <tr>
+            <td>Airplane Flyover</td>
+            <td>Fixed-wing scattering over meaningful terrain</td>
+            <td>$2,000 – $4,000</td>
+            <td>H (Guild)</td>
+          </tr>
+          <tr>
+            <td>Paraglider / Hang Glider</td>
+            <td>Tandem flight with ashes, intimate and personal</td>
+            <td>$2,500 – $5,000</td>
+            <td>H (Guild)</td>
+          </tr>
+          <tr>
+            <td>BASE Jump Tribute</td>
+            <td>Ashes released from iconic cliffs/structures during BASE jump</td>
+            <td>$5,000 – $10,000</td>
+            <td>H (Guild)</td>
+          </tr>
+          <tr>
+            <td>International Expedition</td>
+            <td>Multi-day destination ceremony (Easter Island, Machu Picchu, etc.)</td>
+            <td>$15,000 – $100,000+</td>
+            <td>S (Special)</td>
+          </tr>
+          <tr>
+            <td>Celebrity / Corporate</td>
+            <td>Large-scale, high-profile memorial events</td>
+            <td>$50,000 – $500,000+</td>
+            <td>S (Special)</td>
+          </tr>
+          <tr>
+            <td>Pet Memorial</td>
+            <td>All modalities available for beloved pets</td>
+            <td>$1,500 – $10,000</td>
+            <td>H/S</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>The Documemorial™</h3>
+      <p>Every ceremony includes or can add the Documemorial package:</p>
+      <ul>
+        <li><strong>Pre-ceremony documentary:</strong> Professional interviews, family footage, life story compilation (10-20 min film)</li>
+        <li><strong>Live stream production:</strong> Multi-camera live broadcast across 7 social media platforms</li>
+        <li><strong>Aerial videography:</strong> 4K drone and helmet-cam footage of the dispersal</li>
+        <li><strong>Post-production edit:</strong> Polished memorial film delivered within 2-4 weeks</li>
+        <li><strong>Permanent digital memorial page:</strong> Hosted on ASH platform with sharing capabilities</li>
+      </ul>
+
+      <h3>The Dispersal Vessel</h3>
+      <ul>
+        <li>Proprietary, patent-pending design engineered for reliable in-flight release</li>
+        <li>Crafted from premium materials (rare woods, artisan metals, crystalline stone, or family-meaningful materials)</li>
+        <li>Engraved with GPS coordinates, date, formation flown, and personal inscription</li>
+        <li>Aerodynamically compatible with all flight platforms (skydive, balloon, helicopter, etc.)</li>
+        <li>Returned to family as a permanent memento after ceremony</li>
+        <li>Optional: matching miniature vessels for extended family members</li>
+      </ul>
+
+      <h3>Cost-Sharing Events</h3>
+      <p>A key innovation: when a high-value ceremony is scheduled (e.g., a celebrity's international expedition), ASH opens additional spots for other families to participate, dramatically reducing per-family costs. This creates a community experience while making premium ceremonies accessible.</p>
+    </div>
+
+    <!-- 6. 7-Step Operational Process -->
+    <div class="bp-section" id="process-framework">
+      <h2>6. The 7-Step Continuous Improvement Process</h2>
+
+      <p>Each of ASH's three divisions — and the parent ASH organization itself — operates on a rigorous 7-step looping process. The steps are mapped to the edges of the isosceles triangle:</p>
+
+      <div class="bp-callout">
+        <p><strong>Edge A→H (Steps 1-3):</strong> Define, Uncover, Measure<br>
+        <strong>Edge H→S (Steps 4-5):</strong> Analyze, Act<br>
+        <strong>Edge S→A (Steps 6-7):</strong> Control, Monitor → Loop restarts</p>
+      </div>
+
+      <div class="bp-phase-card">
+        <h4>Step 1: Define the Process</h4>
+        <p>Map suppliers, inputs, activities, outputs, customers, and boundaries to clearly identify the process scope. For each division, this means documenting every touchpoint from initial family contact through ceremony execution to post-event follow-up.</p>
+      </div>
+
+      <div class="bp-phase-card">
+        <h4>Step 2: Uncover Opportunities</h4>
+        <p>Spot 50-75 improvement areas or problems during mapping, focusing on user-reported issues and their costs. During launch phase, this involves extensive feedback collection from pilot ceremonies and beta users.</p>
+      </div>
+
+      <div class="bp-phase-card">
+        <h4>Step 3: Measure for Success</h4>
+        <p>Create metrics to assess effectiveness, efficiency, responsibility, and customer feedback. KPIs include: family satisfaction scores, ceremony safety record, Documemorial engagement rates, Guild member performance, and revenue per ceremony.</p>
+      </div>
+
+      <div class="bp-phase-card">
+        <h4>Step 4: Analyze the Process</h4>
+        <p>Evaluate task value, time, waste, and customer relationships to pinpoint root causes. Use data from the ASH platform to identify bottlenecks in scheduling, Guild availability, permitting, and family communication.</p>
+      </div>
+
+      <div class="bp-phase-card">
+        <h4>Step 5: Take Effective Action</h4>
+        <p>Implement fixes, solving approximately 50% of identified issues (especially those caused by poor definition) within 90 days. Quick wins are prioritized to build momentum and demonstrate results.</p>
+      </div>
+
+      <div class="bp-phase-card">
+        <h4>Step 6: Establish a State of Control</h4>
+        <p>Add controls like defined value streams, metrics dashboards, feedback mechanisms, and corrective action protocols for operational stability. Standardize Guild training, ceremony protocols, and quality benchmarks.</p>
+      </div>
+
+      <div class="bp-phase-card">
+        <h4>Step 7: Monitor for Effectiveness</h4>
+        <p>Track performance monthly, replacing resolved issues with new challenges. The loop restarts at Step 1 with refined scope and deeper process understanding.</p>
+      </div>
+    </div>
+
+    <!-- 7. Revenue Model -->
+    <div class="bp-section" id="revenue-model">
+      <h2>7. Revenue Model</h2>
+
+      <p>As a 501(c)(3) nonprofit, ASH generates revenue through program services, donations, sponsorships, and grants — not investor returns. All surplus is reinvested into the mission.</p>
+
+      <h3>Revenue Streams</h3>
+      <table class="bp-table">
+        <thead>
+          <tr>
+            <th>Stream</th>
+            <th>Description</th>
+            <th>Year 3 Target</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ceremony Fees</td>
+            <td>Direct revenue from ceremony services (all modalities)</td>
+            <td>$1,200,000</td>
+          </tr>
+          <tr>
+            <td>Documemorial Packages</td>
+            <td>Add-on documentary/film production and live streaming</td>
+            <td>$350,000</td>
+          </tr>
+          <tr>
+            <td>Dispersal Vessels</td>
+            <td>Custom vessel crafting, engraving, premium materials</td>
+            <td>$180,000</td>
+          </tr>
+          <tr>
+            <td>Special Events</td>
+            <td>International expeditions and celebrity/corporate events</td>
+            <td>$500,000</td>
+          </tr>
+          <tr>
+            <td>Membership / Supporters</td>
+            <td>Monthly supporter memberships ($25/month)</td>
+            <td>$150,000</td>
+          </tr>
+          <tr>
+            <td>Sponsorships</td>
+            <td>Corporate wing sponsors and named event sponsorships</td>
+            <td>$300,000</td>
+          </tr>
+          <tr>
+            <td>Individual Donations</td>
+            <td>Feather Patrons and general tax-deductible donations</td>
+            <td>$200,000</td>
+          </tr>
+          <tr>
+            <td>Grants</td>
+            <td>Foundation grants, government grants for end-of-life services</td>
+            <td>$150,000</td>
+          </tr>
+          <tr>
+            <td>Affiliate Referral Fees</td>
+            <td>Revenue share from funeral home / crematory referrals</td>
+            <td>$120,000</td>
+          </tr>
+          <tr>
+            <td><strong>Total Year 3</strong></td>
+            <td></td>
+            <td><strong>$3,150,000</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>501(c)(3) Compliance</h3>
+      <p>All revenue activities are structured to comply with IRS requirements for tax-exempt organizations:</p>
+      <ul>
+        <li>Ceremony services qualify as charitable/educational activities that serve the public good</li>
+        <li>No private inurement — all surplus reinvested in the mission</li>
+        <li>Paid positions are compensated at reasonable, market-rate levels as determined by the Board</li>
+        <li>Unrelated business income (if any) is properly tracked and taxed via Form 990-T</li>
+        <li>Annual Form 990 filing with full public disclosure</li>
+        <li>Independent financial audit beginning Year 2</li>
+      </ul>
+    </div>
+
+    <!-- 8. Financial Projections -->
+    <div class="bp-section" id="financials">
+      <h2>8. Financial Projections</h2>
+
+      <h3>5-Year Revenue Projection</h3>
+      <table class="bp-table">
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Year 1</th>
+            <th>Year 2</th>
+            <th>Year 3</th>
+            <th>Year 4</th>
+            <th>Year 5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ceremonies Performed</td>
+            <td>25</td>
+            <td>80</td>
+            <td>200</td>
+            <td>450</td>
+            <td>800</td>
+          </tr>
+          <tr>
+            <td>Avg Revenue / Ceremony</td>
+            <td>$4,000</td>
+            <td>$5,000</td>
+            <td>$6,000</td>
+            <td>$6,500</td>
+            <td>$7,000</td>
+          </tr>
+          <tr>
+            <td>Ceremony Revenue</td>
+            <td>$100,000</td>
+            <td>$400,000</td>
+            <td>$1,200,000</td>
+            <td>$2,925,000</td>
+            <td>$5,600,000</td>
+          </tr>
+          <tr>
+            <td>Documemorial Revenue</td>
+            <td>$25,000</td>
+            <td>$100,000</td>
+            <td>$350,000</td>
+            <td>$750,000</td>
+            <td>$1,400,000</td>
+          </tr>
+          <tr>
+            <td>Sponsorships & Donations</td>
+            <td>$75,000</td>
+            <td>$250,000</td>
+            <td>$650,000</td>
+            <td>$1,000,000</td>
+            <td>$1,500,000</td>
+          </tr>
+          <tr>
+            <td>Other Revenue</td>
+            <td>$25,000</td>
+            <td>$100,000</td>
+            <td>$950,000</td>
+            <td>$1,325,000</td>
+            <td>$2,000,000</td>
+          </tr>
+          <tr>
+            <td><strong>Total Revenue</strong></td>
+            <td><strong>$225,000</strong></td>
+            <td><strong>$850,000</strong></td>
+            <td><strong>$3,150,000</strong></td>
+            <td><strong>$6,000,000</strong></td>
+            <td><strong>$10,500,000</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>5-Year Expense Projection</h3>
+      <table class="bp-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Year 1</th>
+            <th>Year 2</th>
+            <th>Year 3</th>
+            <th>Year 4</th>
+            <th>Year 5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Personnel (salaries/stipends)</td>
+            <td>$50,000</td>
+            <td>$250,000</td>
+            <td>$800,000</td>
+            <td>$1,800,000</td>
+            <td>$3,200,000</td>
+          </tr>
+          <tr>
+            <td>Guild Operations & Ceremonies</td>
+            <td>$60,000</td>
+            <td>$200,000</td>
+            <td>$600,000</td>
+            <td>$1,200,000</td>
+            <td>$2,100,000</td>
+          </tr>
+          <tr>
+            <td>Technology & Platform</td>
+            <td>$40,000</td>
+            <td>$100,000</td>
+            <td>$250,000</td>
+            <td>$400,000</td>
+            <td>$600,000</td>
+          </tr>
+          <tr>
+            <td>Marketing & Outreach</td>
+            <td>$25,000</td>
+            <td>$100,000</td>
+            <td>$350,000</td>
+            <td>$600,000</td>
+            <td>$1,000,000</td>
+          </tr>
+          <tr>
+            <td>Documemorial Production</td>
+            <td>$15,000</td>
+            <td>$75,000</td>
+            <td>$250,000</td>
+            <td>$500,000</td>
+            <td>$900,000</td>
+          </tr>
+          <tr>
+            <td>Legal & Compliance</td>
+            <td>$20,000</td>
+            <td>$40,000</td>
+            <td>$80,000</td>
+            <td>$120,000</td>
+            <td>$200,000</td>
+          </tr>
+          <tr>
+            <td>Insurance</td>
+            <td>$15,000</td>
+            <td>$35,000</td>
+            <td>$80,000</td>
+            <td>$150,000</td>
+            <td>$250,000</td>
+          </tr>
+          <tr>
+            <td>Administrative / Overhead</td>
+            <td>$10,000</td>
+            <td>$30,000</td>
+            <td>$100,000</td>
+            <td>$200,000</td>
+            <td>$350,000</td>
+          </tr>
+          <tr>
+            <td><strong>Total Expenses</strong></td>
+            <td><strong>$235,000</strong></td>
+            <td><strong>$830,000</strong></td>
+            <td><strong>$2,510,000</strong></td>
+            <td><strong>$4,970,000</strong></td>
+            <td><strong>$8,600,000</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Net Surplus/(Deficit)</strong></td>
+            <td style="color:#d45050;">($10,000)</td>
+            <td style="color:#4caf7d;">$20,000</td>
+            <td style="color:#4caf7d;"><strong>$640,000</strong></td>
+            <td style="color:#4caf7d;"><strong>$1,030,000</strong></td>
+            <td style="color:#4caf7d;"><strong>$1,900,000</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Startup Funding Requirements</h3>
+      <p>ASH is a <strong>bootstrap venture</strong> with initial funding from:</p>
+      <ul>
+        <li><strong>Founding Partner contributions:</strong> $50,000 – $100,000 in seed funding</li>
+        <li><strong>In-kind donations:</strong> Legal services, web development, video production</li>
+        <li><strong>Volunteer labor:</strong> All Year 1 leadership serves as volunteers</li>
+        <li><strong>Early sponsorships:</strong> Targeted outreach to aviation companies, funeral industry partners</li>
+        <li><strong>Grants:</strong> Applications to foundations supporting end-of-life services and innovation</li>
+      </ul>
+      <p><strong>Total seed capital needed: ~$75,000 – $150,000</strong> (primarily for 501(c)(3) filing, insurance, platform MVP, and first 5 pilot ceremonies).</p>
+    </div>
+
+    <!-- 9. Marketing & Growth Strategy -->
+    <div class="bp-section" id="marketing">
+      <h2>9. Marketing & Growth Strategy</h2>
+
+      <h3>Brand Positioning</h3>
+      <p>ASH positions itself as the <strong>premium, trustworthy, mission-driven</strong> choice for aviation memorial services. Not a commercial vendor — a nonprofit movement. The owl motif, gold-and-navy branding, and the Documemorial concept create a distinctive, instantly recognizable brand.</p>
+
+      <h3>Growth Channels</h3>
+      <ol>
+        <li><strong>Viral Documemorial Content:</strong> Every ceremony produces shareable video content. Aviation ash-scattering videos regularly achieve millions of views on YouTube and TikTok. This is our primary organic growth engine.</li>
+        <li><strong>Affiliate Network:</strong> Partnerships with 15,400+ funeral homes, crematories, hospices, and estate planners who refer families directly to ASH.</li>
+        <li><strong>PR & Media:</strong> Human interest stories are irresistible to media. Each international expedition or celebrity ceremony generates press coverage.</li>
+        <li><strong>Social Media:</strong> Active presence on 7 platforms with regular content: ceremony highlights, family stories, Guild member profiles, behind-the-scenes.</li>
+        <li><strong>SEO & Content Marketing:</strong> Comprehensive resource library on cremation, ash scattering laws, memorial planning, and grief support.</li>
+        <li><strong>Community Events:</strong> Open houses at skydiving centers, memorial day events, grief support groups, and public Documemorial screenings.</li>
+        <li><strong>Word of Mouth:</strong> The most powerful channel. Families who experience an ASH ceremony become lifelong advocates.</li>
+        <li><strong>Angel Flight & Volunteer Networks:</strong> Cross-pollination with existing volunteer aviation organizations builds credibility and recruit Guild members.</li>
+      </ol>
+
+      <h3>Year 1 Marketing Budget: $25,000</h3>
+      <ul>
+        <li>Website & SEO: $5,000</li>
+        <li>Social media content production: $8,000</li>
+        <li>PR & media outreach: $5,000</li>
+        <li>Affiliate program setup: $4,000</li>
+        <li>Community events: $3,000</li>
+      </ul>
+    </div>
+
+    <!-- 10. Technology Platform -->
+    <div class="bp-section" id="technology">
+      <h2>10. Technology Platform (The "A" Pillar)</h2>
+
+      <h3>Platform Components</h3>
+      <ul>
+        <li><strong>Public Website:</strong> Brand presence, service information, event listings, testimonials, investor/sponsor portal, blog/resources.</li>
+        <li><strong>Final Wishes Registry:</strong> Secure platform where individuals record their ash dispersal preferences — ceremony type, location, music, messages, formation preferences, Documemorial wishes. Similar to existing "last wishes" platforms but specifically designed for ASH services.</li>
+        <li><strong>Ceremony Scheduling Dashboard:</strong> Internal tool for coordinating Guild members, aircraft, permits, family logistics, and Documemorial production.</li>
+        <li><strong>Live Stream Hub:</strong> Multi-platform simultaneous broadcasting of ceremonies with chat and virtual attendance features.</li>
+        <li><strong>Documemorial CMS:</strong> Content management for documentary production, editing, hosting, and digital memorial page creation.</li>
+        <li><strong>Family Portal:</strong> Private access for families to manage their ceremony details, view/share Documemorials, and connect with their assigned Guild team.</li>
+        <li><strong>Guild Portal:</strong> Member management, certification tracking, mission assignment, training materials, and performance dashboards.</li>
+        <li><strong>Event Marketplace:</strong> Public listing of upcoming ceremonies with cost-sharing participation options.</li>
+        <li><strong>Mobile App (Phase 2):</strong> iOS/Android app for wish registration, ceremony tracking, live stream viewing, and Guild member dispatch.</li>
+      </ul>
+
+      <h3>Technology Stack (Recommended)</h3>
+      <ul>
+        <li><strong>Frontend:</strong> React / Next.js for web, React Native for mobile</li>
+        <li><strong>Backend:</strong> Node.js / Python (FastAPI) microservices</li>
+        <li><strong>Database:</strong> PostgreSQL + Redis caching</li>
+        <li><strong>Live Streaming:</strong> Integration with YouTube Live, Facebook Live, Twitch APIs</li>
+        <li><strong>Cloud:</strong> AWS or Google Cloud (nonprofit credits available)</li>
+        <li><strong>CMS:</strong> Headless CMS (Strapi or Sanity) for Documemorial content</li>
+        <li><strong>Payment:</strong> Stripe (nonprofit pricing available)</li>
+        <li><strong>Security:</strong> SOC 2 compliance path, encrypted PII, HIPAA-adjacent data handling</li>
+      </ul>
+    </div>
+
+    <!-- 11. Legal & Regulatory -->
+    <div class="bp-section" id="legal-compliance">
+      <h2>11. Legal & Regulatory Compliance</h2>
+
+      <h3>Federal Regulations</h3>
+      <ul>
+        <li><strong>FAA:</strong> The FAA does not prohibit the release of cremated remains from aircraft. No permit is required for ash scattering from airplanes or helicopters in the U.S., though standard aviation regulations (airspace, altitude, etc.) apply.</li>
+        <li><strong>EPA:</strong> The Marine Protection, Research, and Sanctuaries Act permits scattering ashes at sea. EPA notification is required within 30 days but no permit is needed.</li>
+        <li><strong>TSA:</strong> Cremated remains may be carried on commercial flights. TSA recommends temporary containers that can be X-rayed.</li>
+        <li><strong>IRS (501(c)(3)):</strong> ASH will file Form 1023 for tax-exempt status. All activities must further the charitable/educational mission. Annual Form 990 required.</li>
+      </ul>
+
+      <h3>State & Local Regulations</h3>
+      <p>Ash scattering regulations vary by state. Some states require a permit, others have location restrictions (distance from public areas, etc.). ASH maintains a comprehensive regulatory database and handles all permitting for each ceremony.</p>
+
+      <h3>International Regulations</h3>
+      <p>Each country has different rules for ash importation and scattering. ASH Special Events division maintains relationships with international aviation authorities, customs agencies, and local governments to ensure full compliance for destination ceremonies.</p>
+
+      <h3>Insurance Requirements</h3>
+      <ul>
+        <li>General liability: $2M per occurrence / $5M aggregate</li>
+        <li>Professional liability: $1M per occurrence</li>
+        <li>Aviation insurance: Per-aircraft, per-jump coverage through Guild member policies</li>
+        <li>Directors & Officers (D&O): Required for nonprofit board</li>
+        <li>Workers' compensation: For paid staff</li>
+        <li>Event insurance: Per-ceremony coverage for international expeditions</li>
+      </ul>
+
+      <h3>Intellectual Property</h3>
+      <ul>
+        <li><strong>Trademarks:</strong> "ASH," "Ashes Soaring High," "Documemorial," owl logo — all to be registered</li>
+        <li><strong>Patents:</strong> Proprietary dispersal vessel design — provisional patent filing planned Year 1</li>
+        <li><strong>Trade secrets:</strong> Formation protocols, ceremony procedures, training methodologies</li>
+      </ul>
+    </div>
+
+    <!-- 12. Risk Analysis -->
+    <div class="bp-section" id="risk">
+      <h2>12. Risk Analysis & Mitigation</h2>
+
+      <table class="bp-table">
+        <thead>
+          <tr>
+            <th>Risk</th>
+            <th>Likelihood</th>
+            <th>Impact</th>
+            <th>Mitigation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Safety incident during ceremony</td>
+            <td>Low</td>
+            <td>Critical</td>
+            <td>Rigorous Guild certification, strict weather minimums, comprehensive insurance, safety officer at every ceremony</td>
+          </tr>
+          <tr>
+            <td>Regulatory changes (ash scattering laws)</td>
+            <td>Low-Medium</td>
+            <td>High</td>
+            <td>Legal counsel monitoring, industry association membership, proactive government relations</td>
+          </tr>
+          <tr>
+            <td>501(c)(3) compliance issues</td>
+            <td>Low</td>
+            <td>Critical</td>
+            <td>Experienced nonprofit counsel, annual audit, transparent governance, IRS guidelines adherence</td>
+          </tr>
+          <tr>
+            <td>Negative publicity / cultural sensitivity</td>
+            <td>Medium</td>
+            <td>Medium</td>
+            <td>Professional PR team, cultural sensitivity training, family-first communication, rapid response protocol</td>
+          </tr>
+          <tr>
+            <td>Insufficient Guild members</td>
+            <td>Medium</td>
+            <td>Medium</td>
+            <td>Partnerships with skydiving centers, USPA outreach, competitive per-ceremony compensation, mission appeal</td>
+          </tr>
+          <tr>
+            <td>Slow revenue growth</td>
+            <td>Medium</td>
+            <td>Medium</td>
+            <td>Bootstrap model, volunteer base, diverse revenue streams, grant applications, cost-sharing events</td>
+          </tr>
+          <tr>
+            <td>International logistics complexity</td>
+            <td>High</td>
+            <td>Medium</td>
+            <td>Local partner network, advance permitting, contingency planning, experienced expedition leaders</td>
+          </tr>
+          <tr>
+            <td>Competition entering market</td>
+            <td>Medium</td>
+            <td>Low-Medium</td>
+            <td>First-mover advantage, brand/IP moat, nonprofit trust, Guild network effects, Documemorial differentiation</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 13. Roadmap -->
+    <div class="bp-section" id="roadmap">
+      <h2>13. Implementation Roadmap</h2>
+
+      <div class="bp-phase-card">
+        <h4>Phase 1: Foundation (Months 1-6)</h4>
+        <ul>
+          <li>Incorporate ASH International, Inc.</li>
+          <li>File Form 1023 for 501(c)(3) status</li>
+          <li>Recruit founding Board of Directors</li>
+          <li>Build MVP website with wish registration</li>
+          <li>Design and prototype dispersal vessel</li>
+          <li>Recruit first 10-15 Guild members (skydivers & pilots)</li>
+          <li>Conduct first 3-5 pilot ceremonies (pro bono or reduced cost)</li>
+          <li>Produce first Documemorials for portfolio</li>
+          <li>Secure initial sponsorships and founding partners</li>
+          <li>File provisional patent for dispersal vessel</li>
+          <li>Register trademarks</li>
+        </ul>
+      </div>
+
+      <div class="bp-phase-card">
+        <h4>Phase 2: Launch & Validate (Months 7-18)</h4>
+        <ul>
+          <li>Launch public website and marketing campaigns</li>
+          <li>Perform 20-25 paid ceremonies</li>
+          <li>Build affiliate network (25+ funeral homes, hospices)</li>
+          <li>Expand Guild to 30-50 certified members</li>
+          <li>Launch live streaming capability</li>
+          <li>First international Special Event expedition</li>
+          <li>Hire part-time Executive Director</li>
+          <li>First annual Form 990 filing</li>
+          <li>Community events and PR campaign</li>
+          <li>Begin mobile app development</li>
+        </ul>
+      </div>
+
+      <div class="bp-phase-card">
+        <h4>Phase 3: Growth (Months 19-36)</h4>
+        <ul>
+          <li>Scale to 150-200 ceremonies annually</li>
+          <li>Expand to 5+ regional chapters</li>
+          <li>Guild grows to 100+ certified members</li>
+          <li>Launch mobile app (iOS & Android)</li>
+          <li>Full Documemorial production team hired</li>
+          <li>Corporate sponsorship program fully operational</li>
+          <li>Affiliate network: 100+ partners</li>
+          <li>First celebrity/corporate Special Event</li>
+          <li>Pet memorial program launch</li>
+          <li>First independent financial audit</li>
+        </ul>
+      </div>
+
+      <div class="bp-phase-card">
+        <h4>Phase 4: Scale (Years 3-5)</h4>
+        <ul>
+          <li>Scale to 500-800 ceremonies annually</li>
+          <li>International chapters (Europe, Asia, South America)</li>
+          <li>Full-time staff of 20-30+</li>
+          <li>Advanced Documemorial: VR/360° experiences</li>
+          <li>Owl motif evolves: wings (sponsors), talons (regional chapters), full body</li>
+          <li>Revenue target: $10M+ annually</li>
+          <li>National brand recognition</li>
+          <li>Industry conference and annual ASH Gala</li>
+          <li>Potential franchise model for regional chapters</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 14. Appendix -->
+    <div class="bp-section" id="appendix">
+      <h2>14. Appendix</h2>
+
+      <h3>A. Key Assumptions</h3>
+      <ul>
+        <li>Cremation rate continues to grow as projected by NFDA</li>
+        <li>501(c)(3) status is obtained within 6-12 months of filing</li>
+        <li>Sufficient Guild volunteers can be recruited from existing skydiving/aviation communities</li>
+        <li>No major adverse regulatory changes to ash scattering laws</li>
+        <li>Viral/organic content growth reduces customer acquisition costs over time</li>
+        <li>Cost-sharing model makes ceremonies accessible to middle-income families</li>
+      </ul>
+
+      <h3>B. Data Sources</h3>
+      <ul>
+        <li>National Funeral Directors Association (NFDA) — 2025 Cremation & Burial Report</li>
+        <li>NFDA — 2025 Consumer Awareness and Preferences Report</li>
+        <li>NFDA — 2023 General Price List Study</li>
+        <li>CDC — National Vital Statistics Reports</li>
+        <li>FAA — Federal Aviation Regulations (14 CFR)</li>
+        <li>EPA — Marine Protection, Research, and Sanctuaries Act (33 U.S.C. § 1401)</li>
+        <li>IRS — Publication 557 (Tax-Exempt Status for Your Organization)</li>
+      </ul>
+
+      <h3>C. Competitive Analysis Detail</h3>
+      <p>No single organization currently offers the comprehensive suite of services ASH plans to provide. The closest competitors are:</p>
+      <ul>
+        <li><strong>Aerial scatter services:</strong> Local charter operators offering basic flyover scattering. No brand, no Documemorial, no formation flying, no proprietary device. Prices range from $200-$800 for airplane flyovers.</li>
+        <li><strong>Balloon services:</strong> Eternal Ascent and similar companies release ashes attached to biodegradable balloons. Simple, passive, no aviation experience for family.</li>
+        <li><strong>Ash reef / space services:</strong> Companies like Eternal Reefs (underwater) and Elysium Space (orbital) offer niche alternatives but serve a different emotional need.</li>
+      </ul>
+      <p>ASH's unique combination of <strong>human aviation (skydiving, paragliding), proprietary devices, Documemorial production, 501(c)(3) status, Guild certification, international capability, and cost-sharing model</strong> creates a category of one.</p>
+
+      <h3>D. Owl Motif Evolution</h3>
+      <p>As ASH grows, the owl motif visually evolves to reflect organizational maturation:</p>
+      <ol>
+        <li><strong>Stage 1 (Launch):</strong> Triangle only — the three pillars (A, H, S)</li>
+        <li><strong>Stage 2 (Growth):</strong> Triangle + Eyebrows — IT and IP capabilities established</li>
+        <li><strong>Stage 3 (Expansion):</strong> + Talons — Regional chapters grounded nationwide</li>
+        <li><strong>Stage 4 (Maturity):</strong> + Wings — Patron/sponsor ecosystem fully developed</li>
+        <li><strong>Stage 5 (Full Form):</strong> Full owl — Complete organization with all functions, global reach</li>
+      </ol>
+    </div>
+
+    <!-- Back to Website -->
+    <div class="bp-nav">
+      <a href="index.html" class="btn btn-outline">← Back to Website</a>
+      <a href="#executive-summary" class="btn btn-gold">Back to Top ↑</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;">
+      <p>&copy; 2026 ASH International — Ashes Soaring High. All rights reserved.</p>
+      <span class="footer-nonprofit">501(c)(3) Tax-Exempt Nonprofit Organization</span>
+      <p>
+        <a href="index.html">Main Website</a> · <a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" aria-label="Scroll to top">↑</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
