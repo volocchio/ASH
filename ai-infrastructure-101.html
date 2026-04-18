@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Development Infrastructure — 101</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #0d1117;
+    color: #e6edf3;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .slide {
+    width: 1280px;
+    max-width: 100%;
+    aspect-ratio: 16/9;
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #0d1117 100%);
+    border: 1px solid #30363d;
+    border-radius: 16px;
+    padding: 3rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slide::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(56,139,253,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 1.8rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .header h1 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #58a6ff, #a371f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+  }
+
+  .header .subtitle {
+    font-size: 0.85rem;
+    color: #8b949e;
+    margin-top: 0.3rem;
+    font-weight: 400;
+  }
+
+  .diagram {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .nodes {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.2rem;
+    width: 100%;
+    position: relative;
+  }
+
+  .node {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+    padding: 1.3rem 1.1rem;
+    width: 220px;
+    text-align: center;
+    position: relative;
+    transition: border-color 0.3s;
+  }
+
+  .node:hover { border-color: #58a6ff; }
+
+  .node .icon {
+    font-size: 2.4rem;
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+
+  .node .label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: #e6edf3;
+  }
+
+  .node .sublabel {
+    font-size: 0.7rem;
+    color: #8b949e;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  .node .badge {
+    display: inline-block;
+    font-size: 0.55rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.2em 0.6em;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+  }
+
+  .badge-ai {
+    background: rgba(163,113,247,0.15);
+    color: #a371f7;
+    border: 1px solid rgba(163,113,247,0.3);
+  }
+
+  .badge-code {
+    background: rgba(88,166,255,0.12);
+    color: #58a6ff;
+    border: 1px solid rgba(88,166,255,0.25);
+  }
+
+  .badge-cloud {
+    background: rgba(63,185,80,0.12);
+    color: #3fb950;
+    border: 1px solid rgba(63,185,80,0.25);
+  }
+
+  .badge-server {
+    background: rgba(210,153,34,0.12);
+    color: #d29922;
+    border: 1px solid rgba(210,153,34,0.25);
+  }
+
+  /* Arrows between nodes */
+  .arrow-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15rem;
+    align-self: center;
+    min-width: 70px;
+  }
+
+  .arrow-group .arrow-line {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .arrow-group .arrow-label {
+    font-size: 0.55rem;
+    color: #8b949e;
+    text-align: center;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .arrow-svg {
+    width: 70px;
+    height: 18px;
+  }
+
+  .arrow-svg line {
+    stroke: #30363d;
+    stroke-width: 1.5;
+  }
+
+  .arrow-svg polygon {
+    fill: #30363d;
+  }
+
+  /* Bottom legend / key takeaways */
+  .footer {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #21262d;
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.65rem;
+    color: #8b949e;
+  }
+
+  .footer-item .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .dot-purple { background: #a371f7; }
+  .dot-blue { background: #58a6ff; }
+  .dot-green { background: #3fb950; }
+  .dot-yellow { background: #d29922; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .slide { padding: 1.5rem; aspect-ratio: auto; }
+    .nodes { flex-direction: column; align-items: center; gap: 0.5rem; }
+    .arrow-group { transform: rotate(90deg); }
+    .node { width: 90%; max-width: 300px; }
+  }
+
+  /* Print friendly */
+  @media print {
+    body { background: #fff; }
+    .slide { border: 2px solid #ccc; background: #fff; }
+    .node { border: 1px solid #ddd; background: #f6f8fa; }
+    .header h1 { -webkit-text-fill-color: #24292f; color: #24292f; }
+    .node .label, .node .sublabel, .footer-item, .arrow-group .arrow-label { color: #24292f; }
+  }
+</style>
+</head>
+<body>
+
+<div class="slide">
+  <div class="header">
+    <h1>AI-Assisted Development Infrastructure</h1>
+    <div class="subtitle">How code goes from idea → AI-assisted writing → version control → production</div>
+  </div>
+
+  <div class="diagram">
+    <div class="nodes">
+
+      <!-- Node 1: VS Code + Copilot -->
+      <div class="node">
+        <span class="icon">🧠</span>
+        <div class="label">VS Code + Copilot</div>
+        <div class="sublabel">
+          Developer's editor with<br>
+          <strong>GitHub Copilot AI</strong> built in.<br>
+          AI writes &amp; reviews code<br>
+          in real time.
+        </div>
+        <span class="badge badge-ai">AI-Powered</span>
+      </div>
+
+      <!-- Arrow 1→2 -->
+      <div class="arrow-group">
+        <div class="arrow-label">git commit</div>
+        <svg class="arrow-svg" viewBox="0 0 70 18">
+          <line x1="2" y1="9" x2="58" y2="9"/>
+          <polygon points="58,4 68,9 58,14"/>
+        </svg>
+      </div>
+
+      <!-- Node 2: Local Repo -->
+      <div class="node">
+        <span class="icon">💻</span>
+        <div class="label">Local Git Repo</div>
+        <div class="sublabel">
+          Full version history<br>
+          lives on developer's machine.<br>
+          Every change is tracked<br>
+          &amp; reversible.
+        </div>
+        <span class="badge badge-code">Version Control</span>
+      </div>
+
+      <!-- Arrow 2→3 -->
+      <div class="arrow-group">
+        <div class="arrow-label">git push</div>
+        <svg class="arrow-svg" viewBox="0 0 70 18">
+          <line x1="2" y1="9" x2="58" y2="9"/>
+          <polygon points="58,4 68,9 58,14"/>
+        </svg>
+      </div>
+
+      <!-- Node 3: GitHub -->
+      <div class="node">
+        <span class="icon">🐙</span>
+        <div class="label">GitHub</div>
+        <div class="sublabel">
+          Cloud backup &amp; collaboration hub.<br>
+          Stores all code &amp; history.<br>
+          Single source of truth<br>
+          for the team.
+        </div>
+        <span class="badge badge-cloud">Cloud</span>
+      </div>
+
+      <!-- Arrow 3→4 -->
+      <div class="arrow-group">
+        <div class="arrow-label">deploy (SSH)</div>
+        <svg class="arrow-svg" viewBox="0 0 70 18">
+          <line x1="2" y1="9" x2="58" y2="9"/>
+          <polygon points="58,4 68,9 58,14"/>
+        </svg>
+      </div>
+
+      <!-- Node 4: VPS -->
+      <div class="node">
+        <span class="icon">🌐</span>
+        <div class="label">Hostinger VPS</div>
+        <div class="sublabel">
+          Production server.<br>
+          Pulls latest code from GitHub,<br>
+          serves the live website<br>
+          to the public.
+        </div>
+        <span class="badge badge-server">Production</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-item">
+      <span class="dot dot-purple"></span>
+      Copilot AI suggests code, catches bugs, explains logic
+    </div>
+    <div class="footer-item">
+      <span class="dot dot-blue"></span>
+      Git tracks every change — nothing is ever lost
+    </div>
+    <div class="footer-item">
+      <span class="dot dot-green"></span>
+      GitHub stores code securely in the cloud
+    </div>
+    <div class="footer-item">
+      <span class="dot dot-yellow"></span>
+      VPS runs the live app visitors see
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

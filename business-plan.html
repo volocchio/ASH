@@ -224,6 +224,14 @@
       margin-bottom: 0.35rem;
       line-height: 1.55;
     }
+    .bp-pillars-diagram {
+      max-width: 920px;
+      margin: 1.2rem auto 0;
+    }
+    .bp-pillars-diagram svg {
+      width: 100%;
+      height: auto;
+    }
     @media (max-width: 768px) {
       .bp-pillars-grid { grid-template-columns: 1fr; }
     }
@@ -433,25 +441,37 @@
       <h3>The Three Pillars (A-S-H)</h3>
       <p>The same structure shown on the public ASH website is also the core operating model in this business plan: three interconnected pillars that each own a distinct mandate while reinforcing the others.</p>
 
-      <div class="bp-triangle-wrap">
-        <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;width:100%;">
-          <polygon points="60,40 440,40 250,270" fill="none" stroke="#c8a84e" stroke-width="2.5" stroke-linejoin="round"/>
-          <circle cx="250" cy="140" r="135" fill="none" stroke="#c8a84e" stroke-width="0.8" opacity="0.2"/>
-          <ellipse cx="155" cy="155" rx="75" ry="90" fill="none" stroke="#c8a84e" stroke-width="0.5" opacity="0.15" transform="rotate(-15,155,155)"/>
-          <ellipse cx="345" cy="155" rx="75" ry="90" fill="none" stroke="#c8a84e" stroke-width="0.5" opacity="0.15" transform="rotate(15,345,155)"/>
-          <ellipse cx="250" cy="220" rx="90" ry="65" fill="none" stroke="#c8a84e" stroke-width="0.5" opacity="0.15"/>
-          <circle cx="60" cy="40" r="28" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1.5"/>
-          <text x="50" y="45" fill="#c8a84e" font-size="20" font-family="Georgia" font-weight="bold">A</text>
-          <text x="22" y="70" fill="#b8bbbe" font-size="9" font-family="Montserrat">App</text>
-          <circle cx="440" cy="40" r="28" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1.5"/>
-          <text x="430" y="45" fill="#c8a84e" font-size="20" font-family="Georgia" font-weight="bold">H</text>
-          <text x="415" y="70" fill="#b8bbbe" font-size="9" font-family="Montserrat">Hub</text>
-          <circle cx="250" cy="270" r="28" fill="rgba(200,168,78,0.08)" stroke="#c8a84e" stroke-width="1.5"/>
-          <text x="242" y="275" fill="#c8a84e" font-size="20" font-family="Georgia" font-weight="bold">S</text>
-          <text x="220" y="298" fill="#b8bbbe" font-size="9" font-family="Montserrat">Special</text>
-          <text x="200" y="28" fill="#b8bbbe" font-size="8" font-family="Montserrat" text-anchor="middle" opacity="0.6">Steps 1-2-3 →</text>
-          <text x="380" y="175" fill="#b8bbbe" font-size="8" font-family="Montserrat" opacity="0.6" transform="rotate(52,380,175)">Steps 4-5 →</text>
-          <text x="115" y="195" fill="#b8bbbe" font-size="8" font-family="Montserrat" opacity="0.6" transform="rotate(-52,115,195)">← Steps 6-7</text>
+      <hr class="divider" style="max-width:110px;margin-top:1rem;margin-bottom:1.6rem;">
+      <div class="bp-pillars-diagram">
+        <svg viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" aria-label="ASH Three Pillars Diagram">
+          <!-- Main geometry -->
+          <polygon points="240,245 960,245 600,650" fill="none" stroke="#c8a84e" stroke-width="4" stroke-linejoin="round"/>
+          <circle cx="600" cy="420" r="255" fill="none" stroke="#c8a84e" stroke-width="1.6" opacity="0.16"/>
+
+          <!-- Lune overlays -->
+          <ellipse cx="448" cy="468" rx="128" ry="182" fill="none" stroke="#c8a84e" stroke-width="1.4" opacity="0.12" transform="rotate(-14,448,468)"/>
+          <ellipse cx="752" cy="468" rx="128" ry="182" fill="none" stroke="#c8a84e" stroke-width="1.4" opacity="0.12" transform="rotate(14,752,468)"/>
+          <ellipse cx="600" cy="566" rx="172" ry="112" fill="none" stroke="#c8a84e" stroke-width="1.4" opacity="0.12"/>
+
+          <!-- Vertices -->
+          <circle cx="240" cy="245" r="42" fill="rgba(200,168,78,0.06)" stroke="#c8a84e" stroke-width="3"/>
+          <circle cx="960" cy="245" r="42" fill="rgba(200,168,78,0.06)" stroke="#c8a84e" stroke-width="3"/>
+          <circle cx="600" cy="650" r="42" fill="rgba(200,168,78,0.06)" stroke="#c8a84e" stroke-width="3"/>
+
+          <!-- Vertex letters -->
+          <text x="228" y="257" fill="#c8a84e" font-size="56" font-family="Georgia" font-weight="bold">A</text>
+          <text x="948" y="257" fill="#c8a84e" font-size="56" font-family="Georgia" font-weight="bold">H</text>
+          <text x="586" y="662" fill="#c8a84e" font-size="56" font-family="Georgia" font-weight="bold">S</text>
+
+          <!-- Labels -->
+          <text x="190" y="312" fill="#b8bbbe" font-size="36" font-family="Montserrat" opacity="0.9">App</text>
+          <text x="914" y="312" fill="#b8bbbe" font-size="36" font-family="Montserrat" opacity="0.9">Hub</text>
+          <text x="542" y="707" fill="#b8bbbe" font-size="34" font-family="Montserrat" opacity="0.9">Special</text>
+
+          <!-- Process labels -->
+          <text x="520" y="224" fill="#b8bbbe" font-size="24" font-family="Montserrat" opacity="0.58">Steps 1-2-3 →</text>
+          <text x="836" y="495" fill="#b8bbbe" font-size="24" font-family="Montserrat" opacity="0.58" transform="rotate(52,836,495)">Steps 4-5 →</text>
+          <text x="406" y="500" fill="#b8bbbe" font-size="24" font-family="Montserrat" opacity="0.58" transform="rotate(-52,406,500)">← Steps 6-7</text>
         </svg>
         <p class="bp-triangle-caption">ASH Three Pillars model used across brand, operations, and service delivery</p>
       </div>
@@ -782,7 +802,7 @@
           <!-- Outer inverted triangle -->
           <polygon points="50,40 550,40 300,470" fill="none" stroke="#c8a84e" stroke-width="2.5" stroke-linejoin="round"/>
 
-          <!-- Top side divisions: 1 Communications, 2 Accommodations, 3 Therapy -->
+          <!-- Top side divisions: 1 Communications, 2 Registrations, 3 Treasury -->
           <!-- Division tick marks on top edge -->
           <line x1="217" y1="40" x2="217" y2="55" stroke="#c8a84e" stroke-width="1" opacity="0.5"/>
           <line x1="383" y1="40" x2="383" y2="55" stroke="#c8a84e" stroke-width="1" opacity="0.5"/>
@@ -790,8 +810,8 @@
           <text x="300" y="30" fill="#c8a84e" font-size="10" font-family="Georgia" text-anchor="middle" font-weight="bold">2</text>
           <text x="467" y="30" fill="#c8a84e" font-size="10" font-family="Georgia" text-anchor="middle" font-weight="bold">3</text>
           <text x="133" y="18" fill="#b8bbbe" font-size="8" font-family="Montserrat" text-anchor="middle">COMMUNICATIONS</text>
-          <text x="300" y="18" fill="#b8bbbe" font-size="8" font-family="Montserrat" text-anchor="middle">ACCOMMODATIONS</text>
-          <text x="467" y="18" fill="#b8bbbe" font-size="8" font-family="Montserrat" text-anchor="middle">THERAPY</text>
+          <text x="300" y="18" fill="#b8bbbe" font-size="8" font-family="Montserrat" text-anchor="middle">REGISTRATIONS</text>
+          <text x="467" y="18" fill="#b8bbbe" font-size="8" font-family="Montserrat" text-anchor="middle">TREASURY</text>
 
           <!-- Dept markers on top edge (9 departments: 1-9) -->
           <line x1="106" y1="40" x2="106" y2="48" stroke="#c8a84e" stroke-width="0.5" opacity="0.4"/>
@@ -804,7 +824,7 @@
           <!-- Right side divisions: 4 Production, 5 Quality -->
           <text x="480" y="185" fill="#c8a84e" font-size="10" font-family="Georgia" font-weight="bold" transform="rotate(59,480,185)">4</text>
           <text x="400" y="340" fill="#c8a84e" font-size="10" font-family="Georgia" font-weight="bold" transform="rotate(59,400,340)">5</text>
-          <text x="500" y="170" fill="#b8bbbe" font-size="8" font-family="Montserrat" transform="rotate(59,500,170)">OPERATIONS</text>
+          <text x="500" y="170" fill="#b8bbbe" font-size="8" font-family="Montserrat" transform="rotate(59,500,170)">PRODUCTIONS</text>
           <text x="420" y="330" fill="#b8bbbe" font-size="8" font-family="Montserrat" transform="rotate(59,420,330)">QUALITY</text>
 
           <!-- Left side division: 6 Public Relations -->
@@ -859,54 +879,54 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+                    <tr>
             <td><strong>1</strong></td>
             <td>Communications</td>
             <td>Top</td>
-            <td>Depts 1–3</td>
-            <td>Outreach, media relations, branding, social channels</td>
+            <td>Dept 1: Recognition<br>Dept 2: Communications<br>Dept 3: Perception</td>
+            <td>Routing &amp; Personnel, Communications &amp; Office, Inspections &amp; Reports</td>
           </tr>
-          <tr>
+                    <tr>
             <td><strong>2</strong></td>
-            <td>Accommodations</td>
+            <td>Registrations</td>
             <td>Top</td>
-            <td>Depts 4–6</td>
-            <td>Family logistics, travel, lodging, ceremony venue coordination</td>
+            <td>Dept 4: Orientation<br>Dept 5: Understanding<br>Dept 6: Enlightenment</td>
+            <td>Promo &amp; Marketing, Publications &amp; ASH Events Planning, Office of Registrar</td>
           </tr>
           <tr>
             <td><strong>3</strong></td>
-            <td>Therapy</td>
+            <td>Treasury</td>
             <td>Top</td>
-            <td>Depts 7–9</td>
-            <td>Grief counseling, chaplaincy, pre- and post-ceremony family support</td>
+            <td>Dept 7: Energy<br>Dept 8: Adjustment<br>Dept 9: Body</td>
+            <td>Income, Disbursements, Records Assets &amp; Materials</td>
           </tr>
           <tr>
             <td><strong>4</strong></td>
-            <td>Operations</td>
+            <td>Productions</td>
             <td>Right</td>
-            <td>Depts 10–12</td>
-            <td>Guild management, aircraft, dispersal devices, ceremony execution</td>
+            <td>Dept 10: Prediction<br>Dept 11: Activity<br>Dept 12: Production</td>
+            <td>Guild Production Services, Guild Technical Development, Guild Technical Execution</td>
           </tr>
-          <tr>
+                    <tr>
             <td><strong>5</strong></td>
             <td>Quality</td>
             <td>Right</td>
-            <td>Depts 13–15</td>
-            <td>Safety, training, certification, continuous improvement (7-Step)</td>
+            <td>Dept 13: Result<br>Dept 14: Correction<br>Dept 15: Ability</td>
+            <td>Guild Examinations for Quality, Review of Safety, Guild Certifications</td>
           </tr>
           <tr>
             <td><strong>6</strong></td>
             <td>Public Relations</td>
             <td>Left</td>
-            <td>Depts 16–18</td>
-            <td>Community engagement, partnerships, affiliate network, fundraising</td>
+            <td>Dept 16: Acceptability<br>Dept 17: Participation<br>Dept 18: Control</td>
+            <td>Public Information, Public Services, Success!</td>
           </tr>
           <tr>
             <td><strong>7</strong></td>
             <td>Executive</td>
             <td>Center</td>
-            <td>Depts 19–21</td>
-            <td>Strategic leadership, governance, 501(c)(3) compliance, board liaison</td>
+            <td>Dept 19: Conditions<br>Dept 20: Existence<br>Dept 21: Source</td>
+            <td>Office of Executive Director, Office of Corporate Affairs, Office of the Founder</td>
           </tr>
         </tbody>
       </table>
@@ -1967,390 +1987,4 @@
       <h2>9. Marketing & Growth Strategy</h2>
 
       <h3>Brand Positioning</h3>
-      <p>ASH positions itself as the <strong>premium, trustworthy, mission-driven</strong> choice for aviation memorial services. Not a commercial vendor — a nonprofit movement. The owl motif, gold-and-navy branding, and the Documemorial concept create a distinctive, instantly recognizable brand.</p>
-
-      <h3>Growth Channels</h3>
-      <ol>
-        <li><strong>Viral Documemorial Content:</strong> Every ceremony produces shareable video content. Aviation ash-scattering videos regularly achieve millions of views on YouTube and TikTok. This is our primary organic growth engine.</li>
-        <li><strong>Affiliate Network:</strong> Partnerships with 15,400+ funeral homes, crematories, hospices, and estate planners who refer families directly to ASH.</li>
-        <li><strong>PR & Media:</strong> Human interest stories are irresistible to media. Each international expedition or celebrity ceremony generates press coverage.</li>
-        <li><strong>Social Media:</strong> Active presence on 7 platforms with regular content: ceremony highlights, family stories, Guild member profiles, behind-the-scenes.</li>
-        <li><strong>SEO & Content Marketing:</strong> Comprehensive resource library on cremation, ash scattering laws, memorial planning, and grief support.</li>
-        <li><strong>Community Events:</strong> Open houses at skydiving centers, memorial day events, grief support groups, and public Documemorial screenings.</li>
-        <li><strong>Word of Mouth:</strong> The most powerful channel. Families who experience an ASH ceremony become lifelong advocates.</li>
-        <li><strong>Angel Flight & Volunteer Networks:</strong> Cross-pollination with existing volunteer aviation organizations builds credibility and recruit Guild members.</li>
-      </ol>
-
-      <h3>Year 1 Marketing Budget: $25,000</h3>
-      <ul>
-        <li>Website & SEO: $5,000</li>
-        <li>Social media content production: $8,000</li>
-        <li>PR & media outreach: $5,000</li>
-        <li>Affiliate program setup: $4,000</li>
-        <li>Community events: $3,000</li>
-      </ul>
-    </div>
-
-    <!-- 10. Technology Platform -->
-    <div class="bp-section" id="technology">
-      <h2>10. Technology Platform (The "A" Pillar)</h2>
-
-      <h3>Platform Components</h3>
-      <ul>
-        <li><strong>Public Website:</strong> Brand presence, service information, event listings, testimonials, investor/sponsor portal, blog/resources.</li>
-        <li><strong>Final Wishes Registry:</strong> Secure platform where individuals record their ash dispersal preferences — ceremony type, location, music, messages, formation preferences, Documemorial wishes. Similar to existing "last wishes" platforms but specifically designed for ASH services.</li>
-        <li><strong>Ceremony Scheduling Dashboard:</strong> Internal tool for coordinating Guild members, aircraft, permits, family logistics, and Documemorial production.</li>
-        <li><strong>Live Stream Hub:</strong> Multi-platform simultaneous broadcasting of ceremonies with chat and virtual attendance features.</li>
-        <li><strong>Documemorial CMS:</strong> Content management for documentary production, editing, hosting, and digital memorial page creation.</li>
-        <li><strong>Family Portal:</strong> Private access for families to manage their ceremony details, view/share Documemorials, and connect with their assigned Guild team.</li>
-        <li><strong>Guild Portal:</strong> Member management, certification tracking, mission assignment, training materials, and performance dashboards.</li>
-        <li><strong>Event Marketplace:</strong> Public listing of upcoming ceremonies with cost-sharing participation options.</li>
-        <li><strong>Mobile App (Phase 2):</strong> iOS/Android app for wish registration, ceremony tracking, live stream viewing, and Guild member dispatch.</li>
-      </ul>
-
-      <h3>Technology Stack (Recommended)</h3>
-      <ul>
-        <li><strong>Frontend:</strong> React / Next.js for web, React Native for mobile</li>
-        <li><strong>Backend:</strong> Node.js / Python (FastAPI) microservices</li>
-        <li><strong>Database:</strong> PostgreSQL + Redis caching</li>
-        <li><strong>Live Streaming:</strong> Integration with YouTube Live, Facebook Live, Twitch APIs</li>
-        <li><strong>Cloud:</strong> AWS or Google Cloud (nonprofit credits available)</li>
-        <li><strong>CMS:</strong> Headless CMS (Strapi or Sanity) for Documemorial content</li>
-        <li><strong>Payment:</strong> Stripe (nonprofit pricing available)</li>
-        <li><strong>Security:</strong> SOC 2 compliance path, encrypted PII, HIPAA-adjacent data handling</li>
-      </ul>
-    </div>
-
-    <!-- 11. Legal & Regulatory -->
-    <div class="bp-section" id="legal-compliance">
-      <h2>11. Legal & Regulatory Compliance</h2>
-
-      <h3>Federal Regulations</h3>
-      <ul>
-        <li><strong>FAA:</strong> The FAA does not prohibit the release of cremated remains from aircraft. No permit is required for ash scattering from airplanes or helicopters in the U.S., though standard aviation regulations (airspace, altitude, etc.) apply.</li>
-        <li><strong>EPA:</strong> The Marine Protection, Research, and Sanctuaries Act permits scattering ashes at sea. EPA notification is required within 30 days but no permit is needed.</li>
-        <li><strong>TSA:</strong> Cremated remains may be carried on commercial flights. TSA recommends temporary containers that can be X-rayed.</li>
-        <li><strong>IRS (501(c)(3)):</strong> ASH will file Form 1023 for tax-exempt status. All activities must further the charitable/educational mission. Annual Form 990 required.</li>
-      </ul>
-
-      <h3>State & Local Regulations</h3>
-      <p>Ash scattering regulations vary by state. Some states require a permit, others have location restrictions (distance from public areas, etc.). ASH maintains a comprehensive regulatory database and handles all permitting for each ceremony.</p>
-
-      <h3>International Regulations</h3>
-      <p>Each country has different rules for ash importation and scattering. ASH Special Events division maintains relationships with international aviation authorities, customs agencies, and local governments to ensure full compliance for destination ceremonies.</p>
-
-      <h3>Insurance Requirements</h3>
-      <ul>
-        <li>General liability: $2M per occurrence / $5M aggregate</li>
-        <li>Professional liability: $1M per occurrence</li>
-        <li>Aviation insurance: Per-aircraft, per-jump coverage through Guild member policies</li>
-        <li>Directors & Officers (D&O): Required for nonprofit board</li>
-        <li>Workers' compensation: For paid staff</li>
-        <li>Event insurance: Per-ceremony coverage for international expeditions</li>
-      </ul>
-
-      <h3>Intellectual Property</h3>
-      <ul>
-        <li><strong>Trademarks:</strong> "ASH," "Ashes Soaring High," "Documemorial," owl logo — all to be registered</li>
-        <li><strong>Patents:</strong> Proprietary dispersal vessel design — provisional patent filing planned Year 1</li>
-        <li><strong>Trade secrets:</strong> Formation protocols, ceremony procedures, training methodologies</li>
-      </ul>
-    </div>
-
-    <!-- 12. Risk Analysis -->
-    <div class="bp-section" id="risk">
-      <h2>12. Risk Analysis & Mitigation</h2>
-
-      <table class="bp-table">
-        <thead>
-          <tr>
-            <th>Risk</th>
-            <th>Likelihood</th>
-            <th>Impact</th>
-            <th>Mitigation</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Safety incident during ceremony</td>
-            <td>Low</td>
-            <td>Critical</td>
-            <td>Rigorous Guild certification, strict weather minimums, comprehensive insurance, safety officer at every ceremony</td>
-          </tr>
-          <tr>
-            <td>Regulatory changes (ash scattering laws)</td>
-            <td>Low-Medium</td>
-            <td>High</td>
-            <td>Legal counsel monitoring, industry association membership, proactive government relations</td>
-          </tr>
-          <tr>
-            <td>501(c)(3) compliance issues</td>
-            <td>Low</td>
-            <td>Critical</td>
-            <td>Experienced nonprofit counsel, annual audit, transparent governance, IRS guidelines adherence</td>
-          </tr>
-          <tr>
-            <td>Negative publicity / cultural sensitivity</td>
-            <td>Medium</td>
-            <td>Medium</td>
-            <td>Professional PR team, cultural sensitivity training, family-first communication, rapid response protocol</td>
-          </tr>
-          <tr>
-            <td>Insufficient Guild members</td>
-            <td>Medium</td>
-            <td>Medium</td>
-            <td>Partnerships with skydiving centers, USPA outreach, competitive per-ceremony compensation, mission appeal</td>
-          </tr>
-          <tr>
-            <td>Slow revenue growth</td>
-            <td>Medium</td>
-            <td>Medium</td>
-            <td>Bootstrap model, volunteer base, diverse revenue streams, grant applications, cost-sharing events</td>
-          </tr>
-          <tr>
-            <td>International logistics complexity</td>
-            <td>High</td>
-            <td>Medium</td>
-            <td>Local partner network, advance permitting, contingency planning, experienced expedition leaders</td>
-          </tr>
-          <tr>
-            <td>Competition entering market</td>
-            <td>Medium</td>
-            <td>Low-Medium</td>
-            <td>First-mover advantage, brand/IP moat, nonprofit trust, Guild network effects, Documemorial differentiation</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- 13. Roadmap -->
-    <div class="bp-section" id="roadmap">
-      <h2>13. Implementation Roadmap</h2>
-
-      <div class="bp-phase-card">
-        <h4>Phase 1: Foundation (Months 1-6)</h4>
-        <ul>
-          <li>Incorporate ASH International, Inc.</li>
-          <li>File Form 1023 for 501(c)(3) status</li>
-          <li>Recruit founding Board of Directors</li>
-          <li>Build MVP website with wish registration</li>
-          <li>Design and prototype dispersal vessel</li>
-          <li>Recruit first 10-15 Guild members (skydivers & pilots)</li>
-          <li>Conduct first 3-5 pilot ceremonies (pro bono or reduced cost)</li>
-          <li>Produce first Documemorials for portfolio</li>
-          <li>Secure initial sponsorships and founding partners</li>
-          <li>File provisional patent for dispersal vessel</li>
-          <li>Register trademarks</li>
-        </ul>
-      </div>
-
-      <div class="bp-phase-card">
-        <h4>Phase 2: Launch & Validate (Months 7-18)</h4>
-        <ul>
-          <li>Launch public website and marketing campaigns</li>
-          <li>Perform 20-25 paid ceremonies</li>
-          <li>Build affiliate network (25+ funeral homes, hospices)</li>
-          <li>Expand Guild to 30-50 certified members</li>
-          <li>Launch live streaming capability</li>
-          <li>First international Special Event expedition</li>
-          <li>Hire part-time Executive Director</li>
-          <li>First annual Form 990 filing</li>
-          <li>Community events and PR campaign</li>
-          <li>Begin mobile app development</li>
-        </ul>
-      </div>
-
-      <div class="bp-phase-card">
-        <h4>Phase 3: Growth (Months 19-36)</h4>
-        <ul>
-          <li>Scale to 150-200 ceremonies annually</li>
-          <li>Expand to 5+ regional chapters</li>
-          <li>Guild grows to 100+ certified members</li>
-          <li>Launch mobile app (iOS & Android)</li>
-          <li>Full Documemorial production team hired</li>
-          <li>Corporate sponsorship program fully operational</li>
-          <li>Affiliate network: 100+ partners</li>
-          <li>First celebrity/corporate Special Event</li>
-          <li>Pet memorial program launch</li>
-          <li>First independent financial audit</li>
-        </ul>
-      </div>
-
-      <div class="bp-phase-card">
-        <h4>Phase 4: Scale (Years 3-5)</h4>
-        <ul>
-          <li>Scale to 500-800 ceremonies annually</li>
-          <li>International chapters (Europe, Asia, South America)</li>
-          <li>Full-time staff of 20-30+</li>
-          <li>Advanced Documemorial: VR/360° experiences</li>
-          <li>Owl motif evolves: wings (sponsors), talons (regional chapters), full body</li>
-          <li>Revenue target: $10M+ annually</li>
-          <li>National brand recognition</li>
-          <li>Industry conference and annual ASH Gala</li>
-          <li>Potential franchise model for regional chapters</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- 14. Appendix -->
-    <div class="bp-section" id="appendix">
-      <h2>14. Appendix</h2>
-
-      <h3>A. Key Assumptions</h3>
-      <ul>
-        <li>Cremation rate continues to grow as projected by NFDA</li>
-        <li>501(c)(3) status is obtained within 6-12 months of filing</li>
-        <li>Sufficient Guild volunteers can be recruited from existing skydiving/aviation communities</li>
-        <li>No major adverse regulatory changes to ash scattering laws</li>
-        <li>Viral/organic content growth reduces customer acquisition costs over time</li>
-        <li>Cost-sharing model makes ceremonies accessible to middle-income families</li>
-      </ul>
-
-      <h3>B. Data Sources</h3>
-      <ul>
-        <li>National Funeral Directors Association (NFDA) — 2025 Cremation & Burial Report</li>
-        <li>NFDA — 2025 Consumer Awareness and Preferences Report</li>
-        <li>NFDA — 2023 General Price List Study</li>
-        <li>CDC — National Vital Statistics Reports</li>
-        <li>FAA — Federal Aviation Regulations (14 CFR)</li>
-        <li>EPA — Marine Protection, Research, and Sanctuaries Act (33 U.S.C. § 1401)</li>
-        <li>IRS — Publication 557 (Tax-Exempt Status for Your Organization)</li>
-      </ul>
-
-      <h3>C. Competitive Analysis Detail</h3>
-      <p>No single organization currently offers the comprehensive suite of services ASH plans to provide. The closest competitors are:</p>
-      <ul>
-        <li><strong>Aerial scatter services:</strong> Local charter operators offering basic flyover scattering. No brand, no Documemorial, no formation flying, no proprietary device. Prices range from $200-$800 for airplane flyovers.</li>
-        <li><strong>Balloon services:</strong> Eternal Ascent and similar companies release ashes attached to biodegradable balloons. Simple, passive, no aviation experience for family.</li>
-        <li><strong>Ash reef / space services:</strong> Companies like Eternal Reefs (underwater) and Elysium Space (orbital) offer niche alternatives but serve a different emotional need.</li>
-      </ul>
-      <p>ASH's unique combination of <strong>human aviation (skydiving, paragliding), proprietary devices, Documemorial production, 501(c)(3) status, Guild certification, international capability, and cost-sharing model</strong> creates a category of one.</p>
-
-      <h3>D. Owl Motif Evolution</h3>
-      <p>As ASH grows, the owl motif visually evolves to reflect organizational maturation:</p>
-
-      <!-- Owl Evolution Stages -->
-      <div class="bp-evolution-row">
-        <!-- Stage 1: Triangle only -->
-        <div class="bp-evolution-stage">
-          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="20,20 100,20 60,100" fill="none" stroke="#c8a84e" stroke-width="2" stroke-linejoin="round"/>
-            <text x="12" y="16" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">A</text>
-            <text x="98" y="16" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">H</text>
-            <text x="55" y="115" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">S</text>
-          </svg>
-          <p><strong>Stage 1</strong><br>Triangle Only</p>
-        </div>
-        <!-- Stage 2: Triangle + Eyebrows -->
-        <div class="bp-evolution-stage">
-          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="20,25 100,25 60,105" fill="none" stroke="#c8a84e" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M28,23 Q40,10 52,18" fill="none" stroke="#c8a84e" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M92,23 Q80,10 68,18" fill="none" stroke="#c8a84e" stroke-width="1.5" stroke-linecap="round"/>
-            <text x="24" y="9" fill="#c8a84e" font-size="7" font-family="Georgia">IT</text>
-            <text x="86" y="9" fill="#c8a84e" font-size="7" font-family="Georgia">IP</text>
-            <text x="12" y="22" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">A</text>
-            <text x="98" y="22" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">H</text>
-            <text x="55" y="118" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">S</text>
-          </svg>
-          <p><strong>Stage 2</strong><br>+ Eyebrows (IT/IP)</p>
-        </div>
-        <!-- Stage 3: + Eyes + Beak -->
-        <div class="bp-evolution-stage">
-          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="20,25 100,25 60,105" fill="none" stroke="#c8a84e" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M28,23 Q40,10 52,18" fill="none" stroke="#c8a84e" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M92,23 Q80,10 68,18" fill="none" stroke="#c8a84e" stroke-width="1.5" stroke-linecap="round"/>
-            <circle cx="45" cy="42" r="8" fill="none" stroke="#c8a84e" stroke-width="1"/>
-            <circle cx="45" cy="42" r="3" fill="#c8a84e"/>
-            <circle cx="75" cy="42" r="8" fill="none" stroke="#c8a84e" stroke-width="1"/>
-            <circle cx="75" cy="42" r="3" fill="#c8a84e"/>
-            <polygon points="56,55 64,55 60,63" fill="rgba(200,168,78,0.3)" stroke="#c8a84e" stroke-width="0.8"/>
-            <text x="12" y="22" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">A</text>
-            <text x="98" y="22" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">H</text>
-            <text x="55" y="118" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">S</text>
-          </svg>
-          <p><strong>Stage 3</strong><br>+ Talons (Chapters)</p>
-        </div>
-        <!-- Stage 4: + Wings -->
-        <div class="bp-evolution-stage">
-          <svg viewBox="0 0 140 120" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="30,25 110,25 70,105" fill="none" stroke="#c8a84e" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M38,23 Q50,10 62,18" fill="none" stroke="#c8a84e" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M102,23 Q90,10 78,18" fill="none" stroke="#c8a84e" stroke-width="1.5" stroke-linecap="round"/>
-            <circle cx="55" cy="42" r="8" fill="none" stroke="#c8a84e" stroke-width="1"/>
-            <circle cx="55" cy="42" r="3" fill="#c8a84e"/>
-            <circle cx="85" cy="42" r="8" fill="none" stroke="#c8a84e" stroke-width="1"/>
-            <circle cx="85" cy="42" r="3" fill="#c8a84e"/>
-            <polygon points="66,55 74,55 70,63" fill="rgba(200,168,78,0.3)" stroke="#c8a84e" stroke-width="0.8"/>
-            <!-- Wings -->
-            <path d="M30,25 Q5,50 10,90" fill="none" stroke="#c8a84e" stroke-width="1.5" opacity="0.6" stroke-dasharray="4,3"/>
-            <path d="M110,25 Q135,50 130,90" fill="none" stroke="#c8a84e" stroke-width="1.5" opacity="0.6" stroke-dasharray="4,3"/>
-            <text x="22" y="22" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">A</text>
-            <text x="108" y="22" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">H</text>
-            <text x="65" y="118" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">S</text>
-          </svg>
-          <p><strong>Stage 4</strong><br>+ Wings (Sponsors)</p>
-        </div>
-        <!-- Stage 5: Full Owl -->
-        <div class="bp-evolution-stage">
-          <svg viewBox="0 0 140 130" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="30,25 110,25 70,100" fill="none" stroke="#c8a84e" stroke-width="2" stroke-linejoin="round"/>
-            <circle cx="70" cy="55" r="42" fill="none" stroke="#c8a84e" stroke-width="0.8" opacity="0.25"/>
-            <path d="M38,23 Q50,10 62,18" fill="none" stroke="#c8a84e" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M102,23 Q90,10 78,18" fill="none" stroke="#c8a84e" stroke-width="1.5" stroke-linecap="round"/>
-            <circle cx="55" cy="40" r="9" fill="none" stroke="#c8a84e" stroke-width="1.2"/>
-            <circle cx="55" cy="40" r="4" fill="#c8a84e"/>
-            <circle cx="85" cy="40" r="9" fill="none" stroke="#c8a84e" stroke-width="1.2"/>
-            <circle cx="85" cy="40" r="4" fill="#c8a84e"/>
-            <polygon points="66,53 74,53 70,61" fill="rgba(200,168,78,0.4)" stroke="#c8a84e" stroke-width="0.8"/>
-            <!-- Wings -->
-            <path d="M30,25 Q2,48 8,90" fill="none" stroke="#c8a84e" stroke-width="1.5" opacity="0.6"/>
-            <path d="M110,25 Q138,48 132,90" fill="none" stroke="#c8a84e" stroke-width="1.5" opacity="0.6"/>
-            <!-- Talons -->
-            <line x1="60" y1="100" x2="55" y2="118" stroke="#c8a84e" stroke-width="1.5" opacity="0.6"/>
-            <line x1="70" y1="100" x2="70" y2="120" stroke="#c8a84e" stroke-width="1.5" opacity="0.6"/>
-            <line x1="80" y1="100" x2="85" y2="118" stroke="#c8a84e" stroke-width="1.5" opacity="0.6"/>
-            <text x="22" y="22" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">A</text>
-            <text x="108" y="22" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">H</text>
-            <text x="65" y="98" fill="#c8a84e" font-size="9" font-family="Georgia" font-weight="bold">S</text>
-          </svg>
-          <p><strong>Stage 5</strong><br>Full Owl (Global)</p>
-        </div>
-      </div>
-      <ol>
-        <li><strong>Stage 1 (Launch):</strong> Triangle only — the three pillars (A, H, S)</li>
-        <li><strong>Stage 2 (Growth):</strong> Triangle + Eyebrows — IT and IP capabilities established</li>
-        <li><strong>Stage 3 (Expansion):</strong> + Talons — Regional chapters grounded nationwide</li>
-        <li><strong>Stage 4 (Maturity):</strong> + Wings — Patron/sponsor ecosystem fully developed</li>
-        <li><strong>Stage 5 (Full Form):</strong> Full owl — Complete organization with all functions, global reach</li>
-      </ol>
-    </div>
-
-    <!-- Back to Website -->
-    <div class="bp-nav">
-      <a href="index.html" class="btn btn-outline">← Back to Website</a>
-      <a href="#executive-summary" class="btn btn-gold">Back to Top ↑</a>
-    </div>
-
-  </div>
-</div>
-
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-bottom" style="border-top:none;">
-      <p>&copy; 2026 ASH International — Ashes Soaring High. All rights reserved.</p>
-      <span class="footer-nonprofit">501(c)(3) Tax-Exempt Nonprofit Organization</span>
-      <p>
-        <a href="index.html">Main Website</a> · <a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a>
-      </p>
-    </div>
-  </div>
-</footer>
-
-<button class="scroll-top" aria-label="Scroll to top">↑</button>
-
-<script src="js/main.js"></script>
-</body>
-</html>
+      <p>ASH positions itself as the <strong>premium, trustworthy, mission-driven</strong> choice for aviation memorial services. Not a commercial vendor — a nonprofit movement. The owl motif, gold-and-navy branding, and the Documemorial concept create a distinctive, instantly recogniz
