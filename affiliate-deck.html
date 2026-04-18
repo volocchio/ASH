@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASH Affiliate Deck — Ashes Soaring High</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .slide { min-height:100vh; display:flex; align-items:center; justify-content:center; padding:8rem 2rem 4rem; }
+    .slide:nth-child(odd) { background:var(--navy); }
+    .slide:nth-child(even) { background:var(--navy-light); }
+    .slide-inner { max-width:1000px; width:100%; }
+    .slide-number { font-size:0.75rem; letter-spacing:3px; text-transform:uppercase; color:var(--gold); opacity:0.6; margin-bottom:1rem; }
+    .slide-title { font-family:var(--font-heading); font-size:clamp(2rem,5vw,3.5rem); color:var(--cream); margin-bottom:0.5rem; line-height:1.15; }
+    .slide-title span { color:var(--gold); }
+    .slide-subtitle { font-size:1.1rem; color:var(--ash-light); margin-bottom:3rem; max-width:700px; }
+    .slide-grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; }
+    .slide-grid-3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:2rem; }
+    .deck-card { background:rgba(200,168,78,0.05); border:1px solid rgba(200,168,78,0.18); border-radius:10px; padding:2rem; }
+    .deck-card h3 { color:var(--gold); font-size:1.2rem; margin-bottom:0.75rem; }
+    .deck-card p, .deck-card li { color:var(--ash-light); font-size:0.92rem; line-height:1.7; }
+    .deck-card ul { list-style:none; padding:0; }
+    .deck-card ul li { padding:0.3rem 0 0.3rem 1.4rem; position:relative; }
+    .deck-card ul li::before { content:'◆'; position:absolute; left:0; color:var(--gold); font-size:0.55rem; top:0.6rem; }
+    .callout { background:rgba(200,168,78,0.07); border-left:4px solid var(--gold); padding:1.5rem 2rem; border-radius:0 8px 8px 0; margin:2rem 0; }
+    .callout p { color:var(--ash-light); font-size:0.95rem; margin:0; }
+    .tag { display:inline-block; background:rgba(200,168,78,0.12); border:1px solid rgba(200,168,78,0.3); color:var(--gold-light); padding:0.3rem 0.9rem; border-radius:20px; font-size:0.78rem; font-weight:500; margin:0.25rem; }
+    .divider-gold { width:60px; height:3px; background:var(--gold); border:none; margin:1.5rem 0; }
+    .hero-slide { min-height:100vh; background:linear-gradient(135deg,var(--navy) 0%,#0d2240 60%,#132d4f 100%); display:flex; align-items:center; justify-content:center; text-align:center; padding:6rem 2rem; }
+    .hero-slide h1 { font-size:clamp(3rem,8vw,6rem); color:var(--cream); letter-spacing:6px; margin-bottom:1rem; }
+    .hero-slide h1 span { color:var(--gold); }
+    .hero-slide .tagline { font-family:var(--font-heading); font-size:clamp(1.1rem,2.5vw,1.6rem); color:var(--gold-light); font-style:italic; margin-bottom:1rem; }
+    .progress-bar { position:fixed; top:0; left:0; height:3px; background:var(--gold); z-index:2000; transition:width 0.2s; }
+    .aff-type-card { border-radius:10px; padding:1.8rem; border:1px solid rgba(200,168,78,0.18); background:rgba(200,168,78,0.04); transition:all 0.3s; }
+    .aff-type-card:hover { border-color:var(--gold); transform:translateY(-3px); }
+    .aff-type-card .icon { font-size:2.2rem; margin-bottom:0.8rem; }
+    .aff-type-card h4 { color:var(--gold); margin-bottom:0.5rem; font-size:1.05rem; }
+    .aff-type-card p { color:var(--ash-light); font-size:0.85rem; }
+    @media(max-width:768px) { .slide-grid-2,.slide-grid-3 { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<div class="progress-bar" id="progress"></div>
+
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="height:36px;">
+        <polygon points="20,22 60,22 40,58" fill="none" stroke="#c8a84e" stroke-width="2"/>
+        <circle cx="30" cy="30" r="4" fill="#c8a84e" opacity="0.8"/>
+        <circle cx="50" cy="30" r="4" fill="#c8a84e" opacity="0.8"/>
+        <polygon points="37,38 43,38 40,44" fill="#c8a84e" opacity="0.6"/>
+      </svg>
+      <div><span class="nav-logo-text">ASH</span><span class="nav-logo-tagline">Affiliate Deck</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">← Website</a></li>
+      <li><a href="business-plan.html">Business Plan</a></li>
+      <li><a href="investor-deck.html">Investor Deck</a></li>
+      <li><a href="sponsor-deck.html">Sponsor Deck</a></li>
+      <li><a href="affiliate-deck.html" class="active">Affiliate Deck</a></li>
+      <li><a href="hero-deck.html">Join the Guild</a></li>
+    </ul>
+    <button class="hamburger" aria-label="menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- SLIDE 1 -->
+<section class="hero-slide">
+  <div>
+    <p style="font-size:0.75rem;letter-spacing:4px;text-transform:uppercase;color:var(--ash-grey);margin-bottom:3rem;">Affiliate Partnership Presentation · April 2026</p>
+    <h1><span>ASH</span> International</h1>
+    <p class="tagline">Your Clients Need This. We Make It Possible.</p>
+    <p style="color:var(--ash-light);max-width:620px;margin:0 auto 2.5rem;font-size:1.05rem;">ASH International partners with insurance companies, hospice organizations, funeral homes, cremation providers, and social media agencies to deliver meaningful aviation memorial services to the families they serve.</p>
+    <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;">
+      <span class="tag">Insurance Partners</span>
+      <span class="tag">Hospice & End-of-Life</span>
+      <span class="tag">Funeral Homes</span>
+      <span class="tag">Social Media Agencies</span>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 2: Affiliate Types -->
+<section class="slide">
+  <div class="slide-inner">
+    <p class="slide-number">Slide 02 of 06</p>
+    <h2 class="slide-title">Who <span>Affiliates</span> With ASH?</h2>
+    <p class="slide-subtitle">ASH's affiliate network is the "chin" of the owl — the stable foundation connecting families to our services at their moment of greatest need.</p>
+    <hr class="divider-gold">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;">
+      <div class="aff-type-card"><div class="icon">🏥</div><h4>Hospice Organizations</h4><p>30,000+ U.S. hospices. Active end-of-life planning conversations with families.</p></div>
+      <div class="aff-type-card"><div class="icon">🔥</div><h4>Cremation Companies</h4><p>100+ independent & chain crematories. Families choose dispersal immediately after cremation.</p></div>
+      <div class="aff-type-card"><div class="icon">⚱️</div><h4>Funeral Homes</h4><p>15,400+ U.S. locations. Trusted family advisors at the most important moment.</p></div>
+      <div class="aff-type-card"><div class="icon">🛡️</div><h4>Life Insurance</h4><p>Death benefit administrators and brokers who market memorial options at point of claim.</p></div>
+      <div class="aff-type-card"><div class="icon">📱</div><h4>Social Media Agencies</h4><p>Production partners who amplify Documemorials across 7 platforms per ceremony.</p></div>
+      <div class="aff-type-card"><div class="icon">⚖️</div><h4>Estate Planners</h4><p>Attorneys and financial advisors integrating ASH into final wishes documentation.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 3: How It Works -->
+<section class="slide">
+  <div class="slide-inner">
+    <p class="slide-number">Slide 03 of 06</p>
+    <h2 class="slide-title">How the <span>Partnership</span> Works</h2>
+    <p class="slide-subtitle">Simple, low-friction referral model. You serve your client. We handle the ceremony. Everyone wins.</p>
+    <hr class="divider-gold">
+    <div class="slide-grid-3" style="margin-bottom:2.5rem;">
+      <div class="deck-card">
+        <h3>1 — You Refer</h3>
+        <p>Your team introduces ASH at the right moment — during hospice planning, at cremation selection, in estate planning, or at point of life insurance claim. We provide you with a simple referral toolkit.</p>
+      </div>
+      <div class="deck-card" style="border-color:var(--gold);">
+        <h3>2 — We Deliver</h3>
+        <p>ASH handles the entire ceremony from consultation to Documemorial production. Your client receives a world-class, deeply personal aviation farewell — you take zero operational risk.</p>
+      </div>
+      <div class="deck-card">
+        <h3>3 — You Earn</h3>
+        <p>Affiliates receive a referral fee on every completed ceremony. High-volume partners qualify for tiered revenue sharing and co-branded marketing materials.</p>
+      </div>
+    </div>
+    <div class="callout">
+      <p><strong style="color:var(--cream);">No operational complexity:</strong> You don't manage aviation, dispersal logistics, or Documemorial production. You simply connect families to a service they will be forever grateful for — and receive compensation for every completed ceremony.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 4: By Affiliate Type -->
+<section class="slide">
+  <div class="slide-inner">
+    <p class="slide-number">Slide 04 of 06</p>
+    <h2 class="slide-title">Tailored for <span>Your Sector</span></h2>
+    <p class="slide-subtitle">Every affiliate category has a customized partnership framework designed around your workflows and client relationships.</p>
+    <hr class="divider-gold">
+    <div class="slide-grid-2">
+      <div class="deck-card">
+        <h3>🏥 Hospice & End-of-Life Care</h3>
+        <p style="margin-bottom:0.75rem;">Families in hospice care are actively planning final wishes. ASH integrates directly into those conversations with a compassionate, meaningful option.</p>
+        <ul>
+          <li>Co-branded family information packets</li>
+          <li>Staff training on ASH services (1hr session)</li>
+          <li>Referral fee per completed ceremony</li>
+          <li>Grief support resource bundle included</li>
+        </ul>
+      </div>
+      <div class="deck-card">
+        <h3>🛡️ Life Insurance & Estate</h3>
+        <p style="margin-bottom:0.75rem;">Death benefit claims are the trigger moment. ASH can be introduced as a meaningful use of benefit funds, or pre-funded through policy riders.</p>
+        <ul>
+          <li>Co-branded brochure at point of claim</li>
+          <li>ASH ceremony pre-funding option</li>
+          <li>Digital last wishes platform integration</li>
+          <li>Referral tracking portal access</li>
+        </ul>
+      </div>
+      <div class="deck-card">
+        <h3>📱 Social Media Agencies</h3>
+        <p style="margin-bottom:0.75rem;">Every ASH ceremony is a content production opportunity. Agency partners provide live stream production, editing, and multi-platform broadcast support.</p>
+        <ul>
+          <li>Revenue share on Documemorial packages</li>
+          <li>Co-branded production credit on all content</li>
+          <li>Preferred vendor status in ASH system</li>
+          <li>Access to raw footage for portfolio use</li>
+        </ul>
+      </div>
+      <div class="deck-card">
+        <h3>⚱️ Funeral Homes & Crematories</h3>
+        <p style="margin-bottom:0.75rem;">The most natural referral moment: when a family chooses cremation and asks "now what?" ASH is the answer your staff can proudly recommend.</p>
+        <ul>
+          <li>Point-of-sale referral materials</li>
+          <li>Co-branded ceremony coordination</li>
+          <li>Tiered referral fees by volume</li>
+          <li>Joint marketing in local markets</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 5: The Affiliate Opportunity -->
+<section class="slide">
+  <div class="slide-inner">
+    <p class="slide-number">Slide 05 of 06</p>
+    <h2 class="slide-title">The <span>Numbers</span></h2>
+    <p class="slide-subtitle">The market is enormous. The timing is perfect. Your referral network is already in place.</p>
+    <hr class="divider-gold">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-bottom:2.5rem;">
+      <div style="text-align:center;padding:1.5rem;background:rgba(200,168,78,0.05);border:1px solid rgba(200,168,78,0.15);border-radius:10px;">
+        <div style="font-family:var(--font-heading);font-size:3rem;color:var(--gold);font-weight:700;">30K+</div>
+        <div style="color:var(--ash-light);font-size:0.82rem;text-transform:uppercase;letter-spacing:1px;margin-top:0.5rem;">U.S. Hospice Organizations</div>
+      </div>
+      <div style="text-align:center;padding:1.5rem;background:rgba(200,168,78,0.05);border:1px solid rgba(200,168,78,0.15);border-radius:10px;">
+        <div style="font-family:var(--font-heading);font-size:3rem;color:var(--gold);font-weight:700;">15.4K</div>
+        <div style="color:var(--ash-light);font-size:0.82rem;text-transform:uppercase;letter-spacing:1px;margin-top:0.5rem;">U.S. Funeral Homes</div>
+      </div>
+      <div style="text-align:center;padding:1.5rem;background:rgba(200,168,78,0.05);border:1px solid rgba(200,168,78,0.15);border-radius:10px;">
+        <div style="font-family:var(--font-heading);font-size:3rem;color:var(--gold);font-weight:700;">2.1M</div>
+        <div style="color:var(--ash-light);font-size:0.82rem;text-transform:uppercase;letter-spacing:1px;margin-top:0.5rem;">Annual Cremations</div>
+      </div>
+      <div style="text-align:center;padding:1.5rem;background:rgba(200,168,78,0.05);border:1px solid rgba(200,168,78,0.15);border-radius:10px;">
+        <div style="font-family:var(--font-heading);font-size:3rem;color:var(--gold);font-weight:700;">$120K</div>
+        <div style="color:var(--ash-light);font-size:0.82rem;text-transform:uppercase;letter-spacing:1px;margin-top:0.5rem;">Year 3 Affiliate Revenue</div>
+        <div style="color:var(--ash-grey);font-size:0.72rem;margin-top:0.3rem;">Shared across network</div>
+      </div>
+    </div>
+    <div class="callout">
+      <p><strong style="color:var(--cream);">Capturing just 0.1%</strong> of the annual scattering market means 700 ceremonies per year. At an average affiliate referral fee of $300–$500 per ceremony, a mid-size hospice network referring 20 families/year earns $6,000–$10,000 annually with zero operational overhead.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 6: Join the Network -->
+<section class="slide">
+  <div class="slide-inner" style="text-align:center;">
+    <p class="slide-number">Slide 06 of 06</p>
+    <h2 class="slide-title" style="text-align:center;">Join the <span>ASH Affiliate Network</span></h2>
+    <p class="slide-subtitle" style="margin:0 auto 2rem;">Simple onboarding. No fees. No minimum referrals. Just a shared commitment to serving families at their most important moments.</p>
+    <hr class="divider-gold" style="margin:1.5rem auto;">
+    <div class="slide-grid-3" style="margin:2.5rem 0;text-align:left;">
+      <div class="deck-card">
+        <h3>Step 1 — Agreement</h3>
+        <p>Sign our one-page affiliate agreement. No exclusivity required. Works alongside existing vendor relationships.</p>
+      </div>
+      <div class="deck-card" style="border-color:var(--gold);">
+        <h3>Step 2 — Onboarding</h3>
+        <p>Receive your affiliate kit: referral materials, staff training guide, co-branded collateral, and referral tracking portal access.</p>
+      </div>
+      <div class="deck-card">
+        <h3>Step 3 — Refer & Earn</h3>
+        <p>Start referring families. Track completions in your portal. Receive referral fees monthly via direct deposit.</p>
+      </div>
+    </div>
+    <div class="callout" style="max-width:700px;margin:0 auto;">
+      <p style="text-align:center;font-size:1.05rem;">
+        <strong style="color:var(--gold);">Ready to partner?</strong><br>
+        <span style="color:var(--ash-light);">affiliates@ashsoaringhigh.org · No setup fees · Cancel anytime</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" style="padding:2rem 0;">
+  <div class="container" style="text-align:center;">
+    <p style="color:var(--ash-grey);font-size:0.8rem;">ASH International, Inc. · 501(c)(3) Nonprofit · April 2026</p>
+    <div style="margin-top:1rem;display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;">
+      <a href="investor-deck.html" style="color:var(--gold);font-size:0.85rem;">Investor Deck</a>
+      <a href="sponsor-deck.html" style="color:var(--gold);font-size:0.85rem;">Sponsor Deck</a>
+      <a href="hero-deck.html" style="color:var(--gold);font-size:0.85rem;">Join the Guild</a>
+      <a href="business-plan.html" style="color:var(--gold);font-size:0.85rem;">Business Plan</a>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script>
+  window.addEventListener('scroll', () => {
+    const p = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    document.getElementById('progress').style.width = p + '%';
+  });
+</script>
+</body>
+</html>

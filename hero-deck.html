@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join the ASH Guild — Ashes Soaring High</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .slide { min-height:100vh; display:flex; align-items:center; justify-content:center; padding:8rem 2rem 4rem; }
+    .slide:nth-child(odd) { background:var(--navy); }
+    .slide:nth-child(even) { background:var(--navy-light); }
+    .slide-inner { max-width:1000px; width:100%; }
+    .slide-number { font-size:0.75rem; letter-spacing:3px; text-transform:uppercase; color:var(--gold); opacity:0.6; margin-bottom:1rem; }
+    .slide-title { font-family:var(--font-heading); font-size:clamp(2rem,5vw,3.5rem); color:var(--cream); margin-bottom:0.5rem; line-height:1.15; }
+    .slide-title span { color:var(--gold); }
+    .slide-subtitle { font-size:1.1rem; color:var(--ash-light); margin-bottom:3rem; max-width:700px; }
+    .slide-grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; }
+    .slide-grid-3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:2rem; }
+    .deck-card { background:rgba(200,168,78,0.05); border:1px solid rgba(200,168,78,0.18); border-radius:10px; padding:2rem; }
+    .deck-card h3 { color:var(--gold); font-size:1.2rem; margin-bottom:0.75rem; }
+    .deck-card p, .deck-card li { color:var(--ash-light); font-size:0.92rem; line-height:1.7; }
+    .deck-card ul { list-style:none; padding:0; }
+    .deck-card ul li { padding:0.3rem 0 0.3rem 1.4rem; position:relative; }
+    .deck-card ul li::before { content:'◆'; position:absolute; left:0; color:var(--gold); font-size:0.55rem; top:0.6rem; }
+    .callout { background:rgba(200,168,78,0.07); border-left:4px solid var(--gold); padding:1.5rem 2rem; border-radius:0 8px 8px 0; margin:2rem 0; }
+    .callout p { color:var(--ash-light); font-size:0.95rem; margin:0; }
+    .tag { display:inline-block; background:rgba(200,168,78,0.12); border:1px solid rgba(200,168,78,0.3); color:var(--gold-light); padding:0.3rem 0.9rem; border-radius:20px; font-size:0.78rem; font-weight:500; margin:0.25rem; }
+    .divider-gold { width:60px; height:3px; background:var(--gold); border:none; margin:1.5rem 0; }
+    .hero-slide { min-height:100vh; background:linear-gradient(135deg,var(--navy) 0%,#0a1828 50%,#0d2240 100%); display:flex; align-items:center; justify-content:center; text-align:center; padding:6rem 2rem; position:relative; overflow:hidden; }
+    .hero-slide::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at center, rgba(200,168,78,0.06) 0%, transparent 70%); }
+    .hero-slide h1 { font-size:clamp(2.5rem,7vw,5.5rem); color:var(--cream); letter-spacing:4px; margin-bottom:1rem; }
+    .hero-slide h1 span { color:var(--gold); }
+    .hero-slide .tagline { font-family:var(--font-heading); font-size:clamp(1.1rem,2.5vw,1.8rem); color:var(--gold-light); font-style:italic; margin-bottom:1rem; }
+    .progress-bar { position:fixed; top:0; left:0; height:3px; background:var(--gold); z-index:2000; transition:width 0.2s; }
+    .discipline-card { border-radius:10px; padding:2rem; border:1px solid rgba(200,168,78,0.18); background:rgba(200,168,78,0.04); transition:all 0.3s; cursor:default; }
+    .discipline-card:hover { border-color:var(--gold); transform:translateY(-4px); box-shadow:0 4px 30px rgba(200,168,78,0.1); }
+    .discipline-card .icon { font-size:2.5rem; margin-bottom:0.8rem; }
+    .discipline-card h4 { color:var(--gold); margin-bottom:0.5rem; font-size:1.1rem; }
+    .discipline-card p { color:var(--ash-light); font-size:0.85rem; line-height:1.6; }
+    .discipline-card .req { margin-top:0.75rem; font-size:0.78rem; color:var(--ash-grey); font-style:italic; }
+    .mission-statement { font-family:var(--font-heading); font-size:clamp(1.3rem,3vw,2rem); color:var(--cream); font-style:italic; line-height:1.5; text-align:center; padding:2rem; border:1px solid rgba(200,168,78,0.2); border-radius:10px; background:rgba(200,168,78,0.04); }
+    .mission-statement span { color:var(--gold); }
+    @media(max-width:768px) { .slide-grid-2,.slide-grid-3 { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<div class="progress-bar" id="progress"></div>
+
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="height:36px;">
+        <polygon points="20,22 60,22 40,58" fill="none" stroke="#c8a84e" stroke-width="2"/>
+        <circle cx="30" cy="30" r="4" fill="#c8a84e" opacity="0.8"/>
+        <circle cx="50" cy="30" r="4" fill="#c8a84e" opacity="0.8"/>
+        <polygon points="37,38 43,38 40,44" fill="#c8a84e" opacity="0.6"/>
+      </svg>
+      <div><span class="nav-logo-text">ASH</span><span class="nav-logo-tagline">Join the Guild</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">← Website</a></li>
+      <li><a href="business-plan.html">Business Plan</a></li>
+      <li><a href="investor-deck.html">Investor Deck</a></li>
+      <li><a href="sponsor-deck.html">Sponsor Deck</a></li>
+      <li><a href="affiliate-deck.html">Affiliate Deck</a></li>
+      <li><a href="hero-deck.html" class="active nav-cta">Join the Guild</a></li>
+    </ul>
+    <button class="hamburger" aria-label="menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- SLIDE 1 -->
+<section class="hero-slide">
+  <div style="position:relative;z-index:2;">
+    <p style="font-size:0.75rem;letter-spacing:4px;text-transform:uppercase;color:var(--ash-grey);margin-bottom:2rem;">The ASH Guild · Aviator Recruitment</p>
+    <h1>You Were <span>Born</span><br>to Do This.</h1>
+    <p class="tagline">"The sky is not the end. It's the beginning."</p>
+    <p style="color:var(--ash-light);max-width:600px;margin:0 auto 2.5rem;font-size:1.05rem;">The ASH Guild is an elite network of skydivers, pilots, balloonists, and aviators united by a sacred mission: to give people the most extraordinary farewell imaginable. If the sky is where you feel alive — this is how you make it matter most.</p>
+    <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;">
+      <span class="tag">Skydivers</span>
+      <span class="tag">Helicopter Pilots</span>
+      <span class="tag">Balloon Pilots</span>
+      <span class="tag">BASE Jumpers</span>
+      <span class="tag">Paragliders</span>
+      <span class="tag">Fixed-Wing Pilots</span>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 2: The Mission -->
+<section class="slide">
+  <div class="slide-inner">
+    <p class="slide-number">Slide 02 of 06</p>
+    <h2 class="slide-title">The <span>Sacred Mission</span></h2>
+    <p class="slide-subtitle">You've spent your life mastering the sky. Now use that mastery to give families a farewell they will never forget.</p>
+    <hr class="divider-gold">
+    <div class="mission-statement" style="margin-bottom:3rem;">
+      "Every life deserves a farewell that <span>soars</span>. The ASH Guild makes that possible — with skill, reverence, and the courage to fly into the most emotional moment of a family's life."
+    </div>
+    <div class="slide-grid-3">
+      <div class="deck-card">
+        <h3>🎯 What You Do</h3>
+        <p>You conduct aviation ash dispersal ceremonies — skydiving formations, helicopter flyovers, balloon releases, BASE descents, and more — using ASH's proprietary dispersal vessel, trained to our protocols.</p>
+      </div>
+      <div class="deck-card" style="border-color:var(--gold);">
+        <h3>🦉 Who You Join</h3>
+        <p>The ASH Guild is a brotherhood and sisterhood of aviators who believe their skills serve a higher purpose. You are not a vendor. You are a Guardian of Final Flights — trained, certified, and honored.</p>
+      </div>
+      <div class="deck-card">
+        <h3>💛 Why It Matters</h3>
+        <p>37% of cremated remains sit on a shelf — families unable to find a meaningful way forward. Every ceremony you conduct frees a soul to soar and gives a family peace that nothing else can provide.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 3: Disciplines -->
+<section class="slide">
+  <div class="slide-inner">
+    <p class="slide-number">Slide 03 of 06</p>
+    <h2 class="slide-title">Your <span>Discipline</span> Has a Place</h2>
+    <p class="slide-subtitle">Every aviation discipline is welcome in the ASH Guild. Your specific skills determine which ceremonies you lead.</p>
+    <hr class="divider-gold">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;">
+      <div class="discipline-card">
+        <div class="icon">🪂</div>
+        <h4>Skydiving</h4>
+        <p>Formation flying, wingsuit, freefly, angle, belly. The most visually powerful ceremony — ashes released mid-formation at altitude.</p>
+        <p class="req">USPA B-license min · 200+ jumps · ASH cert</p>
+      </div>
+      <div class="discipline-card">
+        <div class="icon">🚁</div>
+        <h4>Helicopter</h4>
+        <p>Intimate family-on-board ceremony over meaningful landscapes. The most personal option — family flies with their loved one.</p>
+        <p class="req">FAA Commercial · 500+ hrs PIC · ASH protocol</p>
+      </div>
+      <div class="discipline-card">
+        <div class="icon">🎈</div>
+        <h4>Hot Air Balloon</h4>
+        <p>Sunrise or sunset releases at altitude. Breathtakingly beautiful. Families frequently on board for the full experience.</p>
+        <p class="req">FAA LTA cert · 200+ hours · Passenger trained</p>
+      </div>
+      <div class="discipline-card">
+        <div class="icon">✈️</div>
+        <h4>Fixed-Wing</h4>
+        <p>Classic flyover scattering above meaningful terrain — coastlines, mountains, hometown landscapes, or favorite locations.</p>
+        <p class="req">FAA Commercial or PPL · 500+ hrs · ASH procedures</p>
+      </div>
+      <div class="discipline-card">
+        <div class="icon">🪂</div>
+        <h4>Paraglider / Hang Glider</h4>
+        <p>Tandem flights carrying ashes. Intimate and personal — the most peaceful, serene ceremony available.</p>
+        <p class="req">USHPA P4/H4 · Tandem cert · 300+ hours</p>
+      </div>
+      <div class="discipline-card">
+        <div class="icon">🏔️</div>
+        <h4>BASE Jump</h4>
+        <p>The most dramatic ceremony — ashes released from iconic cliffs, bridges, or structures. Reserved for the most experienced Guild members.</p>
+        <p class="req">500+ BASE jumps · Consistent safety record · ASH risk mgmt</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 4: What You Get -->
+<section class="slide">
+  <div class="slide-inner">
+    <p class="slide-number">Slide 04 of 06</p>
+    <h2 class="slide-title">What <span>Guild Membership</span> Gives You</h2>
+    <p class="slide-subtitle">This is not just a gig. The ASH Guild offers meaningful compensation, community, purpose, and recognition for elite aviators.</p>
+    <hr class="divider-gold">
+    <div class="slide-grid-2">
+      <div>
+        <div class="deck-card" style="margin-bottom:1.5rem;">
+          <h3>💰 Compensation</h3>
+          <ul>
+            <li>Per-ceremony fees ($200–$2,000+ depending on type)</li>
+            <li>Bonus for complex formations and international expeditions</li>
+            <li>Revenue sharing for Guild members who recruit others</li>
+            <li>Travel & accommodation covered for destination ceremonies</li>
+          </ul>
+        </div>
+        <div class="deck-card">
+          <h3>🎓 Training & Certification</h3>
+          <ul>
+            <li>2-day ASH Dispersal Device intensive</li>
+            <li>Ceremonial protocol and family interaction training</li>
+            <li>Weather decision-making and safety procedures</li>
+            <li>Annual recertification with updated protocols</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="deck-card" style="margin-bottom:1.5rem;">
+          <h3>🦉 Recognition & Community</h3>
+          <ul>
+            <li>Official ASH Guild certification and digital badge</li>
+            <li>Featured in Documemorial credits</li>
+            <li>Annual ASH Guild gathering & awards</li>
+            <li>Private Guild network and communications channel</li>
+            <li>"Guardian of Final Flights" — a title you earn</li>
+          </ul>
+        </div>
+        <div class="callout">
+          <p><strong style="color:var(--cream);">Purpose beyond the jump:</strong> Guild members consistently report that ASH ceremonies become the most meaningful flights of their career. The families never forget you. Neither will you forget them.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 5: Who We're Looking For -->
+<section class="slide">
+  <div class="slide-inner">
+    <p class="slide-number">Slide 05 of 06</p>
+    <h2 class="slide-title">The <span>Right Aviator</span></h2>
+    <p class="slide-subtitle">Technical skill is required. But the best ASH Guild members bring something more — a heart for service and the ability to hold space for a family in their most vulnerable moment.</p>
+    <hr class="divider-gold">
+    <div class="slide-grid-2" style="margin-bottom:2.5rem;">
+      <div class="deck-card">
+        <h3>You Must Have</h3>
+        <ul>
+          <li>Current certification in your discipline (see requirements)</li>
+          <li>Clean safety record — no significant incidents</li>
+          <li>Current medical certificate (where applicable)</li>
+          <li>Valid insurance coverage</li>
+          <li>Genuine compassion for families in grief</li>
+          <li>Professionalism in appearance and communication</li>
+        </ul>
+      </div>
+      <div class="deck-card">
+        <h3>You Will Bring</h3>
+        <ul>
+          <li>Pride in your craft and the ASH mission</li>
+          <li>The ability to adapt to each family's needs</li>
+          <li>Respect for the sacred nature of each ceremony</li>
+          <li>Commitment to ongoing training and recertification</li>
+          <li>A network of other qualified aviators to recruit</li>
+          <li>Your unique story — every Guild member is a hero</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout">
+      <p><strong style="color:var(--cream);">We are not a gig economy platform.</strong> ASH Guild members are trained, certified, recognized professionals. We invest in you because you represent the highest expression of what ASH stands for — the skill, courage, and heart to give a final farewell the sky it deserves.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 6: Join Now -->
+<section class="slide">
+  <div class="slide-inner" style="text-align:center;">
+    <p class="slide-number">Slide 06 of 06</p>
+    <h2 class="slide-title" style="text-align:center;">Ready to <span>Fly</span> With Us?</h2>
+    <p class="slide-subtitle" style="margin:0 auto 2rem;">The sky has always been your home. Now it becomes someone's forever.</p>
+    <hr class="divider-gold" style="margin:1.5rem auto;">
+    <div class="slide-grid-3" style="margin:2.5rem 0;text-align:left;">
+      <div class="deck-card">
+        <h3>Step 1 — Apply</h3>
+        <p>Submit your aviation credentials, certifications, and a brief statement of why you want to join the ASH Guild. We review every application personally.</p>
+      </div>
+      <div class="deck-card" style="border-color:var(--gold);">
+        <h3>Step 2 — Train & Certify</h3>
+        <p>Complete the 2-day ASH Dispersal Device and Ceremonial Protocol training. Meet your fellow Guild members. Receive your certification.</p>
+      </div>
+      <div class="deck-card">
+        <h3>Step 3 — First Flight</h3>
+        <p>Your first ceremony is conducted with an experienced Guild mentor. After that, you fly solo — carrying families through the most important moment of their year.</p>
+      </div>
+    </div>
+    <div style="margin-bottom:2rem;">
+      <div class="mission-statement" style="max-width:700px;margin:0 auto;">
+        "You have the skill. You have the hours. You have the courage.<br>
+        <span>Now use them for the most meaningful flight of your life.</span>"
+      </div>
+    </div>
+    <div class="callout" style="max-width:700px;margin:0 auto;">
+      <p style="text-align:center;font-size:1.05rem;">
+        <strong style="color:var(--gold);">Apply to Join the ASH Guild</strong><br>
+        <span style="color:var(--ash-light);">guild@ashsoaringhigh.org · All disciplines welcome · Limited founding member spots available</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" style="padding:2rem 0;">
+  <div class="container" style="text-align:center;">
+    <p style="color:var(--ash-grey);font-size:0.8rem;">ASH International, Inc. · 501(c)(3) Nonprofit · April 2026</p>
+    <div style="margin-top:1rem;display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;">
+      <a href="investor-deck.html" style="color:var(--gold);font-size:0.85rem;">Investor Deck</a>
+      <a href="sponsor-deck.html" style="color:var(--gold);font-size:0.85rem;">Sponsor Deck</a>
+      <a href="affiliate-deck.html" style="color:var(--gold);font-size:0.85rem;">Affiliate Deck</a>
+      <a href="business-plan.html" style="color:var(--gold);font-size:0.85rem;">Business Plan</a>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script>
+  window.addEventListener('scroll', () => {
+    const p = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    document.getElementById('progress').style.width = p + '%';
+  });
+</script>
+</body>
+</html>

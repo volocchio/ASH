@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASH Sponsor & Angel Deck — Ashes Soaring High</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .slide { min-height:100vh; display:flex; align-items:center; justify-content:center; padding:8rem 2rem 4rem; }
+    .slide:nth-child(odd) { background:var(--navy); }
+    .slide:nth-child(even) { background:var(--navy-light); }
+    .slide-inner { max-width:1000px; width:100%; }
+    .slide-number { font-size:0.75rem; letter-spacing:3px; text-transform:uppercase; color:var(--gold); opacity:0.6; margin-bottom:1rem; }
+    .slide-title { font-family:var(--font-heading); font-size:clamp(2rem,5vw,3.5rem); color:var(--cream); margin-bottom:0.5rem; line-height:1.15; }
+    .slide-title span { color:var(--gold); }
+    .slide-subtitle { font-size:1.1rem; color:var(--ash-light); margin-bottom:3rem; max-width:700px; }
+    .slide-grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; }
+    .slide-grid-3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:2rem; }
+    .deck-card { background:rgba(200,168,78,0.05); border:1px solid rgba(200,168,78,0.18); border-radius:10px; padding:2rem; }
+    .deck-card h3 { color:var(--gold); font-size:1.2rem; margin-bottom:0.75rem; }
+    .deck-card p, .deck-card li { color:var(--ash-light); font-size:0.92rem; line-height:1.7; }
+    .deck-card ul { list-style:none; padding:0; }
+    .deck-card ul li { padding:0.3rem 0 0.3rem 1.4rem; position:relative; }
+    .deck-card ul li::before { content:'◆'; position:absolute; left:0; color:var(--gold); font-size:0.55rem; top:0.6rem; }
+    .big-stat { text-align:center; padding:1.5rem; }
+    .big-stat-num { font-family:var(--font-heading); font-size:clamp(2.5rem,5vw,4.5rem); color:var(--gold); font-weight:700; line-height:1; }
+    .big-stat-label { color:var(--ash-light); font-size:0.85rem; text-transform:uppercase; letter-spacing:1px; margin-top:0.5rem; }
+    .big-stat-sub { color:var(--ash-grey); font-size:0.75rem; margin-top:0.3rem; }
+    .callout { background:rgba(200,168,78,0.07); border-left:4px solid var(--gold); padding:1.5rem 2rem; border-radius:0 8px 8px 0; margin:2rem 0; }
+    .callout p { color:var(--ash-light); font-size:0.95rem; margin:0; }
+    .tag { display:inline-block; background:rgba(200,168,78,0.12); border:1px solid rgba(200,168,78,0.3); color:var(--gold-light); padding:0.3rem 0.9rem; border-radius:20px; font-size:0.78rem; font-weight:500; margin:0.25rem; }
+    .divider-gold { width:60px; height:3px; background:var(--gold); border:none; margin:1.5rem 0; }
+    .hero-slide { min-height:100vh; background:linear-gradient(135deg,var(--navy) 0%,#0d2240 60%,#132d4f 100%); display:flex; align-items:center; justify-content:center; text-align:center; padding:6rem 2rem; }
+    .hero-slide h1 { font-size:clamp(3rem,8vw,6rem); color:var(--cream); letter-spacing:6px; margin-bottom:1rem; }
+    .hero-slide h1 span { color:var(--gold); }
+    .hero-slide .tagline { font-family:var(--font-heading); font-size:clamp(1.1rem,2.5vw,1.6rem); color:var(--gold-light); font-style:italic; margin-bottom:1rem; }
+    .hero-slide .deck-label { font-size:0.75rem; letter-spacing:4px; text-transform:uppercase; color:var(--ash-grey); margin-bottom:3rem; }
+    .progress-bar { position:fixed; top:0; left:0; height:3px; background:var(--gold); z-index:2000; transition:width 0.2s; }
+    .wing-tier { border-radius:12px; padding:2rem; text-align:center; border:1px solid rgba(200,168,78,0.2); position:relative; transition:all 0.3s; }
+    .wing-tier:hover { border-color:var(--gold); transform:translateY(-4px); }
+    .wing-tier.featured { border-color:var(--gold); box-shadow:0 4px 30px rgba(200,168,78,0.15); }
+    .wing-tier .tier-badge { position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:var(--gold); color:var(--navy); padding:0.2rem 1rem; border-radius:12px; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; white-space:nowrap; }
+    .wing-tier h3 { color:var(--gold); font-size:1.3rem; margin-bottom:0.5rem; margin-top:0.5rem; }
+    .wing-tier .amount { font-family:var(--font-heading); font-size:2.2rem; color:var(--cream); margin-bottom:1rem; }
+    .wing-tier ul { list-style:none; padding:0; text-align:left; }
+    .wing-tier ul li { color:var(--ash-light); font-size:0.82rem; padding:0.35rem 0 0.35rem 1.4rem; position:relative; }
+    .wing-tier ul li::before { content:'✓'; position:absolute; left:0; color:var(--success); font-weight:700; }
+    @media(max-width:768px) { .slide-grid-2,.slide-grid-3 { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<div class="progress-bar" id="progress"></div>
+
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="height:36px;">
+        <polygon points="20,22 60,22 40,58" fill="none" stroke="#c8a84e" stroke-width="2"/>
+        <circle cx="30" cy="30" r="4" fill="#c8a84e" opacity="0.8"/>
+        <circle cx="50" cy="30" r="4" fill="#c8a84e" opacity="0.8"/>
+        <polygon points="37,38 43,38 40,44" fill="#c8a84e" opacity="0.6"/>
+      </svg>
+      <div><span class="nav-logo-text">ASH</span><span class="nav-logo-tagline">Sponsor & Angel Deck</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">← Website</a></li>
+      <li><a href="business-plan.html">Business Plan</a></li>
+      <li><a href="investor-deck.html">Investor Deck</a></li>
+      <li><a href="sponsor-deck.html" class="active">Sponsor Deck</a></li>
+      <li><a href="affiliate-deck.html">Affiliate Deck</a></li>
+      <li><a href="hero-deck.html">Join the Guild</a></li>
+    </ul>
+    <button class="hamburger" aria-label="menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- SLIDE 1 -->
+<section class="hero-slide">
+  <div>
+    <p class="deck-label">Sponsor & Angel Partner Presentation · April 2026</p>
+    <h1><span>ASH</span> International</h1>
+    <p class="tagline">Sponsor a Farewell. Change a Legacy.</p>
+    <p style="color:var(--ash-light);max-width:620px;margin:0 auto 2.5rem;font-size:1.05rem;">ASH International is a 501(c)(3) nonprofit offering corporate sponsors and angel donors a rare combination: deep mission alignment, powerful brand exposure, and fully tax-deductible giving.</p>
+    <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;">
+      <span class="tag">100% Tax Deductible</span>
+      <span class="tag">National Brand Exposure</span>
+      <span class="tag">Viral Documemorial Content</span>
+      <span class="tag">Mission-Driven</span>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 2: Why Sponsor ASH -->
+<section class="slide">
+  <div class="slide-inner">
+    <p class="slide-number">Slide 02 of 06</p>
+    <h2 class="slide-title">Why <span>Sponsor</span> ASH?</h2>
+    <p class="slide-subtitle">Your brand becomes part of one of the most emotionally powerful, visually stunning, and widely shared events a family will ever experience.</p>
+    <hr class="divider-gold">
+    <div class="slide-grid-3">
+      <div class="deck-card">
+        <h3>🎥 Documemorial Reach</h3>
+        <p>Every ceremony is broadcast live across 7 platforms — YouTube, Instagram, TikTok, Facebook, X, LinkedIn, and direct stream. Your sponsor recognition reaches every viewer, everywhere, forever.</p>
+      </div>
+      <div class="deck-card" style="border-color:var(--gold);">
+        <h3>❤️ Emotional Resonance</h3>
+        <p>Ash dispersal ceremonies are among the most moving moments in a family's life. Sponsors associated with ASH are remembered as partners in something sacred — not just a logo on a banner.</p>
+      </div>
+      <div class="deck-card">
+        <h3>✈️ Unique Content Asset</h3>
+        <p>Aerial footage of skydiving formations, balloon releases at sunset, and soaring dispersals over iconic landscapes generates millions of organic views. Your brand is embedded in that content.</p>
+      </div>
+    </div>
+    <div class="callout">
+      <p><strong style="color:var(--cream);">501(c)(3) advantage:</strong> All corporate sponsorships are fully tax-deductible. ASH provides IRS acknowledgment letters for all contributions over $250.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 3: Sponsorship Tiers -->
+<section class="slide">
+  <div class="slide-inner">
+    <p class="slide-number">Slide 03 of 06</p>
+    <h2 class="slide-title">Sponsorship <span>Wings</span></h2>
+    <p class="slide-subtitle">Four tiers of partnership — each named for the wingspan that lifts our mission higher.</p>
+    <hr class="divider-gold">
+    <div class="slide-grid-2" style="gap:1.5rem;">
+      <div class="wing-tier" style="background:rgba(200,168,78,0.04);">
+        <h3>🪶 Feather</h3>
+        <div class="amount">$1,000 <span style="font-size:1rem;color:var(--ash-grey);">/yr</span></div>
+        <ul>
+          <li>Name in ASH annual donor report</li>
+          <li>Recognition on ASH website</li>
+          <li>Invitation to 1 ceremony viewing</li>
+          <li>501(c)(3) tax acknowledgment</li>
+        </ul>
+      </div>
+      <div class="wing-tier featured" style="background:rgba(200,168,78,0.07);">
+        <span class="tier-badge">Most Popular</span>
+        <h3>🦅 Wing</h3>
+        <div class="amount">$10,000 <span style="font-size:1rem;color:var(--ash-grey);">/yr</span></div>
+        <ul>
+          <li>Logo on all Wing-level Documemorials</li>
+          <li>Branded ceremony segment recognition</li>
+          <li>Social media feature (1 post/month)</li>
+          <li>VIP access to 2 ceremonies/year</li>
+          <li>Named in all event press releases</li>
+        </ul>
+      </div>
+      <div class="wing-tier" style="background:rgba(200,168,78,0.04);">
+        <h3>🌤️ Soaring</h3>
+        <div class="amount">$25,000 <span style="font-size:1rem;color:var(--ash-grey);">/yr</span></div>
+        <ul>
+          <li>Named sponsor on all ceremony materials</li>
+          <li>Opening brand placement in every Documemorial</li>
+          <li>Quarterly co-branded content package</li>
+          <li>Board observer seat (non-voting)</li>
+          <li>First right on regional chapter naming</li>
+        </ul>
+      </div>
+      <div class="wing-tier" style="background:rgba(200,168,78,0.04);">
+        <h3>☀️ Ascension</h3>
+        <div class="amount">$100,000+ <span style="font-size:1rem;color:var(--ash-grey);">/yr</span></div>
+        <ul>
+          <li>Title sponsor of ASH International</li>
+          <li>Full Documemorial co-production credit</li>
+          <li>Exclusive category sponsorship rights</li>
+          <li>Custom branded dispersal vessel design</li>
+          <li>Annual ASH Gala headline sponsor</li>
+          <li>Voting board seat available</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 4: Angel Donors -->
+<section class="slide">
+  <div class="slide-inner">
+    <p class="slide-number">Slide 04 of 06</p>
+    <h2 class="slide-title">Angel <span>Donors</span> — The Founding Flock</h2>
+    <p class="slide-subtitle">Individual angel donors are the heart of ASH's launch. Your gift makes the first ceremonies possible and earns you a permanent place in the ASH story.</p>
+    <hr class="divider-gold">
+    <div class="slide-grid-2">
+      <div>
+        <div class="deck-card" style="margin-bottom:1.5rem;">
+          <h3>Founding Angel: $5,000–$25,000</h3>
+          <ul>
+            <li>Permanent "Founding Flock" recognition plaque</li>
+            <li>Complimentary ceremony for your family</li>
+            <li>Invitation to all ASH founding events</li>
+            <li>Personal thank-you from the Executive Director</li>
+            <li>Fully tax-deductible gift</li>
+          </ul>
+        </div>
+        <div class="deck-card">
+          <h3>Monthly Feather Patron: $25/mo</h3>
+          <ul>
+            <li>ASH Feather Patron digital badge</li>
+            <li>Monthly mission update & behind-the-scenes</li>
+            <li>10% discount on future ceremony services</li>
+            <li>Voting rights in community decisions</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="callout" style="margin-bottom:1.5rem;">
+          <p><strong style="color:var(--cream);">The impact of your gift:</strong><br><br>
+          $5,000 funds one complete pilot ceremony including dispersal vessel, Guild aviator, and Documemorial production.<br><br>
+          $25,000 funds 5 ceremonies — potentially 5 families whose loved one's ashes have been waiting for the perfect farewell.</p>
+        </div>
+        <div class="big-stat">
+          <div class="big-stat-num">$75K</div>
+          <div class="big-stat-label">Total Seed Target</div>
+          <div class="big-stat-sub">15 founding angels at $5K each makes ASH real</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 5: Who We Reach -->
+<section class="slide">
+  <div class="slide-inner">
+    <p class="slide-number">Slide 05 of 06</p>
+    <h2 class="slide-title">Who <span>Sees</span> Your Brand</h2>
+    <p class="slide-subtitle">ASH's audience is emotionally engaged, affluent, and deeply loyal. They remember who helped honor their loved one.</p>
+    <hr class="divider-gold">
+    <div class="slide-grid-3" style="margin-bottom:2.5rem;">
+      <div class="big-stat">
+        <div class="big-stat-num">700K</div>
+        <div class="big-stat-label">Families/Year Seeking Scattering</div>
+        <div class="big-stat-sub">Primary target market</div>
+      </div>
+      <div class="big-stat">
+        <div class="big-stat-num">7</div>
+        <div class="big-stat-label">Platforms Per Ceremony</div>
+        <div class="big-stat-sub">Live + archived broadcast reach</div>
+      </div>
+      <div class="big-stat">
+        <div class="big-stat-num">∞</div>
+        <div class="big-stat-label">Permanent Archive</div>
+        <div class="big-stat-sub">Every Documemorial lives online forever</div>
+      </div>
+    </div>
+    <div class="slide-grid-2">
+      <div class="deck-card">
+        <h3>Ideal Sponsor Sectors</h3>
+        <ul>
+          <li>Aviation & aerospace companies</li>
+          <li>Life insurance & estate planning</li>
+          <li>Funeral home chains & cremation networks</li>
+          <li>Grief counseling & hospice organizations</li>
+          <li>Outdoor & adventure brands</li>
+          <li>Media, streaming & production companies</li>
+          <li>Legal & wealth management firms</li>
+        </ul>
+      </div>
+      <div class="deck-card">
+        <h3>Audience Profile</h3>
+        <ul>
+          <li>Age 45–75 primary (end-of-life planning)</li>
+          <li>Age 25–45 secondary (pre-planning & pets)</li>
+          <li>Average household income $85K+</li>
+          <li>High social sharing behavior</li>
+          <li>Multi-generational family viewer groups</li>
+          <li>International reach via expedition ceremonies</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 6: Join the Mission -->
+<section class="slide">
+  <div class="slide-inner" style="text-align:center;">
+    <p class="slide-number">Slide 06 of 06</p>
+    <h2 class="slide-title" style="text-align:center;">Join the <span>Mission</span></h2>
+    <p class="slide-subtitle" style="margin:0 auto 2rem;">You're not just sponsoring an event. You're helping a family say goodbye in a way they will talk about for the rest of their lives.</p>
+    <hr class="divider-gold" style="margin:1.5rem auto;">
+    <div class="slide-grid-3" style="margin:2.5rem 0;text-align:left;">
+      <div class="deck-card">
+        <h3>Step 1 — Choose Your Wing</h3>
+        <p>Select a sponsorship tier that fits your budget and goals. All tiers include tax acknowledgment and brand recognition.</p>
+      </div>
+      <div class="deck-card" style="border-color:var(--gold);">
+        <h3>Step 2 — Sign the Agreement</h3>
+        <p>We'll send a simple one-page sponsorship agreement outlining your tier benefits, recognition schedule, and 501(c)(3) gift documentation.</p>
+      </div>
+      <div class="deck-card">
+        <h3>Step 3 — Soar With Us</h3>
+        <p>Receive your sponsorship materials, attend your first ceremony, and watch your brand become part of something that genuinely matters.</p>
+      </div>
+    </div>
+    <div class="callout" style="max-width:700px;margin:0 auto;">
+      <p style="text-align:center;font-size:1.05rem;">
+        <strong style="color:var(--gold);">"Ashes Soaring High — Where Every Farewell Takes Flight"</strong><br>
+        <span style="color:var(--ash-light);">info@ashsoaringhigh.org · Full Business Plan & Investor Deck available on request</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" style="padding:2rem 0;">
+  <div class="container" style="text-align:center;">
+    <p style="color:var(--ash-grey);font-size:0.8rem;">ASH International, Inc. · 501(c)(3) Nonprofit · April 2026</p>
+    <div style="margin-top:1rem;display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;">
+      <a href="investor-deck.html" style="color:var(--gold);font-size:0.85rem;">Investor Deck</a>
+      <a href="affiliate-deck.html" style="color:var(--gold);font-size:0.85rem;">Affiliate Deck</a>
+      <a href="hero-deck.html" style="color:var(--gold);font-size:0.85rem;">Join the Guild</a>
+      <a href="business-plan.html" style="color:var(--gold);font-size:0.85rem;">Business Plan</a>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script>
+  window.addEventListener('scroll', () => {
+    const p = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    document.getElementById('progress').style.width = p + '%';
+  });
+</script>
+</body>
+</html>

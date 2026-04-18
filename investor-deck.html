@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASH Investor Deck — Ashes Soaring High</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .deck-nav { background: rgba(11,26,46,0.98); border-bottom: 1px solid rgba(200,168,78,0.15); }
+    .slide {
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      padding: 8rem 2rem 4rem; position: relative;
+    }
+    .slide:nth-child(odd) { background: var(--navy); }
+    .slide:nth-child(even) { background: var(--navy-light); }
+    .slide-inner { max-width: 1000px; width: 100%; }
+    .slide-number {
+      font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); opacity: 0.6; margin-bottom: 1rem;
+    }
+    .slide-title {
+      font-family: var(--font-heading); font-size: clamp(2rem,5vw,3.5rem);
+      color: var(--cream); margin-bottom: 0.5rem; line-height: 1.15;
+    }
+    .slide-title span { color: var(--gold); }
+    .slide-subtitle {
+      font-size: 1.1rem; color: var(--ash-light); margin-bottom: 3rem;
+      max-width: 700px;
+    }
+    .slide-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+    .slide-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; }
+    .deck-card {
+      background: rgba(200,168,78,0.05); border: 1px solid rgba(200,168,78,0.18);
+      border-radius: 10px; padding: 2rem;
+    }
+    .deck-card h3 { color: var(--gold); font-size: 1.2rem; margin-bottom: 0.75rem; }
+    .deck-card p, .deck-card li { color: var(--ash-light); font-size: 0.92rem; line-height: 1.7; }
+    .deck-card ul { list-style: none; padding: 0; }
+    .deck-card ul li { padding: 0.3rem 0 0.3rem 1.4rem; position: relative; }
+    .deck-card ul li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 0.55rem; top: 0.6rem; }
+    .big-stat { text-align: center; padding: 2rem; }
+    .big-stat-num { font-family: var(--font-heading); font-size: clamp(2.5rem,6vw,5rem); color: var(--gold); font-weight: 700; line-height: 1; }
+    .big-stat-label { color: var(--ash-light); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 0.5rem; }
+    .big-stat-sub { color: var(--ash-grey); font-size: 0.75rem; margin-top: 0.3rem; }
+    .callout {
+      background: rgba(200,168,78,0.07); border-left: 4px solid var(--gold);
+      padding: 1.5rem 2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;
+    }
+    .callout p { color: var(--ash-light); font-size: 0.95rem; margin: 0; }
+    .tag {
+      display: inline-block; background: rgba(200,168,78,0.12);
+      border: 1px solid rgba(200,168,78,0.3); color: var(--gold-light);
+      padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.78rem;
+      font-weight: 500; margin: 0.25rem;
+    }
+    .divider-gold { width: 60px; height: 3px; background: var(--gold); border: none; margin: 1.5rem 0; }
+    .hero-slide {
+      min-height: 100vh; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #132d4f 100%);
+      display: flex; align-items: center; justify-content: center; text-align: center;
+      padding: 6rem 2rem;
+    }
+    .hero-slide h1 { font-size: clamp(3rem,8vw,6rem); color: var(--cream); letter-spacing: 6px; margin-bottom: 1rem; }
+    .hero-slide h1 span { color: var(--gold); }
+    .hero-slide .tagline { font-family: var(--font-heading); font-size: clamp(1.1rem,2.5vw,1.6rem); color: var(--gold-light); font-style: italic; margin-bottom: 1rem; }
+    .hero-slide .deck-label { font-size: 0.75rem; letter-spacing: 4px; text-transform: uppercase; color: var(--ash-grey); margin-bottom: 3rem; }
+    .progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); z-index: 2000; transition: width 0.2s; }
+    @media(max-width:768px) {
+      .slide-grid-2, .slide-grid-3 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<nav class="navbar scrolled deck-nav" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="height:36px;">
+        <polygon points="20,22 60,22 40,58" fill="none" stroke="#c8a84e" stroke-width="2"/>
+        <circle cx="30" cy="30" r="4" fill="#c8a84e" opacity="0.8"/>
+        <circle cx="50" cy="30" r="4" fill="#c8a84e" opacity="0.8"/>
+        <polygon points="37,38 43,38 40,44" fill="#c8a84e" opacity="0.6"/>
+      </svg>
+      <div><span class="nav-logo-text">ASH</span><span class="nav-logo-tagline">Investor Deck</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">← Website</a></li>
+      <li><a href="business-plan.html">Business Plan</a></li>
+      <li><a href="investor-deck.html" class="active">Investor Deck</a></li>
+      <li><a href="sponsor-deck.html">Sponsor Deck</a></li>
+      <li><a href="affiliate-deck.html">Affiliate Deck</a></li>
+      <li><a href="hero-deck.html">Join the Guild</a></li>
+    </ul>
+    <button class="hamburger" aria-label="menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- SLIDE 1: Title -->
+<section class="hero-slide">
+  <div>
+    <p class="deck-label">Investor Presentation · April 2026 · Confidential</p>
+    <h1><span>ASH</span> International</h1>
+    <p class="tagline">"Where Every Farewell Takes Flight"</p>
+    <p style="color:var(--ash-light);max-width:600px;margin:0 auto 2.5rem;font-size:1.05rem;">A 501(c)(3) nonprofit transforming the $20B cremation memorial market through aviation-based ash dispersal — the first national platform of its kind.</p>
+    <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;">
+      <span class="tag">501(c)(3) Nonprofit</span>
+      <span class="tag">Aviation Memorial Services</span>
+      <span class="tag">$20B+ Market</span>
+      <span class="tag">Fractal Scalability</span>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 2: The Problem & Opportunity -->
+<section class="slide">
+  <div class="slide-inner">
+    <p class="slide-number">Slide 02 of 06</p>
+    <h2 class="slide-title">A <span>$20 Billion</span> Market With No Leader</h2>
+    <p class="slide-subtitle">Cremation is now America's #1 end-of-life choice — and 37% of families don't know what to do next.</p>
+    <hr class="divider-gold">
+    <div class="slide-grid-3" style="margin-bottom:2.5rem;">
+      <div class="big-stat">
+        <div class="big-stat-num">63%</div>
+        <div class="big-stat-label">U.S. Cremation Rate</div>
+        <div class="big-stat-sub">Projected 82% by 2045 · NFDA 2025</div>
+      </div>
+      <div class="big-stat">
+        <div class="big-stat-num">2.1M</div>
+        <div class="big-stat-label">Annual Cremations</div>
+        <div class="big-stat-sub">~700,000 families seek scattering options</div>
+      </div>
+      <div class="big-stat">
+        <div class="big-stat-num">37%</div>
+        <div class="big-stat-label">Ashes on a Shelf</div>
+        <div class="big-stat-sub">Families unable to find meaningful options</div>
+      </div>
+    </div>
+    <div class="callout">
+      <p><strong style="color:var(--cream);">The gap:</strong> No national organization offers a comprehensive, technology-enabled, multi-modality aerial ash dispersal platform with certified aviators, documentary production, and international expedition capability. <strong style="color:var(--gold);">ASH fills that gap.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 3: The Solution -->
+<section class="slide">
+  <div class="slide-inner">
+    <p class="slide-number">Slide 03 of 06</p>
+    <h2 class="slide-title">The <span>ASH</span> Platform</h2>
+    <p class="slide-subtitle">Three interconnected pillars — App, Special Events, Hub & Guild — powered by a self-replicating 7-division organizational Reactor.</p>
+    <hr class="divider-gold">
+    <div class="slide-grid-3">
+      <div class="deck-card">
+        <h3>A — App & Platform</h3>
+        <ul>
+          <li>Final wishes registry</li>
+          <li>Ceremony scheduling</li>
+          <li>Live stream & Documemorial hosting</li>
+          <li>Family digital memorial pages</li>
+          <li>7-channel social broadcast</li>
+        </ul>
+      </div>
+      <div class="deck-card" style="border-color:var(--gold);">
+        <h3>S — Special Events</h3>
+        <ul>
+          <li>International expeditions</li>
+          <li>Celebrity & corporate memorials</li>
+          <li>Cost-sharing ceremonies</li>
+          <li>Pet memorial services</li>
+          <li>HNW concierge planning</li>
+        </ul>
+      </div>
+      <div class="deck-card">
+        <h3>H — Hub & Guild</h3>
+        <ul>
+          <li>Certified skydivers, pilots & balloonists</li>
+          <li>Proprietary dispersal vessel (patent-pending)</li>
+          <li>Guild training & certification</li>
+          <li>Ceremony operations & logistics</li>
+          <li>Safety & QA governance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 4: Business Model & Revenue -->
+<section class="slide">
+  <div class="slide-inner">
+    <p class="slide-number">Slide 04 of 06</p>
+    <h2 class="slide-title">Revenue Model & <span>Financial Trajectory</span></h2>
+    <p class="slide-subtitle">Nine diversified revenue streams. Break-even Year 2. $58M total revenue by Year 10.</p>
+    <hr class="divider-gold">
+    <div class="slide-grid-2">
+      <div>
+        <div class="deck-card" style="margin-bottom:1.5rem;">
+          <h3>Revenue Streams</h3>
+          <ul>
+            <li>Ceremony fees ($2,000 – $100,000+)</li>
+            <li>Documemorial production packages</li>
+            <li>Proprietary dispersal vessels</li>
+            <li>Corporate sponsorships & named events</li>
+            <li>Feather Patron memberships ($25/mo)</li>
+            <li>Affiliate referral network</li>
+            <li>Foundation & government grants</li>
+            <li>International licensing</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="big-stat" style="margin-bottom:1rem;">
+          <div class="big-stat-num">$225K</div>
+          <div class="big-stat-label">Year 1 Revenue</div>
+        </div>
+        <div class="big-stat" style="margin-bottom:1rem;">
+          <div class="big-stat-num">$3.15M</div>
+          <div class="big-stat-label">Year 3 Revenue</div>
+        </div>
+        <div class="big-stat">
+          <div class="big-stat-num">$58M</div>
+          <div class="big-stat-label">Year 10 Revenue</div>
+          <div class="big-stat-sub">20% net surplus margin · 25 chapters · 4,000 ceremonies/yr</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 5: Why Now & Competitive Moat -->
+<section class="slide">
+  <div class="slide-inner">
+    <p class="slide-number">Slide 05 of 06</p>
+    <h2 class="slide-title">Why <span>Now</span> — & Why ASH Wins</h2>
+    <p class="slide-subtitle">The market is at an inflection point. Cremation is accelerating, viral video culture amplifies every ceremony, and no competitor offers what ASH offers.</p>
+    <hr class="divider-gold">
+    <div class="slide-grid-2">
+      <div class="deck-card">
+        <h3>Timing</h3>
+        <ul>
+          <li>Cremation rate rising 2% per year</li>
+          <li>73M Baby Boomers entering end-of-life planning</li>
+          <li>Aerial ash videos earn millions of organic views</li>
+          <li>Post-COVID shift to non-traditional memorials</li>
+          <li>Pet memorial market growing to $23B+</li>
+        </ul>
+      </div>
+      <div class="deck-card">
+        <h3>Competitive Moat</h3>
+        <ul>
+          <li>501(c)(3) status — mission-driven, donor-supported</li>
+          <li>Patent-pending proprietary dispersal vessel</li>
+          <li>Documemorial™ — no competitor produces this</li>
+          <li>The Guild — certified, trained, branded network</li>
+          <li>Fractal Reactor model — infinitely scalable chapters</li>
+          <li>First-mover in a fragmented, unbranded market</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:2rem;">
+      <p><strong style="color:var(--cream);">Viral growth engine:</strong> Every Documemorial broadcast across 7 channels is both a sacred ceremony and an organic marketing asset. ASH ceremonies sell themselves.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 6: The Ask -->
+<section class="slide">
+  <div class="slide-inner">
+    <p class="slide-number">Slide 06 of 06</p>
+    <h2 class="slide-title">The <span>Ask</span></h2>
+    <p class="slide-subtitle">ASH is a bootstrap launch requiring minimal seed capital. We are seeking founding partners who believe every farewell deserves to soar.</p>
+    <hr class="divider-gold">
+    <div class="slide-grid-3" style="margin-bottom:2.5rem;">
+      <div class="deck-card">
+        <h3>Seed Capital: $75K–$150K</h3>
+        <ul>
+          <li>501(c)(3) IRS filing & legal</li>
+          <li>Platform MVP development</li>
+          <li>Insurance & licensing</li>
+          <li>First 5 pilot ceremonies</li>
+          <li>Documemorial equipment</li>
+        </ul>
+      </div>
+      <div class="deck-card" style="border-color:var(--gold);">
+        <h3>Founding Partner Benefits</h3>
+        <ul>
+          <li>Named founding donor recognition</li>
+          <li>Permanent board advisory seat</li>
+          <li>First right on naming rights for events</li>
+          <li>Complimentary ceremony for family</li>
+          <li>Tax deductible — 501(c)(3)</li>
+        </ul>
+      </div>
+      <div class="deck-card">
+        <h3>Year 1 Milestones</h3>
+        <ul>
+          <li>IRS 501(c)(3) approval</li>
+          <li>App MVP launch</li>
+          <li>25 pilot ceremonies</li>
+          <li>Guild of 10+ certified aviators</li>
+          <li>First Documemorial produced</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout">
+      <p style="text-align:center;font-size:1.05rem;">
+        <strong style="color:var(--gold);">"Ashes Soaring High — Where Every Farewell Takes Flight"</strong><br>
+        <span style="color:var(--ash-light);">Contact us · info@ashsoaringhigh.org · View the full Business Plan</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" style="padding:2rem 0;">
+  <div class="container" style="text-align:center;">
+    <p style="color:var(--ash-grey);font-size:0.8rem;">ASH International, Inc. · 501(c)(3) Nonprofit · Confidential — April 2026</p>
+    <div style="margin-top:1rem;display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;">
+      <a href="business-plan.html" style="color:var(--gold);font-size:0.85rem;">Full Business Plan</a>
+      <a href="sponsor-deck.html" style="color:var(--gold);font-size:0.85rem;">Sponsor Deck</a>
+      <a href="affiliate-deck.html" style="color:var(--gold);font-size:0.85rem;">Affiliate Deck</a>
+      <a href="hero-deck.html" style="color:var(--gold);font-size:0.85rem;">Join the Guild</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  window.addEventListener('scroll', () => {
+    const p = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    document.getElementById('progress').style.width = p + '%';
+  });
+</script>
+</body>
+</html>

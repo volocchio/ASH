@@ -16,8 +16,8 @@ if (-not $NoPush) {
     git push
 }
 
-# SSH to VPS: pull latest and copy to static site dir
-wsl ssh -i $sshKey "$vpsUser@$vpsHost" "cd /tmp && rm -rf ASH && git clone https://github.com/volocchio/ASH.git && rsync -av --delete --exclude='.git' --exclude='deploy.ps1' ASH/ $vpsPath/ && rm -rf /tmp/ASH && echo 'Deployed to $vpsPath'"
+# SSH to VPS: pull latest
+wsl ssh -i $sshKey "$vpsUser@$vpsHost" "cd $vpsPath && git pull origin master && echo 'Deployed to $vpsPath'"
 
 # Update apps portal
 wsl ssh -i $sshKey "$vpsUser@$vpsHost" "if [ -x /usr/local/bin/sync-and-update-portal.sh ]; then /usr/local/bin/sync-and-update-portal.sh; fi"
