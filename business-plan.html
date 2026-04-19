@@ -232,8 +232,64 @@
       width: 100%;
       height: auto;
     }
+    .bp-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin: 1rem 0 1.25rem;
+    }
+    .bp-tab-btn {
+      background: rgba(200,168,78,0.08);
+      color: var(--ash-light);
+      border: 1px solid rgba(200,168,78,0.22);
+      border-radius: 999px;
+      padding: 0.45rem 0.9rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.4px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .bp-tab-btn:hover {
+      color: var(--cream);
+      border-color: rgba(200,168,78,0.4);
+    }
+    .bp-tab-btn.active {
+      color: var(--navy);
+      background: var(--gold);
+      border-color: var(--gold);
+      font-weight: 600;
+    }
+    .bp-tab-pane {
+      display: none;
+      animation: bpFadeIn 0.25s ease;
+    }
+    .bp-tab-pane.active {
+      display: block;
+    }
+    .bp-img-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1rem 0 1.3rem;
+    }
+    .bp-img-card {
+      background: rgba(200,168,78,0.04);
+      border: 1px solid rgba(200,168,78,0.15);
+      border-radius: 10px;
+      padding: 0.8rem;
+    }
+    .bp-img-card img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid rgba(200,168,78,0.18);
+    }
+    @keyframes bpFadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
     @media (max-width: 768px) {
       .bp-pillars-grid { grid-template-columns: 1fr; }
+      .bp-img-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -305,6 +361,7 @@
         <li><a href="#process-framework">7-Step Operational Process</a></li>
         <li><a href="#revenue-model">Revenue Model</a></li>
         <li><a href="#financials">Financial Projections</a></li>
+        <li><a href="#spreadsheet-addendum">Spreadsheet Addendum</a></li>
         <li><a href="#marketing">Marketing & Growth Strategy</a></li>
         <li><a href="#technology">Technology Platform</a></li>
         <li><a href="#legal-compliance">Legal & Regulatory Compliance</a></li>
@@ -347,7 +404,7 @@
           <text x="243" y="286" fill="#c8a84e" font-size="20" font-family="Georgia" font-weight="bold">S</text>
           <!-- Division labels -->
           <text x="18" y="75" fill="#b8bbbe" font-size="10" font-family="Montserrat">App &amp; Platform</text>
-          <text x="395" y="75" fill="#b8bbbe" font-size="10" font-family="Montserrat">Hub &amp; Guild</text>
+          <text x="395" y="75" fill="#b8bbbe" font-size="10" font-family="Montserrat">Hero &amp; Guild</text>
           <text x="215" y="315" fill="#b8bbbe" font-size="10" font-family="Montserrat">Special Events</text>
           <!-- Center owl icon -->
           <circle cx="250" cy="110" r="14" fill="none" stroke="#c8a84e" stroke-width="1" opacity="0.4"/>
@@ -368,7 +425,7 @@
         <li><strong>Proprietary Dispersal Vessel:</strong> Handcrafted, personalized containers that become family keepsakes after the ceremony.</li>
         <li><strong>Technology Platform:</strong> App-based wish registration, ceremony scheduling, live streaming, and digital memorial pages.</li>
         <li><strong>Cost-Sharing Events:</strong> Shared ceremonies that dramatically reduce individual family costs.</li>
-        <li><strong>Three-Pillar Model (A-S-H):</strong> App, Special Events, and Hub/Guild — each a semi-autonomous organization with dedicated leadership.</li>
+        <li><strong>Three-Pillar Model (A-S-H):</strong> App, Special Events, and Hero/Guild — each a semi-autonomous organization with dedicated leadership.</li>
         <li><strong>International Reach:</strong> Destination ceremonies worldwide — Easter Island, Machu Picchu, Galápagos, and any meaningful location on Earth.</li>
       </ul>
 
@@ -432,7 +489,7 @@
           <text x="210" y="370" fill="#c8a84e" font-size="22" font-family="Georgia" font-weight="bold">S</text>
           <!-- Sublabels -->
           <text x="10" y="78" fill="#b8bbbe" font-size="10" font-family="Montserrat">App &amp; Platform</text>
-          <text x="370" y="78" fill="#b8bbbe" font-size="10" font-family="Montserrat">Hub &amp; Guild</text>
+          <text x="370" y="78" fill="#b8bbbe" font-size="10" font-family="Montserrat">Hero &amp; Guild</text>
           <text x="194" y="390" fill="#b8bbbe" font-size="10" font-family="Montserrat">Special Events</text>
           <!-- Chin: Affiliates -->
           <text x="170" y="395" fill="#c8a84e" font-size="10" font-family="Montserrat" opacity="0.5">AFFILIATES</text>
@@ -441,7 +498,7 @@
       </div>
       <ul>
         <li><strong>A (Top Left):</strong> The App & Digital Platform</li>
-        <li><strong>H (Top Right):</strong> The Hub & Guild (Operations)</li>
+        <li><strong>H (Top Right):</strong> The Hero & Guild (Operations)</li>
         <li><strong>S (Bottom):</strong> Special Events (Premium Experiences)</li>
       </ul>
       <p>The owl's eyebrows represent <strong>IT</strong> (left) and <strong>IP</strong> (right) — the technology and intellectual property functions. The chin below the S vertex represents <strong>Affiliates Management</strong>. As ASH grows, the owl motif evolves — adding talons, wings (patrons/sponsors), and a full body — reflecting the organization's maturation.</p>
@@ -473,7 +530,7 @@
 
           <!-- Labels -->
           <text x="190" y="312" fill="#b8bbbe" font-size="36" font-family="Montserrat" opacity="0.9">App</text>
-          <text x="914" y="312" fill="#b8bbbe" font-size="36" font-family="Montserrat" opacity="0.9">Hub</text>
+          <text x="914" y="312" fill="#b8bbbe" font-size="36" font-family="Montserrat" opacity="0.9">Hero</text>
           <text x="542" y="707" fill="#b8bbbe" font-size="34" font-family="Montserrat" opacity="0.9">Special</text>
 
                     <!-- Division edge labels -->
@@ -507,7 +564,7 @@
         </div>
         <div class="bp-pillar-card">
           <div class="bp-pillar-letter">H</div>
-          <h4>Hub & Guild</h4>
+          <h4>Hero & Guild</h4>
           <p>Operational backbone that recruits, trains, certifies, and deploys aviation talent.</p>
           <ul>
             <li>Guild standards, onboarding, and safety governance</li>
@@ -693,7 +750,7 @@
           </tr>
           <tr>
             <td><strong>H</strong> (Top Right)</td>
-            <td>Hub & Guild</td>
+            <td>Hero & Guild</td>
             <td>Guild recruitment/training, operations, logistics, dispersal device management</td>
             <td>Director of Operations</td>
           </tr>
@@ -773,9 +830,9 @@
         <p class="bp-triangle-caption">Lune Model — Each division's circle overlaps, creating shared crescent zones of collaboration</p>
       </div>
       <ul>
-        <li><strong>A Division:</strong> Driven by App/Tech. Lunes: S (Special Events) and H (Hub/Guild).</li>
+        <li><strong>A Division:</strong> Driven by App/Tech. Lunes: S (Special Events) and H (Hero/Guild).</li>
         <li><strong>H Division:</strong> Driven by Operations/Guild. Lunes: A (App) and S (Special Events).</li>
-        <li><strong>S Division:</strong> Driven by Special Events. Lunes: A (App) and H (Hub/Guild).</li>
+        <li><strong>S Division:</strong> Driven by Special Events. Lunes: A (App) and H (Hero/Guild).</li>
       </ul>
       <p>The driver division is always the <strong>upper lune</strong> in its circumscribed circle, ensuring clarity of ownership while maintaining interconnection.</p>
 
@@ -1966,4 +2023,252 @@
             <td style="color:#d45050;">($40,000)</td>
             <td style="color:#d45050;">($1,200,000)</td>
             <td style="color:#d45050;">($5,100,000)</td>
-          </tr
+          </tr>
+          <tr>
+            <td>Net Cash from Financing</td>
+            <td>$60,000</td>
+            <td>($350,000)</td>
+            <td>($900,000)</td>
+          </tr>
+          <tr>
+            <td><strong>Net Change in Cash</strong></td>
+            <td><strong>$25,000</strong></td>
+            <td><strong>$500,000</strong></td>
+            <td><strong>$7,500,000</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div class="bp-section" id="spreadsheet-addendum">
+      <h2>8A. Spreadsheet Addendum: Talent, Sponsors, and Budget Inputs</h2>
+      <p>This section is sourced from the worksheet set in <strong>ASH Talent and Sponsor list.xlsx</strong> and integrated as planning tabs. The data supports staffing, sponsorship targeting, and early budget sequencing across APP, production, and event logistics.</p>
+
+      <div class="bp-img-grid">
+        <div class="bp-img-card">
+          <img src="images/triangle_images/triangle-image1.png" alt="Triangle systems image from planning document">
+          <p class="bp-triangle-caption">Triangle visual used as a planning anchor for cross-division alignment.</p>
+        </div>
+        <div class="bp-img-card">
+          <img src="images/triangle_images/triangle-image2.png" alt="Triangle framework image from planning document">
+          <p class="bp-triangle-caption">Budget and operations are tracked by triangle pillar ownership.</p>
+        </div>
+      </div>
+
+      <div class="bp-tabs" role="tablist" aria-label="Spreadsheet data tabs">
+        <button class="bp-tab-btn active" data-bp-tab="bp-tab-reactor" role="tab" aria-selected="true">Reactor 7 Divisions</button>
+        <button class="bp-tab-btn" data-bp-tab="bp-tab-talent" role="tab" aria-selected="false">Talent</button>
+        <button class="bp-tab-btn" data-bp-tab="bp-tab-sponsors" role="tab" aria-selected="false">Sponsors</button>
+        <button class="bp-tab-btn" data-bp-tab="bp-tab-prod-budget" role="tab" aria-selected="false">Production Budget</button>
+        <button class="bp-tab-btn" data-bp-tab="bp-tab-event-budget" role="tab" aria-selected="false">Sawtooth Event Budget</button>
+        <button class="bp-tab-btn" data-bp-tab="bp-tab-app-budget" role="tab" aria-selected="false">App Registry Budget</button>
+      </div>
+
+      <div id="bp-tab-reactor" class="bp-tab-pane active" role="tabpanel">
+        <h3>Worksheet: ASH Reactor 7 Divisions</h3>
+        <table class="bp-table">
+          <thead>
+            <tr>
+              <th>Division Group</th>
+              <th>Department Labels</th>
+              <th>Operational Mapping</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Executive (Division 7)</td>
+              <td>Conditions, Existence, Source (Dept 19-21)</td>
+              <td>Office of Executive Director, Corporate Affairs, Founder</td>
+            </tr>
+            <tr>
+              <td>Communications (Division 1)</td>
+              <td>Recognition, Communications, Perception (Dept 1-3)</td>
+              <td>Routing/Personnel, Communications Office, Inspections/Reports</td>
+            </tr>
+            <tr>
+              <td>Registrations (Division 2)</td>
+              <td>Orientation, Understanding (+ Dept 4-5 shown in sheet)</td>
+              <td>Promo and Marketing, Publications/Event Planning</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="bp-tab-talent" class="bp-tab-pane" role="tabpanel">
+        <h3>Worksheet: Talent</h3>
+        <table class="bp-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Primary Contact Data</th>
+              <th>Social Channels</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>William J Liebhart</td>
+              <td>Core TECH</td>
+              <td>520 280 5155, 520 688 7267; multiple email addresses</td>
+              <td>IG @fungiz17, Facebook William J Liebhart, WA/Telegram listed</td>
+            </tr>
+            <tr>
+              <td>Taylor Buffington</td>
+              <td>Core</td>
+              <td>To be completed</td>
+              <td>To be completed</td>
+            </tr>
+            <tr>
+              <td>Michelle Smith</td>
+              <td>Core ED</td>
+              <td>To be completed</td>
+              <td>To be completed</td>
+            </tr>
+            <tr>
+              <td>Lady George Harges</td>
+              <td>Core PR</td>
+              <td>To be completed</td>
+              <td>To be completed</td>
+            </tr>
+            <tr>
+              <td>David Cherry</td>
+              <td>Pending role assignment</td>
+              <td>(703) 203-4476</td>
+              <td>To be completed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="bp-tab-sponsors" class="bp-tab-pane" role="tabpanel">
+        <h3>Worksheet: Sponsors</h3>
+        <table class="bp-table">
+          <thead>
+            <tr>
+              <th>Sponsor/Donor Name</th>
+              <th>Plan Use in 2026-2027</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Sterling</td><td>Founding outreach and anchor donor cultivation</td></tr>
+            <tr><td>Lord Atlas</td><td>Brand amplification and event visibility partner</td></tr>
+            <tr><td>Nickolas Guida</td><td>Strategic supporter and business development touchpoint</td></tr>
+            <tr><td>Don Potts</td><td>Regional relationship development</td></tr>
+            <tr><td>Gery Warner</td><td>Sponsor candidate for mission-aligned events</td></tr>
+            <tr><td>KMo Kelly Morton</td><td>Community campaign and social support</td></tr>
+            <tr><td>Steve</td><td>Sponsor pipeline candidate</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="bp-tab-prod-budget" class="bp-tab-pane" role="tabpanel">
+        <h3>Worksheet: ASH Family Production Budget</h3>
+        <p>Program reference in worksheet: <strong>PROGRAM-ADS (Ash Deployment System 1 OFF) R&amp;D</strong>.</p>
+        <table class="bp-table">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Timing</th>
+              <th>Estimated Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Trigger Remote Transmitter</td><td>APR</td><td>$5,000.00</td></tr>
+            <tr><td>Trigger Remote Receiver</td><td>APR</td><td>$5,000.00</td></tr>
+            <tr><td>Transmitter Mount/Assembly</td><td>APR</td><td>$1,000.00</td></tr>
+            <tr><td>Receiver Mount/Assembly</td><td>APR</td><td>$1,000.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="bp-tab-event-budget" class="bp-tab-pane" role="tabpanel">
+        <h3>Worksheet: ASH Family Sawtooth ADS Event Budget</h3>
+        <p>Worksheet heading: <strong>Basic Sawtooth Location's Special Event budget</strong>. Budget columns are structured JAN through JUN for phased logistics planning.</p>
+        <table class="bp-table">
+          <thead>
+            <tr>
+              <th>Budget Track</th>
+              <th>Cadence</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Event Vendors, Supplies, and Logistics</td>
+              <td>JAN-JUN</td>
+              <td>Multi-month event cost sequencing for Sawtooth execution</td>
+            </tr>
+            <tr>
+              <td>Special Event Operating Window</td>
+              <td>Pre-season planning</td>
+              <td>Allows sponsor alignment before field deployment</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="bp-tab-app-budget" class="bp-tab-pane" role="tabpanel">
+        <h3>Worksheet: APP Last Wishes Registry Budget</h3>
+        <table class="bp-table">
+          <thead>
+            <tr>
+              <th>Budget Group</th>
+              <th>Month Pattern</th>
+              <th>Visible Line Items</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Supplies Vendor Cost Estimates</td>
+              <td>JAN-JUN</td>
+              <td>Recurring placeholder entries shown at $5.00 in APR rows</td>
+            </tr>
+            <tr>
+              <td>Registry Platform Build Support</td>
+              <td>Monthly staging model</td>
+              <td>Framework prepared for expanded itemized app development costs</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="bp-section" id="appendix">
+      <h2>Appendix</h2>
+      <p>Supporting source files in this plan include reactor diagrams, talent and sponsor worksheets, and internal planning assets used to align implementation sequencing.</p>
+      <div class="bp-nav">
+        <a href="index.html" class="btn btn-outline">Back to Website</a>
+        <a href="#executive-summary" class="btn btn-gold">Back to Top</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabButtons = document.querySelectorAll('.bp-tab-btn');
+    const tabPanes = document.querySelectorAll('.bp-tab-pane');
+
+    tabButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-bp-tab');
+        tabButtons.forEach((b) => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        tabPanes.forEach((pane) => pane.classList.remove('active'));
+
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        const targetPane = document.getElementById(targetId);
+        if (targetPane) targetPane.classList.add('active');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
