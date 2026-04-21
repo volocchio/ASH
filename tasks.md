@@ -1,7 +1,7 @@
 # ASH Tasks
 
 ## In Progress
-- [ ] Add remaining instructor bios (Julie, Noelle, Allie, Toshi) — photos + text to `images/` folder
+- [ ] Add remaining instructor bios (Julie, Noelle, Allie) — photos + text to `images/` folder
 - [ ] Set up nginx config on VPS so ASH is accessible via a domain (ash.voloaltro.tech?)
 
 ## Content
